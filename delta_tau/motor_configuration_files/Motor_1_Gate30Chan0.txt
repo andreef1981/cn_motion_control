@@ -1,0 +1,100 @@
+Sys.WpKey=$AAAAAAAA
+
+//Global Clock Settings
+
+Gate3[0].PhaseFreq=9035.69;
+Gate3[0].PhaseClockDiv=0;											//[0..3] only used if PhaseServoDir = 0 (master)
+Gate3[0].ServoClockDiv=3;											//[0..15] only used if PhaseServoDir = 0 (master)
+Gate3[0].AdcAmpStrobe=$fffffc;										//$fffffc is default value
+Gate3[0].PfmClockDiv=7												//[0..15] default 5 -> 100MHz/2^5 = 3.125 MHz
+																	// each PFM clock cycle a 24 bit active phase D command value
+																	// is added to 24 bit accumulator; 7->781.25kHz
+Gate3[0].EncClockDiv=5												//[0..15] default 5 -> 100MHz/2^5 = 3.125 MHz
+Sys.PhaseOverServoPeriod=1/(Gate3[0].ServoClockDiv+1)				// resulting from input above
+Sys.ServoPeriod=1000*(Gate3[0].ServoClockDiv+1)/Gate3[0].PhaseFreq	// resulting from input above
+
+//Channel PFM Hardware Settings
+
+Gate3[0].Chan[0].PfmWidth=15	//May be stepper drive specific
+								// units of pfm cycles
+Gate3[0].Chan[0].OutputMode=8	// PFM on channel D
+Gate3[0].Chan[0].PackOutData=0
+Gate3[0].Chan[0].OutputPol=0    //May be stepper drive specific
+Gate3[0].Chan[0].PfmDirPol=0    //May be stepper drive specific
+Gate3[0].Chan[0].TimerMode=3	// internal puls and direction drive channels timer circuit as counter
+								// leaves encoder counter available for external signal 
+								// default 0 hardware 1/T
+
+Gate3[0].Chan[0].EncCtrl=8		//default 7, how to decode input signal, 8 internal puls and direction CW
+
+//Gate3[0].Chan[0].TimerMode=0	// mu's are set by quadrature encoder
+//Gate3[0].Chan[0].EncCtrl = 7	// Quadrature direction same as jog direction
+
+								// not part of delta tau basic setup
+//Gate3[0].Chan[0].Pfm=0		// not part of delta tau basic setup
+								//[-2,147,483,392..2,147,483,391], default 0
+								//command value for pfm accumulator
+								// f_out = gate.chan.pfm * f_pfmclk / 4,294,483,648
+Gate3[0].Chan[0].CaptCtrl=2		// how flags are detected 2 flat high 10 flag low
+
+//Encoder Conversion Table
+
+EncTable[1].Type = 1
+EncTable[1].pEnc =  Gate3[0].Chan[0].TimerA.a		// delta tau basic setup
+//EncTable[1].pEnc = Acc24E3[0].Chan[0].ServoCapt.a;
+EncTable[1].index1 =  0
+EncTable[1].index2 = 0
+//EncTable[1].index3 =  0
+//EncTable[1].MaxDelta =  0
+EncTable[1].ScaleFactor = 1/256 //81920
+
+//Motor Control
+
+Motor[1].PhaseCtrl=0		// default 0 [0..15], commutation calculation
+Motor[1].ServoCtrl=1		// default 0 [0..15], 1=standard mode
+Motor[1].pDac=Gate3[0].Chan[0].Pfm.a
+Motor[1].pAmpFault=0                  //May be stepper drive specific
+//Motor[1].pAmpEnable=1                  //May be stepper drive specific
+Motor[1].pAmpEnable=Gate3[0].Chan[0].OutCtrl.a
+
+Motor[1].pLimits=0
+//Motor[1].pLimits = Gate3[0].Chan[0].Status.a
+Motor[1].pCaptFlag = Gate3[0].Chan[0].Status.a
+//Motor[1].pCaptFlag = Gate3[0].Chan[0].HomeCapt.a
+Motor[1].pCaptPos = Gate3[0].Chan[0].HomeCapt.a
+// Motor[1].CaptFlagBit=21							//page 419 user manual
+
+Motor[1].pEnc = EncTable[1].a
+//Motor[1].pEnc2 = EncTable[1].a
+                                       
+//Motor Gains
+
+Motor[1].Servo.Kp = 4
+Motor[1].Servo.Ki = 0
+Motor[1].Servo.BreakPosErr = 2.0
+Motor[1].Servo.Kbreak = 0 
+//Motor[1].JogSpeed=10.
+Motor[1].JogSpeed=0.1
+Motor[1].homevel=0.1
+
+Motor[1].JogTa=1000
+Motor[1].JogTs=1000
+
+//Motor[1].BlSize=90
+//Motor[1].BlSize=100
+//Motor[1].BlSlewRate =20
+
+//Motor[1].HomeOffset=20
+//Motor[1].HomeOffset=30
+//Gate3[0].Chan[0].Pfm=10000.
+&1						// Address C.S. 1
+
+#1->22.22A
+//Coord[1].PosRollOver[1]=18000
+//Coord[1].PosRollOver[2]=200
+Coord[1].PosRollOver[0]=360
+
+//&1
+
+Sys.WpKey=$0 // Write-protect Gate3 registers
+ 
