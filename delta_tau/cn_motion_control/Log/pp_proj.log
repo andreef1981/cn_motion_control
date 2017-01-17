@@ -1,0 +1,53 @@
+[PMAC_HARDWARE]
+Gate1AutoDetect=0x0
+Gate2AutoDetect=0x0
+Gate3AutoDetect=0x1F
+CardIOAutoDetect=0x60
+CardDPRAutoDetect=0x0
+[PMAC_CONFIG]
+// *** EOF 
+Successful Configuration using "/var/ftp/usrflash/Project/Configuration/pp_save.cfg"
+// *** EOF 
+Successful Custom Configuration using "/var/ftp/usrflash/Project/Configuration/pp_custom_save.cfg"
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/filter_wheel_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog4.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/repeatability.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+8 Project Symbols were created for gpascii -2 communication
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/repeatability.pmc:7:1: warning: "fast" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc:7:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/repeatability.pmc:8:1: warning: "slow" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc:8:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/repeatability.pmc:9:1: warning: "degrees_per_mu" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc:11:1: warning: this is the location of the previous definition
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+LoadRTUserCode() Delta Time (sec) = 0.038714
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.016804
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.000983
+0 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.138264
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.001384
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.116643
+Project Preprocessing & Load Total Time (sec) = 0.313457
+[PMAC_CONFIG]
+Successful: SaveConfiguration using /var/ftp/usrflash/Project/Configuration/pp_save.cfg
+Successful: SaveCustomConfiguration using /var/ftp/usrflash/Project/Configuration/pp_custom_save.tpl

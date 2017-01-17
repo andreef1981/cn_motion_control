@@ -32,6 +32,8 @@
     <EncryptionOption>Do Not Encrypt Any File</EncryptionOption>
     <CommType>PPmacServer</CommType>
     <Name>cn_motion_control</Name>
+    <ProjectFrimwareVers>2.0.2.14</ProjectFrimwareVers>
+    <IDESignature>mmte5422MMTE</IDESignature>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>

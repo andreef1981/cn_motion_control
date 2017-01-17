@@ -1,0 +1,11 @@
+[PMAC_HARDWARE]
+[PMAC_CONFIG]
+[PMAC_PROJECT]
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/repeatability.pmc:7:1: warning: "fast" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc:7:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/repeatability.pmc:8:1: warning: "slow" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc:8:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/repeatability.pmc:9:1: warning: "degrees_per_mu" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc:11:1: warning: this is the location of the previous definition
+[PMAC_PROJECT]
+[PMAC_CONFIG]
