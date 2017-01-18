@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// General settings for controller cards
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Sys.WpKey=$AAAAAAAA							// enable writing to hardware registers
+
+//Global Clock Settings
+
+Gate3[0].PhaseFreq=9035.69;
+Gate3[0].PhaseClockDiv=0;						// [0..3] only used if PhaseServoDir = 0 (master)
+Gate3[0].ServoClockDiv=3;						// [0..15] only used if PhaseServoDir = 0 (master)
+Gate3[0].AdcAmpStrobe=$fffffc;						// $fffffc is default value
+Gate3[0].PfmClockDiv=7							// [0..15] default 5 -> 100MHz/2^5 = 3.125 MHz
+									// each PFM clock cycle a 24 bit active phase D command value
+									// is added to 24 bit accumulator; 7->781.25kHz
+Gate3[0].EncClockDiv=5							// [0..15] default 5 -> 100MHz/2^5 = 3.125 MHz
+Sys.PhaseOverServoPeriod=1/(Gate3[0].ServoClockDiv+1)			// resulting from input above
+Sys.ServoPeriod=1000*(Gate3[0].ServoClockDiv+1)/Gate3[0].PhaseFreq	// resulting from input above
+
