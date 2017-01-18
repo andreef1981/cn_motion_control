@@ -42,7 +42,7 @@
 4e,0,Motor Wiring,0
 53,0,Brake/Stop Delay Time,0
 54,0,Motor Brake Delay Time,0
-55,0,Motor Brake Activation Velocity,0
+55,0,Brake/Stop Activation Velocity,0
 56,0,Motor Back Emf Constant,1
 6a,0,Commanded Current Ramp,0
 70,0,Output 1 Config,100:44007f:0
@@ -141,7 +141,7 @@ c4,0,Home Velocity Slow,1667
 c5,0,Home Accel/Decel,3400
 c6,0,Home Offset,0
 c7,0,Home Current,56
-ce,0,Trajectory Max Jerk,133600
+ce,0,Trajectory Max Jerk,26720000
 d0,0,Input 9 Config,0
 d1,0,Input 10 Config,0
 d2,0,Input 11 Config,0
@@ -152,7 +152,7 @@ da,0,Regen Peak Power,0
 db,0,Regen Peak Power Time,0
 e1,0,Regen Resistor Model Number,None
 e3,0,Position Loop Gains Multiplier,100
-e8,0,uStep Holding Current,225
+e8,0,uStep Holding Current,100
 e9,0,uStep Run To Hold Time,250
 f6,0,Input 7 Debounce Time,0
 f7,0,Input 8 Debounce Time,0
@@ -170,4 +170,4 @@ ee,0,Stepnet Configuration ,0
 e6,0,Stepper Max Vel Adjustment,20000
 e7,0,Stepper Proportional Gain,25
 ed,0,Hold to Voltage Time,0
-94c,0,basic host cfg,97
+94c,0,basic host cfg,31
