@@ -1,0 +1,3 @@
+motor_configuration_files\gate3_configuration.txt
+motor_configuration_files\Motor_1_Gate30Chan0.txt
+motor_configuration_files\gate3_configuration_end.txt
