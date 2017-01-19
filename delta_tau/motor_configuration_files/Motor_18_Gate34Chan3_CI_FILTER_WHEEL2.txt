@@ -1,0 +1,89 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// MOTOR xxx xxx stage
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Channel PFM Hardware Settings
+
+Gate3[4].Chan[3].PfmWidth=15				//May be stepper drive specific
+							// units of pfm cycles
+Gate3[4].Chan[3].OutputMode=8				// PFM on channel D
+Gate3[4].Chan[3].PackOutData=0
+Gate3[4].Chan[3].OutputPol=0    			//May be stepper drive specific
+Gate3[4].Chan[3].PfmDirPol=0    			//May be stepper drive specific
+Gate3[4].Chan[3].TimerMode=3				// internal puls and direction drive channels timer circuit as counter
+							// leaves encoder counter available for external signal 
+							// default 0 hardware 1/T
+
+Gate3[4].Chan[3].EncCtrl=8				//default 7, how to decode input signal, 8 internal puls and direction CW
+
+//Gate3[4].Chan[3].TimerMode=0				// mu's are set by quadrature encoder
+//Gate3[4].Chan[3].EncCtrl = 7				// Quadrature direction same as jog direction
+
+							// not part of delta tau basic setup
+//Gate3[4].Chan[3].Pfm=0				// not part of delta tau basic setup
+							//[-2,147,483,392..2,147,483,391], default 0
+							//command value for pfm accumulator
+							// f_out = gate.chan.pfm * f_pfmclk / 4,294,483,648
+Gate3[4].Chan[3].CaptCtrl=2				// how flags are detected 2 flat high 10 flag low
+
+//Encoder Conversion Table
+
+EncTable[18].Type = 1
+EncTable[18].pEnc =  Gate3[4].Chan[3].TimerA.a		// delta tau basic setup
+//EncTable[18].pEnc = Acc24E3[0].Chan[3].ServoCapt.a;
+EncTable[18].index1 =  0
+EncTable[18].index2 = 0
+//EncTable[18].index3 =  0
+//EncTable[18].MaxDelta =  0
+EncTable[18].ScaleFactor = 1/256 
+
+//Motor Control
+
+Motor[18].PhaseCtrl=0					// default 0 [0..15], commutation calculation
+Motor[18].ServoCtrl=1					// default 0 [0..15], 1=standard mode
+Motor[18].pDac=Gate3[4].Chan[3].Pfm.a
+Motor[18].pAmpFault=0                  			//May be stepper drive specific
+//Motor[18].pAmpEnable=1                  		//May be stepper drive specific
+Motor[18].pAmpEnable=Gate3[4].Chan[3].OutCtrl.a
+
+Motor[18].pLimits=0
+//Motor[18].pLimits = Gate3[4].Chan[3].Status.a
+Motor[18].pCaptFlag = Gate3[4].Chan[3].Status.a
+//Motor[18].pCaptFlag = Gate3[4].Chan[3].HomeCapt.a
+Motor[18].pCaptPos = Gate3[4].Chan[3].HomeCapt.a
+// Motor[18].CaptFlagBit=21				//page 419 user manual
+
+Motor[18].pEnc = EncTable[18].a
+//Motor[18].pEnc2 = EncTable[18].a
+                                       
+//Motor Gains
+
+Motor[18].Servo.Kp = 4
+Motor[18].Servo.Ki = 0
+Motor[18].Servo.BreakPosErr = 2.0
+Motor[18].Servo.Kbreak = 0 
+//Motor[18].JogSpeed=10.
+Motor[18].JogSpeed=0.1
+Motor[18].homevel=0.1
+
+Motor[18].JogTa=1000
+Motor[18].JogTs=1000
+
+//Motor[18].BlSize=90
+//Motor[18].BlSize=100
+//Motor[18].BlSlewRate =20
+
+//Motor[18].HomeOffset=20
+//Motor[18].HomeOffset=30
+//Gate3[4].Chan[3].Pfm=10000.
+
+&18							// Address C.S. 1
+
+#18->22.22AX
+//Coord[18].PosRollOver[1]=18000
+//Coord[1].PosRollOver[2]=200
+Coord[18].PosRollOver[0]=360
+
+//&1
+
+ 
