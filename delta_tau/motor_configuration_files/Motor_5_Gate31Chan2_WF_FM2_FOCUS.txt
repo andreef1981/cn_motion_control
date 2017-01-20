@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////
-// MOTOR xxx xxx stage
+// MOTOR 5 FM2 linear focus stage
 //////////////////////////////////////////////////////////////
 
 //Channel PFM Hardware Settings
@@ -134,6 +134,11 @@ Motor[5].pAmpFault=0                  				// Amplifier-fault (input) flag pointe
 													// pAmpFault = Gate3[m].Chan[n].Status.a to use
 													// (software reference manual p. 410)
 
+
+Motor[5].AmpFaultLevel=1					// Amplifier-fault level
+													// default=0
+													// needs to be 1 so that high indicates fault
+
 Motor[5].pAmpEnable=Gate3[1].Chan[2].OutCtrl.a		// Amplifier-enable (output) flag pointer
 													// .pAmpEnable=Gate3[1].Chan[2].OutCtrl.a use 
 													// .pAmpEnable=1 enable always
@@ -169,7 +174,7 @@ Motor[5].Servo.MaxPosErr= 10000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[5].JogSpeed=10					// Jog command velocity magnitude
+Motor[5].JogSpeed=1						// Jog command velocity magnitude
 										// mu / millisecond
 Motor[5].HomeVel=0.1
 

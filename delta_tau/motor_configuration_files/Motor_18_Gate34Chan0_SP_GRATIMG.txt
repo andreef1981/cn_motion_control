@@ -134,6 +134,11 @@ Motor[18].pAmpFault=0                  				// Amplifier-fault (input) flag point
 													// pAmpFault = Gate3[m].Chan[n].Status.a to use
 													// (software reference manual p. 410)
 
+
+Motor[18].AmpFaultLevel=1					// Amplifier-fault level
+													// default=0
+													// needs to be 1 so that high indicates fault
+
 Motor[18].pAmpEnable=Gate3[4].Chan[3].OutCtrl.a		// Amplifier-enable (output) flag pointer
 													// .pAmpEnable=Gate3[4].Chan[3].OutCtrl.a use 
 													// .pAmpEnable=1 enable always
