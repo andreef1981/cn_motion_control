@@ -1,89 +1,209 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 // MOTOR xxx xxx stage
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 
 //Channel PFM Hardware Settings
 
-Gate3[0].Chan[1].PfmWidth=15				//May be stepper drive specific
-							// units of pfm cycles
-Gate3[0].Chan[1].OutputMode=8				// PFM on channel D
-Gate3[0].Chan[1].PackOutData=0
-Gate3[0].Chan[1].OutputPol=0    			//May be stepper drive specific
-Gate3[0].Chan[1].PfmDirPol=0    			//May be stepper drive specific
-Gate3[0].Chan[1].TimerMode=3				// internal puls and direction drive channels timer circuit as counter
-							// leaves encoder counter available for external signal 
-							// default 0 hardware 1/T
+Gate3[0].Chan[1].PfmWidth=15				// Channel pulse-frequency-modulation output
+											// pulse width (software reference manual p. 322)
+											// units of pfm cycles; default 15
+											
+Gate3[0].Chan[1].OutputMode=8				// Servo IC channel output mode select; default=0
+											// .outputMode=8 PFM on channel D
+											// (software reference manual p. 314)
+											
+Gate3[0].Chan[1].PackOutData=0				// IC channel PWM/DAC “pack” enable; default=1
+											// .PackOutData=0 no packaging all in seperate 
+											// registers (software reference manual p. 317)
+											
+Gate3[0].Chan[1].OutputPol=0    			// IC channel phase output inversion control
+											// default=0, range 0to3
+											// (software reference manual p. 315)
+											
+Gate3[0].Chan[1].PfmDirPol=0    			// IC channel PFM direction polarity control
+											// default=0 range 0ro1
+											// (software reference manual p. 320)
+											
+Gate3[0].Chan[1].TimerMode=3				// IC Channel encoder timer control; default=0
+											// .TimerMode=0 mu's are set by quadrature encoder
+											// .TimerMode=3 internal puls and direction drive
+											// channels timer circuit as counter leaves encoder
+											// counter available for external signal 
+											// (software reference manual p. 331)
 
-Gate3[0].Chan[1].EncCtrl=8				//default 7, how to decode input signal, 8 internal puls and direction CW
-
-//Gate3[0].Chan[1].TimerMode=0				// mu's are set by quadrature encoder
-//Gate3[0].Chan[1].EncCtrl = 7				// Quadrature direction same as jog direction
-
-							// not part of delta tau basic setup
-//Gate3[0].Chan[1].Pfm=0				// not part of delta tau basic setup
-							//[-2,147,483,392..2,147,483,391], default 0
-							//command value for pfm accumulator
-							// f_out = gate.chan.pfm * f_pfmclk / 4,294,483,648
-Gate3[0].Chan[1].CaptCtrl=2				// how flags are detected 2 flat high 10 flag low
+Gate3[0].Chan[1].EncCtrl=8					// IC channel encoder decode control; default 7; 
+											// range 0to15, how to decode input signal,
+											//.EncCtrl=7 mu's are set by quadrature encoder 
+											// (x4 quadrature decode CW)
+											// .EncCtrl=7 mu's are set by quadrature encoder (x4
+											// quadrature decode CCW
+											// .EncCtrl=8 internal puls and direction CW
+											// (software reference manual p. 306)
+	
+Gate3[0].Chan[1].CaptCtrl=2					// IC Channel position-capture control, default=1
+											// range 0to15
+											// 1 capture on index high
+											// 2 capture on flag high
+											// 10 capture on flag low
+											// (software reference manual p. 304)
 
 //Encoder Conversion Table
 
-EncTable[2].Type = 1
-EncTable[2].pEnc =  Gate3[0].Chan[1].TimerA.a		// delta tau basic setup
-//EncTable[2].pEnc = Acc24E3[0].Chan[1].ServoCapt.a;
-EncTable[2].index1 =  0
-EncTable[2].index2 = 0
-//EncTable[2].index3 =  0
-//EncTable[2].MaxDelta =  0
-EncTable[2].ScaleFactor = 1/256 
+EncTable[2].Type = 1									// Encoder table entry conversion method
+														// default=auto based on hardware
+														// range 0to15
+														// .Type=1 Single-word (32-bit) read
+														// (software reference manual p. 209)
+
+EncTable[2].pEnc =  Gate3[0].Chan[1].TimerA.a			// Encoder table entry primary source address
+														// The typical addresses used depend on the 
+														// conversion type. For type 1
+														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
+														// PMAC3-style ASIC channel’s encoder counter
+														// value with hardware interpolation from either
+														// timer data (1/T) used with encoder
+														// .pEnc =  Gate3[0].Chan[1].TimerA.a for internal
+														// feedback loop with PFM signal no encoder
+														// (software reference manual p. 199)
+
+EncTable[2].index1 = 0									// Encoder table entry first conversion factor
+														// type specific. For type 1 left shift of 32 bit
+														// register
+														// (software reference manual p. 185)
+
+EncTable[2].index2 = 0									// Encoder table entry first conversion factor
+														// type specific. For type 1 right shift of 32 bit
+														// register
+														// (software reference manual p. 188)
+
+EncTable[2].index3 = 0									// Encoder table entry first conversion factor
+														// type specific. For type 1 derivative
+														// (software reference manual p. 191)
+
+EncTable[2].index4 = 0									// Encoder table entry first conversion factor
+														// type specific. For type 1 integrations if index2
+														// > 32
+														// (software reference manual p. 193)
+
+EncTable[2].MaxDelta = 0								// Encoder table entry maximum legal output change
+														// type specific. For type 1 if derivative limiting
+														// is enabled. .MaxDelta=0 disabled
+														// (software reference manual p. 197)
+
+EncTable[2].ScaleFactor = 1/256							// Encoder table entry output scale factor
+														// type 1: (single-word read): After the two shifting
+														// operations specified by index2 and index1, the LSB 
+														// of the actual data is typically in Bit (32 minus 
+														// number of bits) of the 32-bit word. Since most users
+														// want the output to be in units of LSBs of actual
+														// data, this intermediate result must be multiplied
+														// by 2-(32-[# of bits]). For example, if there were
+														// 20 bits of real data, ScaleFactor should be set to
+														// 2-(32-20), or 2-12, which is 0.00244140625.
+														// (software reference manual p. 205)
+														// To get the output of the conversion table in units
+														// of encodre counts (most common),
+														// EncTable[n].ScaleFactor should be set to 1/256 with 
+														// encoder and 1.0 without encoder
+														// (ACC24E reference manual p. 36 and 114)
 
 //Motor Control
 
-Motor[2].PhaseCtrl=0					// default 0 [0..15], commutation calculation
-Motor[2].ServoCtrl=1					// default 0 [0..15], 1=standard mode
-Motor[2].pDac=Gate3[0].Chan[1].Pfm.a
-Motor[2].pAmpFault=0                  			//May be stepper drive specific
-//Motor[2].pAmpEnable=1                  		//May be stepper drive specific
-Motor[2].pAmpEnable=Gate3[0].Chan[1].OutCtrl.a
+Motor[2].Ctrl=Sys.ServoCtrl							// Pointer to selected servo loop algorithm
+													// default .Ctrl=Sys.ServoCtrl standard PID
+													// Sys.PidCtrl very simple but fast
+													// Sys.AdaptiveCtrl adaptive PID
+													// Sys.PosCtrl just positon output no PID
+													// (software reference manual p. 370)
 
-Motor[2].pLimits=0
-//Motor[2].pLimits = Gate3[0].Chan[1].Status.a
-Motor[2].pCaptFlag = Gate3[0].Chan[1].Status.a
-//Motor[2].pCaptFlag = Gate3[0].Chan[1].HomeCapt.a
-Motor[2].pCaptPos = Gate3[0].Chan[1].HomeCapt.a
-// Motor[2].CaptFlagBit=21				//page 419 user manual
+Motor[2].PhaseCtrl=0								// Control flag to activate commutation tasks,
+													// default=0 range 0to15
+													// .PhaseCtrl=0 no phase commutation for steppers
+													// (software reference manual p. 422)
 
-Motor[2].pEnc = EncTable[2].a
-//Motor[2].pEnc2 = EncTable[2].a
-                                       
-//Motor Gains
+Motor[2].ServoCtrl=1								// Control flag to activate servo tasks
+													// default=0 range 0to15
+													// .ServoCtrl=1 standard servo mode
+													// (software reference manual p. 447)
 
-Motor[2].Servo.Kp = 4
-Motor[2].Servo.Ki = 0
-Motor[2].Servo.BreakPosErr = 2.0
-Motor[2].Servo.Kbreak = 0 
-//Motor[2].JogSpeed=10.
-Motor[2].JogSpeed=0.1
-Motor[2].homevel=0.1
+Motor[2].pDac=Gate3[0].Chan[1].Pfm.a				// Command output pointer
+													// (software reference manual p. 417)
 
-Motor[2].JogTa=1000
-Motor[2].JogTs=1000
+Motor[2].pAmpFault=0                  				// Amplifier-fault (input) flag pointer
+													// default=0 disabled
+													// pAmpFault = Gate3[m].Chan[n].Status.a to use
+													// (software reference manual p. 410)
 
-//Motor[2].BlSize=90
-//Motor[2].BlSize=100
-//Motor[2].BlSlewRate =20
+Motor[2].pAmpEnable=Gate3[0].Chan[1].OutCtrl.a		// Amplifier-enable (output) flag pointer
+													// .pAmpEnable=Gate3[0].Chan[1].OutCtrl.a use 
+													// .pAmpEnable=1 enable always
+													// (software reference manual p. 409)
 
-//Motor[2].HomeOffset=20
-//Motor[2].HomeOffset=30
-//Gate3[0].Chan[1].Pfm=10000.
+Motor[2].pLimits = Gate3[0].Chan[1].Status.a		// Overtravel limit (input) flag pointer
+													// .pLimits = Gate3[0].Chan[1].Status.a use flags
+													// .pLimits = 0 disable flags
+													// (software reference manual p. 433)
 
-&2							// Address C.S. 1
+Motor[2].pCaptFlag = Gate3[0].Chan[1].Status.a		// Encoder capture trigger (input) flag pointer
+													// (software reference manual p. 415)
 
-#2->22.22AX
-//Coord[2].PosRollOver[1]=18000
-//Coord[1].PosRollOver[2]=200
-Coord[2].PosRollOver[0]=360
+Motor[2].pCaptPos = Gate3[0].Chan[1].HomeCapt.a		// Encoder captured position pointer
+													// (software reference manual p. 415)
 
-//&1
+Motor[2].pEnc = EncTable[2].a						// Outer (position) loop position feedback pointer
+													// (software reference manual p. 418)
 
- 
+Motor[2].pEnc2 = EncTable[2].a						// Inner (velocity) loop position feedback pointer
+													// (software reference manual p. 418)
+													              
+// Motor PID servo setup
+
+Motor[2].Servo.Kp = 4					// PID proportiona term		
+Motor[2].Servo.Ki = 0.001				// PID integral term
+Motor[2].Servo.Kvfb= 40					// PID velocity feedback (“derivative”) gain term
+
+Motor[2].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
+Motor[2].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
+
+Motor[x].Servo.MaxPosErr= 10000.0		// Servo-error input magnitude limit
+
+// Motor Speeds
+
+Motor[2].JogSpeed=10					// Jog command velocity magnitude
+										// mu / millisecond
+Motor[2].HomeVel=0.1
+
+Motor[2].JogTa=-200						// Jog accel/decel time or inverse rate
+										// > 0 mu / millisecond
+										// < 0 mu / millisecond^2
+										// -200 -> 0.005 mu/ms^2 -> 5m/s^2 or 0.5g
+
+Motor[2].JogTs=-1000					// Jog accel/decel S-curve time or inverse jerk rate
+										// > 0 mu / millisecond
+										// < 0 mu / millisecond^3
+										// -50 -> 0.02m/s^3
+										// -12500 -> 0.00008 mu/ms^3 -> 80m/s^3 -> 80g/s
+
+Motor[2].BlSize=0						// Backlash size
+
+Motor[2].BlSlewRate =0.0				// Backlash take-up rate
+
+Motor[2].HomeOffset=0.0					// Position referencing offset	
+
+
+// Coordinate system
+
+&2									// Address C.S. 1
+
+#2->22.22X							// Assign motor to CS and define scale
+									// X, Y, Z,.... linear
+									// A, B, C, AA, BB, CC .... rotary
+
+//Coord[2].PosRollOver[0]=18000		// Axis position rollover range for rotary only
+									// in axis units!!!! default=0.0 disabled
+									// .PosRollOver[0] for axis A
+									// .PosRollOver[1] for axis B ...
+									// 360 -> shortest path in abs move
+									// -360 -> use commanded direction in abs move
+									
+									
