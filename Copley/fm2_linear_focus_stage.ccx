@@ -18,8 +18,8 @@
 23,0,Time at Boost Current,1000
 24,0,Desired State,33
 26,0,Analog Input Deadband,0
-27,0,Velocity Vp,14914
-28,0,Velocity Vi,3314
+27,0,Velocity Vp,7457
+28,0,Velocity Vi,1657
 2f,0,Programmed Velocity Command,0
 31,0,Velocity Gains Scalor,0
 36,0,Velocity Loop Acceleration Limit,1332
@@ -86,16 +86,16 @@ ae,0,Current Loop Offset,0
 af,0,Amp Options Register,2
 b1,0,Increment Rate,0
 b2,0,Commutation Mode,0
-ba,0,Position Following Error Limit,2000
-bb,0,Position Following Warning Limit,1000
-bc,0,Position Tracking Window,500
+ba,0,Position Following Error Limit,4000
+bb,0,Position Following Warning Limit,2000
+bc,0,Position Tracking Window,1000
 bd,0,Position Tracking Window Time,10
 c8,0,Trajectory Profile Mode,256
 ca,0,Trajectory Position Command,0
-cb,0,Trajectory Max Velocity,83333
-cc,0,Trajectory Max Accel,33400
-cd,0,Trajectory Max Decel,33400
-cf,0,Trajectory Abort Decel,33400
+cb,0,Trajectory Max Velocity,166667
+cc,0,Trajectory Max Accel,66800
+cd,0,Trajectory Max Decel,66800
+cf,0,Trajectory Abort Decel,66800
 f0,0,Input 1 Debounce Time,0
 f1,0,Input 2 Debounce Time,0
 f2,0,Input 3 Debounce Time,0
@@ -117,7 +117,7 @@ e5,0,Phase Init Time,400
 58,0,Gear Ratio,65537
 b6,0,PWM Deadband,1000
 ea,0,Detent Correction Gain,0
-57,0,Micro Steps Per Rev.,2000
+57,0,Micro Steps Per Rev.,4000
 59,0,Hall Velocity Shift,0
 5a,0,Multi Mode Port Configuration,0
 5b,0,Position Encoder Resolution,0
@@ -136,12 +136,12 @@ b9,0,Negative Software Limit,0
 bf,0,Home Current Delay Time,250
 c1,0,Node ID configuration,2048
 c2,0,Home Configuration,0
-c3,0,Home Velocity Fast,8333
-c4,0,Home Velocity Slow,1667
-c5,0,Home Accel/Decel,3400
+c3,0,Home Velocity Fast,16667
+c4,0,Home Velocity Slow,3333
+c5,0,Home Accel/Decel,6800
 c6,0,Home Offset,0
 c7,0,Home Current,56
-ce,0,Trajectory Max Jerk,26720000
+ce,0,Trajectory Max Jerk,267200
 d0,0,Input 9 Config,0
 d1,0,Input 10 Config,0
 d2,0,Input 11 Config,0
@@ -167,7 +167,7 @@ fb,0,Input 12 Debounce Time,0
 119,0,CANopen halt option code,1
 11a,0,Amp Scaling Config,-1
 ee,0,Stepnet Configuration ,0
-e6,0,Stepper Max Vel Adjustment,20000
+e6,0,Stepper Max Vel Adjustment,40000
 e7,0,Stepper Proportional Gain,25
 ed,0,Hold to Voltage Time,0
-94c,0,basic host cfg,31
+94c,0,basic host cfg,16
