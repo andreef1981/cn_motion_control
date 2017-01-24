@@ -92,10 +92,10 @@ bc,0,Position Tracking Window,1000
 bd,0,Position Tracking Window Time,10
 c8,0,Trajectory Profile Mode,256
 ca,0,Trajectory Position Command,0
-cb,0,Trajectory Max Velocity,166667
-cc,0,Trajectory Max Accel,66800
-cd,0,Trajectory Max Decel,66800
-cf,0,Trajectory Abort Decel,66800
+cb,0,Trajectory Max Velocity,500000
+cc,0,Trajectory Max Accel,160000
+cd,0,Trajectory Max Decel,160000
+cf,0,Trajectory Abort Decel,160000
 f0,0,Input 1 Debounce Time,0
 f1,0,Input 2 Debounce Time,0
 f2,0,Input 3 Debounce Time,0
@@ -170,4 +170,4 @@ ee,0,Stepnet Configuration ,0
 e6,0,Stepper Max Vel Adjustment,40000
 e7,0,Stepper Proportional Gain,25
 ed,0,Hold to Voltage Time,0
-94c,0,basic host cfg,16
+94c,0,basic host cfg,44
