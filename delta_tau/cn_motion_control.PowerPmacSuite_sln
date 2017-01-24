@@ -1,19 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # PowerPmacSuite Solution File, Format Version 10.00
-Project("{06B4A5CA-70C8-424B-9313-AD94C8F8E260}") = "cn_motion_control(166.122.170.87:PowerPC,460EX)", "cn_motion_control\cn_motion_control.ppproj", "{6706B5B5-8AA2-409E-BCA2-0D3E4B8D39FD}"
-EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6706B5B5-8AA2-409E-BCA2-0D3E4B8D39FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6706B5B5-8AA2-409E-BCA2-0D3E4B8D39FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6706B5B5-8AA2-409E-BCA2-0D3E4B8D39FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6706B5B5-8AA2-409E-BCA2-0D3E4B8D39FD}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

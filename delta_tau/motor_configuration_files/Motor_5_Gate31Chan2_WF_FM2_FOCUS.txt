@@ -24,7 +24,7 @@ Gate3[1].Chan[2].PfmDirPol=0    			// IC channel PFM direction polarity control
 											// default=0 range 0ro1
 											// (software reference manual p. 320)
 											
-Gate3[1].Chan[2].TimerMode=3				// IC Channel encoder timer control; default=0
+Gate3[1].Chan[2].TimerMode=0				// IC Channel encoder timer control; default=0
 											// .TimerMode=0 mu's are set by quadrature encoder
 											// .TimerMode=3 internal puls and direction drive
 											// channels timer circuit as counter leaves encoder
@@ -48,7 +48,7 @@ Gate3[1].Chan[2].CaptCtrl=2					// IC Channel position-capture control, default=
 											// 15: Capture on (Index high AND Flag high)
 											// (software reference manual p. 304)
 
-Gate3[1].Chan[2].CaptFlagSel=0	
+//Gate3[1].Chan[2].CaptFlagSel=0	
 
 //Encoder Conversion Table
 
@@ -58,7 +58,7 @@ EncTable[5].Type = 1									// Encoder table entry conversion method
 														// .Type=1 Single-word (32-bit) read
 														// (software reference manual p. 209)
 
-EncTable[5].pEnc =Gate3[1].Chan[2].TimerA.a			// Encoder table entry primary source address
+EncTable[5].pEnc =Gate3[1].Chan[2].ServoCapt.a			// Encoder table entry primary source address
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
@@ -165,15 +165,15 @@ Motor[5].pEnc2 = EncTable[5].a						// Inner (velocity) loop position feedback p
 													// (software reference manual p. 418)
 													
 
-Motor[5].pEncStatus = Gate3[1].Chan[2].Status.a
+//Motor[5].pEncStatus = Gate3[1].Chan[2].Status.a
 													// break controll see user manula p. 383
 													              
 // Motor PID servo setup
 
-Motor[5].Servo.Kp = 40//0.14					// PID proportiona term		
-Motor[5].Servo.Ki = 0.001//0.0001				// PID integral term
-Motor[5].Servo.Kvfb= 0 //6					// PID velocity feedback (“derivative”) gain term
-Motor[5].Servo.Kvff= 40									// =0 see user manual p. 286
+Motor[5].Servo.Kp = 5.25					// PID proportiona term		
+Motor[5].Servo.Ki = 0.0				// PID integral term
+Motor[5].Servo.Kvfb= 100					// PID velocity feedback (“derivative”) gain term
+Motor[5].Servo.Kvff= 0									// =0 see user manual p. 286
 
 Motor[5].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[5].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
@@ -182,11 +182,11 @@ Motor[5].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[5].JogSpeed=20						// Jog command velocity magnitude
+Motor[5].JogSpeed=50						// Jog command velocity magnitude
 										// mu / millisecond
 Motor[5].HomeVel=-10
 
-Motor[5].JogTa=-10						// Jog accel/decel time or inverse rate
+Motor[5].JogTa=-1						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
 										// < 0 mu / millisecond^2
 										// -200 -> 0.005 mu/ms^2 -> 5m/s^2 or 0.5g
@@ -200,13 +200,11 @@ Motor[5].JogTs=-10000					// Jog accel/decel S-curve time or inverse jerk rate
 Motor[5].AbortTa=-2						// deceleration for abort (hit limit switch
 Motor[5].AbortTs=0									
 
-Motor[5].BlSize=0.0					// Backlash size
+//Motor[5].BlSize=0.0					// Backlash size
 
-Motor[5].BlSlewRate = 0				// Backlash take-up rate
+//Motor[5].BlHysteresis =0.0				// Backlash take-up rate
 
-Motor[5].BlHysteresis =0.0				// Backlash take-up rate
-
-Motor[5].HomeOffset=0.0					// Position referencing offset	
+Motor[5].HomeOffset=13280.0					// Position referencing offset	
 
 
 // Coordinate system
