@@ -2,8 +2,13 @@
 // The following Sample PROGRAM is the standard template for creating Motion Programs.
 // Sample PROGRAM
 /****************************************/
-// open prog 1
+// open prog 2
 // --------------------User Code Goes Here------------------------
+open prog 2
+
+Motor[4].pLimits=0;
+home 4;
+Motor[4].pLimits=Gate3[1].Chan[1].Status.a;
 close
 /****************************************/
 
