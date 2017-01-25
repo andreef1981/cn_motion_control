@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////
-// MOTOR xxx xxx stage
+// MOTOR 4 FM1B rotary beam steering mirror stage
 //////////////////////////////////////////////////////////////
 
 //Channel PFM Hardware Settings
@@ -24,16 +24,16 @@ Gate3[1].Chan[1].PfmDirPol=0    			// IC channel PFM direction polarity control
 											// default=0 range 0ro1
 											// (software reference manual p. 320)
 											
-Gate3[1].Chan[1].TimerMode=3				// IC Channel encoder timer control; default=0
+Gate3[1].Chan[1].TimerMode=0				// IC Channel encoder timer control; default=0
 											// .TimerMode=0 mu's are set by quadrature encoder
 											// .TimerMode=3 internal puls and direction drive
 											// channels timer circuit as counter leaves encoder
 											// counter available for external signal 
 											// (software reference manual p. 331)
 
-Gate3[1].Chan[1].EncCtrl=8					// IC channel encoder decode control; default 7; 
+Gate3[1].Chan[1].EncCtrl=7				// IC channel encoder decode control; default 7; 
 											// range 0to15, how to decode input signal,
-											//.EncCtrl=7 mu's are set by quadrature encoder 
+											//.EncCtrl=3 mu's are set by quadrature encoder 
 											// (x4 quadrature decode CW)
 											// .EncCtrl=7 mu's are set by quadrature encoder (x4
 											// quadrature decode CCW
@@ -45,7 +45,10 @@ Gate3[1].Chan[1].CaptCtrl=2					// IC Channel position-capture control, default=
 											// 1 capture on index high
 											// 2 capture on flag high
 											// 10 capture on flag low
+											// 15: Capture on (Index high AND Flag high)
 											// (software reference manual p. 304)
+
+//Gate3[1].Chan[1].CaptFlagSel=0	
 
 //Encoder Conversion Table
 
@@ -55,10 +58,10 @@ EncTable[4].Type = 1									// Encoder table entry conversion method
 														// .Type=1 Single-word (32-bit) read
 														// (software reference manual p. 209)
 
-EncTable[4].pEnc =  Gate3[1].Chan[1].TimerA.a			// Encoder table entry primary source address
+EncTable[4].pEnc =Gate3[1].Chan[1].ServoCapt.a			// Encoder table entry primary source address
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
-														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
+														// .pEnc=Gate3[2].Chan[1].ServoCapt.a For a
 														// PMAC3-style ASIC channel’s encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
@@ -129,13 +132,13 @@ Motor[4].ServoCtrl=1								// Control flag to activate servo tasks
 Motor[4].pDac=Gate3[1].Chan[1].Pfm.a				// Command output pointer
 													// (software reference manual p. 417)
 
-Motor[4].pAmpFault=0                  				// Amplifier-fault (input) flag pointer
+Motor[4].pAmpFault=Gate3[1].Chan[1].Status.a		// Amplifier-fault (input) flag pointer
 													// default=0 disabled
 													// pAmpFault = Gate3[m].Chan[n].Status.a to use
 													// (software reference manual p. 410)
 
 
-Motor[4].AmpFaultLevel=1					// Amplifier-fault level
+Motor[4].AmpFaultLevel=1							// Amplifier-fault level
 													// default=0
 													// needs to be 1 so that high indicates fault
 
@@ -160,51 +163,69 @@ Motor[4].pEnc = EncTable[4].a						// Outer (position) loop position feedback po
 
 Motor[4].pEnc2 = EncTable[4].a						// Inner (velocity) loop position feedback pointer
 													// (software reference manual p. 418)
+													
+
+//Motor[4].pEncStatus = Gate3[1].Chan[1].Status.a
+													// break controll see user manula p. 383
 													              
 // Motor PID servo setup
 
-Motor[4].Servo.Kp = 4					// PID proportiona term		
-Motor[4].Servo.Ki = 0.001				// PID integral term
-Motor[4].Servo.Kvfb= 40					// PID velocity feedback (“derivative”) gain term
+Motor[4].Servo.Kp = 5.25					// PID proportiona term		
+Motor[4].Servo.Ki = 0.0				// PID integral term
+Motor[4].Servo.Kvfb= 100					// PID velocity feedback (“derivative”) gain term
+Motor[4].Servo.Kvff= 0									// =0 see user manual p. 286
 
-Motor[4].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
+Motor[4].Servo.BreakPosErr = 1.0		// Servo gain-break error size (deadband)
 Motor[4].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
-Motor[4].Servo.MaxPosErr= 10000.0		// Servo-error input magnitude limit
+Motor[4].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[4].JogSpeed=10					// Jog command velocity magnitude
+Motor[4].JogSpeed=10						// Jog command velocity magnitude
 										// mu / millisecond
-Motor[4].HomeVel=0.1
+										
+Motor[4].MaxSpeed=10
 
-Motor[4].JogTa=-200						// Jog accel/decel time or inverse rate
+Motor[4].FatalFeLimit=30000
+
+Motor[4].HomeVel=-10
+
+Motor[4].JogTa=-1						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
 										// < 0 mu / millisecond^2
 										// -200 -> 0.005 mu/ms^2 -> 5m/s^2 or 0.5g
 
-Motor[4].JogTs=-1000					// Jog accel/decel S-curve time or inverse jerk rate
+Motor[4].JogTs=-10000					// Jog accel/decel S-curve time or inverse jerk rate
 										// > 0 mu / millisecond
 										// < 0 mu / millisecond^3
 										// -50 -> 0.02m/s^3
 										// -12500 -> 0.00008 mu/ms^3 -> 80m/s^3 -> 80g/s
+										
+Motor[4].AbortTa=-2						// deceleration for abort (hit limit switch
+Motor[4].AbortTs=0									
 
-Motor[4].BlSize=0						// Backlash size
+//Motor[4].BlSize=0.0					// Backlash size
 
-Motor[4].BlSlewRate =0.0				// Backlash take-up rate
+//Motor[4].BlHysteresis =0.0				// Backlash take-up rate
 
-Motor[4].HomeOffset=0.0					// Position referencing offset	
-
+Motor[4].HomeOffset=1152.0					// Position referencing offset	
+Motor[4].InPosBand = 1.0
 
 // Coordinate system
 
 &4									// Address C.S. 1
 
-#4->22.22X							// Assign motor to CS and define scale
+#4->80.8022802164X					//
+									// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
+									// stage does 240 urad per revolution Schneider encoder
+									// gives 4000 steps per revolution so the final Cs
+									// ratio should be 1 /(240/(4000)) = 16.66666 mu / urad
+									// or 80.8022802164 mu / arcsec
 
-//Coord[4].PosRollOver[0]=18000		// Axis position rollover range for rotary only
+//Coord[5].PosRollOver[0]=18000		// Axis position rollover range for rotary only
 									// in axis units!!!! default=0.0 disabled
 									// .PosRollOver[0] for axis A
 									// .PosRollOver[1] for axis B ...
