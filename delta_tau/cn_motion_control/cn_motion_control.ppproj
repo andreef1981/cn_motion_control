@@ -1,4 +1,4 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -33,7 +33,7 @@
     <CommType>PPmacServer</CommType>
     <Name>cn_motion_control</Name>
     <ProjectFrimwareVers>2.0.2.14</ProjectFrimwareVers>
-    <IDESignature>mmte5422MMTE</IDESignature>
+    <IDESignature>asdk1341ASDK</IDESignature>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -69,11 +69,16 @@
     <Content Include="C Language\Background Programs\capp1\capp1.h" />
     <Content Include="C Language\CPLCs\rticplc\rticplc.c" />
     <Content Include="C Language\CPLCs\bgcplc00\bgcplc.c" />
+    <Content Include="PMAC Script Language\Motion Programs\prog5.pmc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\Motion Programs\prog4.pmc">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="PMAC Script Language\Global Includes\global definitions.pmh" />
     <None Include="PMAC Script Language\Libraries\subprog1.pmc" />
-    <None Include="PMAC Script Language\Motion Programs\prog1.pmc" />
     <Folder Include="C Language\" />
     <Folder Include="C Language\Background Programs\" />
     <Folder Include="C Language\Background Programs\capp1\" />

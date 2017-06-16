@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////
-// MOTOR xxx xxx stage
+// MOTOR Pickoff linear stage
 //////////////////////////////////////////////////////////////
 
 //Channel PFM Hardware Settings
@@ -20,7 +20,7 @@ Gate3[2].Chan[2].OutputPol=0    			// IC channel phase output inversion control
 											// default=0, range 0to3
 											// (software reference manual p. 315)
 											
-Gate3[2].Chan[2].PfmDirPol=0    			// IC channel PFM direction polarity control
+Gate3[2].Chan[2].PfmDirPol=1    			// IC channel PFM direction polarity control
 											// default=0 range 0ro1
 											// (software reference manual p. 320)
 											
@@ -163,19 +163,23 @@ Motor[9].pEnc2 = EncTable[9].a						// Inner (velocity) loop position feedback p
 													              
 // Motor PID servo setup
 
-Motor[9].Servo.Kp = 4					// PID proportiona term		
-Motor[9].Servo.Ki = 0.001				// PID integral term
-Motor[9].Servo.Kvfb= 40					// PID velocity feedback (“derivative”) gain term
+Motor[9].Servo.Kp = 5.25					// PID proportiona term		
+Motor[9].Servo.Ki = 0.0				// PID integral term
+Motor[9].Servo.Kvfb= 100					// PID velocity feedback (“derivative”) gain term
 
 Motor[9].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[9].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
-Motor[9].Servo.MaxPosErr= 10000.0		// Servo-error input magnitude limit
+Motor[9].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[9].JogSpeed=10					// Jog command velocity magnitude
+Motor[9].JogSpeed=30					// Jog command velocity magnitude
 										// mu / millisecond
+										
+Motor[9].MaxSpeed=30
+
+
 Motor[9].HomeVel=0.1
 
 Motor[9].JogTa=-200						// Jog accel/decel time or inverse rate
@@ -200,7 +204,7 @@ Motor[9].HomeOffset=0.0					// Position referencing offset
 
 &9									// Address C.S. 1
 
-#9->22.22X							// Assign motor to CS and define scale
+#9->1X							// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 
