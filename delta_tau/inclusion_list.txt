@@ -1,3 +1,3 @@
 motor_configuration_files\gate3_configuration.txt
-motor_configuration_files\Motor_9_Gate32Chan2_SP_PICKOFF.txt
+motor_configuration_files\Motor_6_Gate31Chan3_WF_LAMP.txt
 motor_configuration_files\gate3_configuration_end.txt

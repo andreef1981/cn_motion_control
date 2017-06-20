@@ -78,39 +78,39 @@ Sys.ServoPeriod=1000*(Gate3[4].ServoClockDiv+1)/Gate3[4].PhaseFreq	// resulting 
 
 
 //////////////////////////////////////////////////////////////
-// MOTOR Pickoff linear stage
+// MOTOR 6 linear lamp stage
 //////////////////////////////////////////////////////////////
 
 //Channel PFM Hardware Settings
 
-Gate3[2].Chan[2].PfmWidth=15				// Channel pulse-frequency-modulation output
+Gate3[1].Chan[3].PfmWidth=15				// Channel pulse-frequency-modulation output
 											// pulse width (software reference manual p. 322)
 											// units of pfm cycles; default 15
 											
-Gate3[2].Chan[2].OutputMode=8				// Servo IC channel output mode select; default=0
+Gate3[1].Chan[3].OutputMode=8				// Servo IC channel output mode select; default=0
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[2].Chan[2].PackOutData=0				// IC channel PWM/DAC “pack” enable; default=1
+Gate3[1].Chan[3].PackOutData=0				// IC channel PWM/DAC “pack” enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
-Gate3[2].Chan[2].OutputPol=0    			// IC channel phase output inversion control
+Gate3[1].Chan[3].OutputPol=0    			// IC channel phase output inversion control
 											// default=0, range 0to3
 											// (software reference manual p. 315)
 											
-Gate3[2].Chan[2].PfmDirPol=0    			// IC channel PFM direction polarity control
+Gate3[1].Chan[3].PfmDirPol=0    			// IC channel PFM direction polarity control
 											// default=0 range 0ro1
 											// (software reference manual p. 320)
 											
-Gate3[2].Chan[2].TimerMode=3				// IC Channel encoder timer control; default=0
+Gate3[1].Chan[3].TimerMode=3				// IC Channel encoder timer control; default=0
 											// .TimerMode=0 mu's are set by quadrature encoder
 											// .TimerMode=3 internal puls and direction drive
 											// channels timer circuit as counter leaves encoder
 											// counter available for external signal 
 											// (software reference manual p. 331)
 
-Gate3[2].Chan[2].EncCtrl=8					// IC channel encoder decode control; default 7; 
+Gate3[1].Chan[3].EncCtrl=8					// IC channel encoder decode control; default 7; 
 											// range 0to15, how to decode input signal,
 											//.EncCtrl=7 mu's are set by quadrature encoder 
 											// (x4 quadrature decode CW)
@@ -119,7 +119,7 @@ Gate3[2].Chan[2].EncCtrl=8					// IC channel encoder decode control; default 7;
 											// .EncCtrl=8 internal puls and direction CW
 											// (software reference manual p. 306)
 	
-Gate3[2].Chan[2].CaptCtrl=2					// IC Channel position-capture control, default=1
+Gate3[1].Chan[3].CaptCtrl=2				// IC Channel position-capture control, default=1
 											// range 0to15
 											// 1 capture on index high
 											// 2 capture on flag high
@@ -128,48 +128,48 @@ Gate3[2].Chan[2].CaptCtrl=2					// IC Channel position-capture control, default=
 
 //Encoder Conversion Table
 
-EncTable[9].Type = 1									// Encoder table entry conversion method
+EncTable[6].Type = 1									// Encoder table entry conversion method
 														// default=auto based on hardware
 														// range 0to15
 														// .Type=1 Single-word (32-bit) read
 														// (software reference manual p. 209)
 
-EncTable[9].pEnc =  Gate3[2].Chan[2].TimerA.a			// Encoder table entry primary source address
+EncTable[6].pEnc =  Gate3[1].Chan[3].TimerA.a		// Encoder table entry primary source address
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
 														// PMAC3-style ASIC channel’s encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
-														// .pEnc =  Gate3[2].Chan[2].TimerA.a for internal
+														// .pEnc =  Gate3[1].Chan[3].TimerA.a for internal
 														// feedback loop with PFM signal no encoder
 														// (software reference manual p. 199)
 
-EncTable[9].index1 = 0									// Encoder table entry first conversion factor
+EncTable[6].index1 = 0									// Encoder table entry first conversion factor
 														// type specific. For type 1 left shift of 32 bit
 														// register
 														// (software reference manual p. 185)
 
-EncTable[9].index2 = 0									// Encoder table entry first conversion factor
+EncTable[6].index2 = 0									// Encoder table entry first conversion factor
 														// type specific. For type 1 right shift of 32 bit
 														// register
 														// (software reference manual p. 188)
 
-EncTable[9].index3 = 0									// Encoder table entry first conversion factor
+EncTable[6].index3 = 0									// Encoder table entry first conversion factor
 														// type specific. For type 1 derivative
 														// (software reference manual p. 191)
 
-EncTable[9].index4 = 0									// Encoder table entry first conversion factor
+EncTable[6].index4 = 0									// Encoder table entry first conversion factor
 														// type specific. For type 1 integrations if index2
 														// > 32
 														// (software reference manual p. 193)
 
-EncTable[9].MaxDelta = 0								// Encoder table entry maximum legal output change
+EncTable[6].MaxDelta = 0								// Encoder table entry maximum legal output change
 														// type specific. For type 1 if derivative limiting
 														// is enabled. .MaxDelta=0 disabled
 														// (software reference manual p. 197)
 
-EncTable[9].ScaleFactor = 1/256							// Encoder table entry output scale factor
+EncTable[6].ScaleFactor = 1/256							// Encoder table entry output scale factor
 														// type 1: (single-word read): After the two shifting
 														// operations specified by index2 and index1, the LSB 
 														// of the actual data is typically in Bit (32 minus 
@@ -188,106 +188,105 @@ EncTable[9].ScaleFactor = 1/256							// Encoder table entry output scale factor
 
 //Motor Control
 
-Motor[9].Ctrl=Sys.ServoCtrl							// Pointer to selected servo loop algorithm
+Motor[6].Ctrl=Sys.ServoCtrl							// Pointer to selected servo loop algorithm
 													// default .Ctrl=Sys.ServoCtrl standard PID
 													// Sys.PidCtrl very simple but fast
 													// Sys.AdaptiveCtrl adaptive PID
 													// Sys.PosCtrl just positon output no PID
 													// (software reference manual p. 370)
 
-Motor[9].PhaseCtrl=0								// Control flag to activate commutation tasks,
+Motor[6].PhaseCtrl=0								// Control flag to activate commutation tasks,
 													// default=0 range 0to15
 													// .PhaseCtrl=0 no phase commutation for steppers
 													// (software reference manual p. 422)
 
-Motor[9].ServoCtrl=1								// Control flag to activate servo tasks
+Motor[6].ServoCtrl=1								// Control flag to activate servo tasks
 													// default=0 range 0to15
 													// .ServoCtrl=1 standard servo mode
 													// (software reference manual p. 447)
 
-Motor[9].pDac=Gate3[2].Chan[2].Pfm.a				// Command output pointer
+Motor[6].pDac=Gate3[1].Chan[3].Pfm.a				// Command output pointer
 													// (software reference manual p. 417)
 
-Motor[9].pAmpFault=0                  				// Amplifier-fault (input) flag pointer
+Motor[6].pAmpFault=0                  				// Amplifier-fault (input) flag pointer
 													// default=0 disabled
 													// pAmpFault = Gate3[m].Chan[n].Status.a to use
 													// (software reference manual p. 410)
 
 
-Motor[9].AmpFaultLevel=1					// Amplifier-fault level
+Motor[6].AmpFaultLevel=1					        // Amplifier-fault level
 													// default=0
 													// needs to be 1 so that high indicates fault
 
-Motor[9].pAmpEnable=Gate3[2].Chan[2].OutCtrl.a		// Amplifier-enable (output) flag pointer
-													// .pAmpEnable=Gate3[2].Chan[2].OutCtrl.a use 
+Motor[6].pAmpEnable=Gate3[1].Chan[3].OutCtrl.a		// Amplifier-enable (output) flag pointer
+													// .pAmpEnable=Gate3[1].Chan[3].OutCtrl.a use 
 													// .pAmpEnable=1 enable always
 													// (software reference manual p. 409)
 
-Motor[9].pLimits = Gate3[2].Chan[2].Status.a		// Overtravel limit (input) flag pointer
-													// .pLimits = Gate3[2].Chan[2].Status.a use flags
+Motor[6].pLimits = Gate3[1].Chan[3].Status.a		// Overtravel limit (input) flag pointer
+													// .pLimits = Gate3[1].Chan[3].Status.a use flags
 													// .pLimits = 0 disable flags
 													// (software reference manual p. 433)
 
-Motor[9].pCaptFlag = Gate3[2].Chan[2].Status.a		// Encoder capture trigger (input) flag pointer
+Motor[6].pCaptFlag = Gate3[1].Chan[3].Status.a		// Encoder capture trigger (input) flag pointer
 													// (software reference manual p. 415)
 
-Motor[9].pCaptPos = Gate3[2].Chan[2].HomeCapt.a		// Encoder captured position pointer
+Motor[6].pCaptPos = Gate3[1].Chan[3].HomeCapt.a		// Encoder captured position pointer
 													// (software reference manual p. 415)
 
-Motor[9].pEnc = EncTable[9].a						// Outer (position) loop position feedback pointer
+Motor[6].pEnc = EncTable[6].a						// Outer (position) loop position feedback pointer
 													// (software reference manual p. 418)
 
-Motor[9].pEnc2 = EncTable[9].a						// Inner (velocity) loop position feedback pointer
+Motor[6].pEnc2 = EncTable[6].a						// Inner (velocity) loop position feedback pointer
 													// (software reference manual p. 418)
 													              
 // Motor PID servo setup
 
-Motor[9].Servo.Kp = 4					// PID proportiona term		
-Motor[9].Servo.Ki = 0.001				// PID integral term
-Motor[9].Servo.Kvfb= 40					// PID velocity feedback (“derivative”) gain term
+Motor[6].Servo.Kp = 5.25					// PID proportiona term		
+Motor[6].Servo.Ki = 0.00				// PID integral term
+Motor[6].Servo.Kvfb= 100					// PID velocity feedback (“derivative”) gain term
 
-Motor[9].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
-Motor[9].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
+Motor[6].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
+Motor[6].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
-Motor[9].Servo.MaxPosErr= 10000.0		// Servo-error input magnitude limit
+Motor[6].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[9].JogSpeed=10					// Jog command velocity magnitude
+Motor[6].JogSpeed=10					// Jog command velocity magnitude
 										// mu / millisecond
 										
-Motor[9].MaxSpeed=30
+Motor[9].MaxSpeed=10
 
+Motor[6].HomeVel=1
 
-Motor[9].HomeVel=0.1
-
-Motor[9].JogTa=-200						// Jog accel/decel time or inverse rate
+Motor[6].JogTa=-200						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
 										// < 0 mu / millisecond^2
 										// -200 -> 0.005 mu/ms^2 -> 5m/s^2 or 0.5g
 
-Motor[9].JogTs=-1000					// Jog accel/decel S-curve time or inverse jerk rate
+Motor[6].JogTs=-1000					// Jog accel/decel S-curve time or inverse jerk rate
 										// > 0 mu / millisecond
 										// < 0 mu / millisecond^3
 										// -50 -> 0.02m/s^3
 										// -12500 -> 0.00008 mu/ms^3 -> 80m/s^3 -> 80g/s
 
-Motor[9].BlSize=0						// Backlash size
+Motor[6].BlSize=0						// Backlash size
 
-Motor[9].BlSlewRate =0.0				// Backlash take-up rate
+Motor[6].BlSlewRate =0.0				// Backlash take-up rate
 
-Motor[9].HomeOffset=0.0					// Position referencing offset	
+Motor[6].HomeOffset=0.0					// Position referencing offset	
 
 
 // Coordinate system
 
-&9									// Address C.S. 1
+&6									// Address C.S. 1
 
-#9->1X							// Assign motor to CS and define scale
+#6->1X								// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 
-//Coord[9].PosRollOver[0]=18000		// Axis position rollover range for rotary only
+//Coord[6].PosRollOver[0]=18000		// Axis position rollover range for rotary only
 									// in axis units!!!! default=0.0 disabled
 									// .PosRollOver[0] for axis A
 									// .PosRollOver[1] for axis B ...

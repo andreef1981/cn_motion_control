@@ -23,3 +23,6 @@ Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pm
 [PMAC_CONFIG]
 Successful: SaveConfiguration using /var/ftp/usrflash/Project/Configuration/pp_save.cfg
 Successful: SaveCustomConfiguration using /var/ftp/usrflash/Project/Configuration/pp_custom_save.tpl
+[PMAC_CONFIG]
+Successful: SaveConfiguration using /var/ftp/usrflash/Project/Configuration/pp_save.cfg
+Successful: SaveCustomConfiguration using /var/ftp/usrflash/Project/Configuration/pp_custom_save.tpl
