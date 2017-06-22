@@ -179,7 +179,7 @@ Motor[6].JogSpeed=15					// Jog command velocity magnitude
 										
 Motor[9].MaxSpeed=15
 
-Motor[6].HomeVel=1
+Motor[6].HomeVel=15
 
 Motor[6].JogTa=-200						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
@@ -195,7 +195,7 @@ Motor[6].JogTs=-1000					// Jog accel/decel S-curve time or inverse jerk rate
 Motor[6].BlSize=11605.0					// Backlash size (measured 21 june 2017 by hand at mlimit 8mu steps
 										// in mu
 										
-Motor[6].BlSlewRate =10.0				// Backlash take-up rate
+Motor[6].BlSlewRate =1.0				// Backlash take-up rate
 										// mu per servo interrupt
 										
 Motor[6].HomeOffset=0.0					// Position referencing offset	

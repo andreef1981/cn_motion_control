@@ -254,12 +254,12 @@ Motor[6].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[6].JogSpeed=20					// Jog command velocity magnitude
+Motor[6].JogSpeed=15					// Jog command velocity magnitude
 										// mu / millisecond
 										
-Motor[9].MaxSpeed=20
+Motor[9].MaxSpeed=15
 
-Motor[6].HomeVel=1
+Motor[6].HomeVel=15
 
 Motor[6].JogTa=-200						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
@@ -272,10 +272,12 @@ Motor[6].JogTs=-1000					// Jog accel/decel S-curve time or inverse jerk rate
 										// -50 -> 0.02m/s^3
 										// -12500 -> 0.00008 mu/ms^3 -> 80m/s^3 -> 80g/s
 
-Motor[6].BlSize=0						// Backlash size
-
-Motor[6].BlSlewRate =0.0				// Backlash take-up rate
-
+Motor[6].BlSize=11605.0					// Backlash size (measured 21 june 2017 by hand at mlimit 8mu steps
+										// in mu
+										
+Motor[6].BlSlewRate =1.0				// Backlash take-up rate
+										// mu per servo interrupt
+										
 Motor[6].HomeOffset=0.0					// Position referencing offset	
 
 
