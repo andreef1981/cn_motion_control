@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////
-// MOTOR xxx xxx stage
+// MOTOR Grating stage
 //////////////////////////////////////////////////////////////
 
 //Channel PFM Hardware Settings
@@ -129,13 +129,13 @@ Motor[18].ServoCtrl=1								// Control flag to activate servo tasks
 Motor[18].pDac=Gate3[4].Chan[3].Pfm.a				// Command output pointer
 													// (software reference manual p. 417)
 
-Motor[18].pAmpFault=0                  				// Amplifier-fault (input) flag pointer
+Motor[18].pAmpFault=Gate3[4].Chan[3].Status.a		// Amplifier-fault (input) flag pointer
 													// default=0 disabled
 													// pAmpFault = Gate3[m].Chan[n].Status.a to use
 													// (software reference manual p. 410)
 
 
-Motor[18].AmpFaultLevel=1					// Amplifier-fault level
+Motor[18].AmpFaultLevel=1							// Amplifier-fault level
 													// default=0
 													// needs to be 1 so that high indicates fault
 
@@ -144,7 +144,7 @@ Motor[18].pAmpEnable=Gate3[4].Chan[3].OutCtrl.a		// Amplifier-enable (output) fl
 													// .pAmpEnable=1 enable always
 													// (software reference manual p. 409)
 
-Motor[18].pLimits = Gate3[4].Chan[3].Status.a		// Overtravel limit (input) flag pointer
+Motor[18].pLimits = 0								// Overtravel limit (input) flag pointer
 													// .pLimits = Gate3[4].Chan[3].Status.a use flags
 													// .pLimits = 0 disable flags
 													// (software reference manual p. 433)
@@ -163,20 +163,24 @@ Motor[18].pEnc2 = EncTable[18].a						// Inner (velocity) loop position feedback
 													              
 // Motor PID servo setup
 
-Motor[18].Servo.Kp = 4					// PID proportiona term		
-Motor[18].Servo.Ki = 0.001				// PID integral term
-Motor[18].Servo.Kvfb= 40					// PID velocity feedback (“derivative”) gain term
+Motor[18].Servo.Kp = 10000					// PID proportiona term		
+Motor[18].Servo.Ki = 0.1				// PID integral term
+Motor[18].Servo.Kvfb= 0					// PID velocity feedback (“derivative”) gain term
+Motor[18].Servo.Kvff = 0
 
-Motor[18].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
+Motor[18].Servo.BreakPosErr = 500.0		// Servo gain-break error size (deadband)
 Motor[18].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
-Motor[18].Servo.MaxPosErr= 10000.0		// Servo-error input magnitude limit
+Motor[18].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
 Motor[18].JogSpeed=10					// Jog command velocity magnitude
 										// mu / millisecond
-Motor[18].HomeVel=0.1
+										
+Motor[9].MaxSpeed=10
+
+Motor[18].HomeVel=10
 
 Motor[18].JogTa=-200						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
@@ -188,6 +192,11 @@ Motor[18].JogTs=-1000					// Jog accel/decel S-curve time or inverse jerk rate
 										// < 0 mu / millisecond^3
 										// -50 -> 0.02m/s^3
 										// -12500 -> 0.00008 mu/ms^3 -> 80m/s^3 -> 80g/s
+										
+Motor[18].FatalFeLimit=1000000
+Motor[18].WarnFeLimit=800000
+Motor[18].MaxDac=5000000
+										
 
 Motor[18].BlSize=0						// Backlash size
 
@@ -200,7 +209,7 @@ Motor[18].HomeOffset=0.0					// Position referencing offset
 
 &18									// Address C.S. 1
 
-#18->22.22X							// Assign motor to CS and define scale
+#18->1X							// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 

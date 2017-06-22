@@ -129,7 +129,7 @@ Motor[6].ServoCtrl=1								// Control flag to activate servo tasks
 Motor[6].pDac=Gate3[1].Chan[3].Pfm.a				// Command output pointer
 													// (software reference manual p. 417)
 
-Motor[6].pAmpFault=0                  				// Amplifier-fault (input) flag pointer
+Motor[6].pAmpFault=Gate3[1].Chan[3].Status.a		// Amplifier-fault (input) flag pointer
 													// default=0 disabled
 													// pAmpFault = Gate3[m].Chan[n].Status.a to use
 													// (software reference manual p. 410)
@@ -174,10 +174,10 @@ Motor[6].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[6].JogSpeed=10					// Jog command velocity magnitude
+Motor[6].JogSpeed=15					// Jog command velocity magnitude
 										// mu / millisecond
 										
-Motor[9].MaxSpeed=10
+Motor[9].MaxSpeed=15
 
 Motor[6].HomeVel=1
 
@@ -192,10 +192,12 @@ Motor[6].JogTs=-1000					// Jog accel/decel S-curve time or inverse jerk rate
 										// -50 -> 0.02m/s^3
 										// -12500 -> 0.00008 mu/ms^3 -> 80m/s^3 -> 80g/s
 
-Motor[6].BlSize=0						// Backlash size
-
-Motor[6].BlSlewRate =0.0				// Backlash take-up rate
-
+Motor[6].BlSize=11605.0					// Backlash size (measured 21 june 2017 by hand at mlimit 8mu steps
+										// in mu
+										
+Motor[6].BlSlewRate =10.0				// Backlash take-up rate
+										// mu per servo interrupt
+										
 Motor[6].HomeOffset=0.0					// Position referencing offset	
 
 

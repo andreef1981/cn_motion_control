@@ -75,6 +75,9 @@
     <Content Include="PMAC Script Language\Motion Programs\prog4.pmc">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="PMAC Script Language\PLC Programs\plc2.plc">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="PMAC Script Language\Global Includes\global definitions.pmh" />

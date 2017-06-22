@@ -1,3 +1,5 @@
 motor_configuration_files\gate3_configuration.txt
 motor_configuration_files\Motor_6_Gate31Chan3_WF_LAMP.txt
+motor_configuration_files\Motor_18_Gate34Chan3_SP_GRATIMG.txt
+grating_encoder_tables_configuration.txt
 motor_configuration_files\gate3_configuration_end.txt

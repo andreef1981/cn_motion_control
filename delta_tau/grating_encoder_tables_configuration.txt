@@ -1,0 +1,77 @@
+//Encoder Conversion Table
+
+Acc84E[5].SerialEncCtrl=$63000B
+Acc84E[5].Chan[0].SerialEncCmd=$2114A0	// 32 bit 2bit status and 6bit polynom Biss C encoder
+Acc84E[5].Chan[1].SerialEncCmd=$2114A0
+Acc84E[5].Chan[2].SerialEncCmd=$2114A0
+Acc84E[5].Chan[3].SerialEncCmd=$2114A0
+
+EncTable[19].type=2;        // 24+8 bit read entry;
+EncTable[19].pEnc = Acc84E[5].Chan[0].SerialEncDataA.a   // address of lower 24 bit
+EncTable[19].pEnc1 = Acc84E[5].Chan[0].SerialEncDataB.a  // address of upper 8 bits
+EncTable[19].index1 = 0;									// left shift for sign adjustment 32-26=6
+EncTable[19].index2 = 0;
+EncTable[19].index3 = 0;
+EncTable[19].index4 = 0;
+EncTable[19].ScaleFactor =   1//  1/exp2(32)*360.;    // scale back to offset the left adjustment done by index2
+EncTable[19].MaxDelta = 50000 * 256;
+
+
+EncTable[20].type=2;        // 24+8 bit read entry;
+EncTable[20].pEnc = Acc84E[5].Chan[1].SerialEncDataA.a   // address of lower 24 bit
+EncTable[20].pEnc1 = Acc84E[5].Chan[1].SerialEncDataB.a  // address of upper 8 bits
+EncTable[20].index1 = 0;									// left shift for sign adjustment 32-26=6
+EncTable[20].index2 = 0;
+EncTable[20].index3 = 0;
+EncTable[20].index4 = 0;
+EncTable[20].ScaleFactor =   1//  1/exp2(32)*360. //1/exp2(32-SingleTurnRes);    // scale back to offset the left adjustment done by index2
+EncTable[20].MaxDelta = 50000 * 256;
+
+EncTable[21].type=2;        // 24+8 bit read entry;
+EncTable[21].pEnc = Acc84E[5].Chan[2].SerialEncDataA.a   // address of lower 24 bit
+EncTable[21].pEnc1 = Acc84E[5].Chan[2].SerialEncDataB.a  // address of upper 8 bits
+EncTable[21].index1 = 0;									// left shift for sign adjustment 32-26=6
+EncTable[21].index2 = 0;
+EncTable[21].index3 = 0;
+EncTable[21].index4 = 0;
+EncTable[21].ScaleFactor =  1// 1/exp2(32)*360. //1/exp2(32-SingleTurnRes);    // scale back to offset the left adjustment done by index2
+EncTable[21].MaxDelta = 50000 * 256;
+
+EncTable[22].type=2;        // 24+8 bit read entry;
+EncTable[22].pEnc = Acc84E[5].Chan[3].SerialEncDataA.a   // address of lower 24 bit
+EncTable[22].pEnc1 = Acc84E[5].Chan[3].SerialEncDataB.a  // address of upper 8 bits
+EncTable[22].index1 = 0;									// left shift for sign adjustment 32-26=6
+EncTable[22].index2 = 0;
+EncTable[22].index3 = 0;
+EncTable[22].index4 = 0;
+EncTable[22].ScaleFactor =  1// 1/exp2(32)*360. //1/exp2(32-SingleTurnRes);    // scale back to offset the left adjustment done by index2
+EncTable[22].MaxDelta = 50000 * 256;
+
+ 
+EncTable[23].type=8
+EncTable[23].pEnc = EncTable[19].PrevEnc.a   // address of lower 24 bit
+EncTable[23].pEnc1 = EncTable[22].PrevEnc.a  // address of upper 8 bits
+EncTable[23].index1 = 0;									// left shift for sign adjustment 32-26=6
+EncTable[23].index2 = 0;
+EncTable[23].index3 = 0;
+EncTable[23].index4 = 0;
+EncTable[23].ScaleFactor = 1/2 ;
+
+EncTable[24].type=8
+EncTable[24].pEnc = EncTable[20].PrevEnc.a   // address of lower 24 bit
+EncTable[24].pEnc1 = EncTable[21].PrevEnc.a  // address of upper 8 bits
+EncTable[24].index1 = 0;									// left shift for sign adjustment 32-26=6
+EncTable[24].index2 = 0;
+EncTable[24].index3 = 0;
+EncTable[24].index4 = 0;
+EncTable[24].ScaleFactor = 1/2 ;
+
+EncTable[25].type=8
+EncTable[25].pEnc = EncTable[23].PrevEnc.a   // address of lower 24 bit
+EncTable[25].pEnc1 = EncTable[24].PrevEnc.a  // address of upper 8 bits
+EncTable[25].index1 = 0;									// left shift for sign adjustment 32-26=6
+EncTable[25].index2 = 0;
+EncTable[25].index3 = 0;
+EncTable[25].index4 = 0;
+EncTable[25].ScaleFactor = 1 ;
+
