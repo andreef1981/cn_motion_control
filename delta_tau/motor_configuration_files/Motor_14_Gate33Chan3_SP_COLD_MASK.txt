@@ -135,7 +135,7 @@ Motor[14].pAmpFault=0                  				// Amplifier-fault (input) flag point
 													// (software reference manual p. 410)
 
 
-Motor[14].AmpFaultLevel=1					// Amplifier-fault level
+Motor[14].AmpFaultLevel=1							// Amplifier-fault level
 													// default=0
 													// needs to be 1 so that high indicates fault
 
@@ -174,7 +174,7 @@ Motor[14].Servo.MaxPosErr= 10000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[14].JogSpeed=10					// Jog command velocity magnitude
+Motor[14].JogSpeed=0.1					// Jog command velocity magnitude
 										// mu / millisecond
 Motor[14].HomeVel=0.1
 
@@ -200,7 +200,7 @@ Motor[14].HomeOffset=0.0					// Position referencing offset
 
 &14									// Address C.S. 1
 
-#14->22.22X							// Assign motor to CS and define scale
+#14->1X							// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 

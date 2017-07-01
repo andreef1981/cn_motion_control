@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////
-// MOTOR xxx xxx stage
+// MOTOR Slit Wheel
 //////////////////////////////////////////////////////////////
 
 //Channel PFM Hardware Settings
@@ -104,7 +104,7 @@ EncTable[10].ScaleFactor = 1/256							// Encoder table entry output scale facto
 														// To get the output of the conversion table in units
 														// of encodre counts (most common),
 														// EncTable[n].ScaleFactor should be set to 1/256 with 
-														// encoder and 1.0 without encoder
+														// encoder and 1/256 without encoder
 														// (ACC24E reference manual p. 36 and 114)
 
 //Motor Control
@@ -129,13 +129,13 @@ Motor[10].ServoCtrl=1								// Control flag to activate servo tasks
 Motor[10].pDac=Gate3[2].Chan[3].Pfm.a				// Command output pointer
 													// (software reference manual p. 417)
 
-Motor[10].pAmpFault=0                  				// Amplifier-fault (input) flag pointer
+Motor[10].pAmpFault=Gate3[2].Chan[3].Status.a		// Amplifier-fault (input) flag pointer
 													// default=0 disabled
 													// pAmpFault = Gate3[m].Chan[n].Status.a to use
 													// (software reference manual p. 410)
 
 
-Motor[10].AmpFaultLevel=1					// Amplifier-fault level
+Motor[10].AmpFaultLevel=1							// Amplifier-fault level
 													// default=0
 													// needs to be 1 so that high indicates fault
 
@@ -144,7 +144,7 @@ Motor[10].pAmpEnable=Gate3[2].Chan[3].OutCtrl.a		// Amplifier-enable (output) fl
 													// .pAmpEnable=1 enable always
 													// (software reference manual p. 409)
 
-Motor[10].pLimits = Gate3[2].Chan[3].Status.a		// Overtravel limit (input) flag pointer
+Motor[10].pLimits = 0								// Overtravel limit (input) flag pointer
 													// .pLimits = Gate3[2].Chan[3].Status.a use flags
 													// .pLimits = 0 disable flags
 													// (software reference manual p. 433)
@@ -163,22 +163,24 @@ Motor[10].pEnc2 = EncTable[10].a						// Inner (velocity) loop position feedback
 													              
 // Motor PID servo setup
 
-Motor[10].Servo.Kp = 4					// PID proportiona term		
-Motor[10].Servo.Ki = 0.001				// PID integral term
-Motor[10].Servo.Kvfb= 40					// PID velocity feedback (“derivative”) gain term
+Motor[10].Servo.Kp = 4								// PID proportiona term		
+Motor[10].Servo.Ki = 0.001							// PID integral term
+Motor[10].Servo.Kvfb= 40							// PID velocity feedback (“derivative”) gain term
 
-Motor[10].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
-Motor[10].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
+Motor[10].Servo.BreakPosErr = 2.0					// Servo gain-break error size (deadband)
+Motor[10].Servo.Kbreak = 0							// Servo “gain break” relative gain within this dead band
 
-Motor[10].Servo.MaxPosErr= 10000.0		// Servo-error input magnitude limit
+Motor[10].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[10].JogSpeed=10					// Jog command velocity magnitude
+Motor[10].JogSpeed=0.1					// Jog command velocity magnitude
 										// mu / millisecond
 Motor[10].HomeVel=0.1
 
-Motor[10].JogTa=-200						// Jog accel/decel time or inverse rate
+Motor[10].MaxSpeed=0.1
+
+Motor[10].JogTa=-200					// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
 										// < 0 mu / millisecond^2
 										// -200 -> 0.005 mu/ms^2 -> 5m/s^2 or 0.5g
@@ -200,7 +202,7 @@ Motor[10].HomeOffset=0.0					// Position referencing offset
 
 &10									// Address C.S. 1
 
-#10->22.22X							// Assign motor to CS and define scale
+#10->1A						// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 

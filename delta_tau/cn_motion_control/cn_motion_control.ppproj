@@ -33,7 +33,7 @@
     <CommType>PPmacServer</CommType>
     <Name>cn_motion_control</Name>
     <ProjectFrimwareVers>2.0.2.14</ProjectFrimwareVers>
-    <IDESignature>asdk1341ASDK</IDESignature>
+    <IDESignature>rslz7081RSLZ</IDESignature>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -75,7 +75,7 @@
     <Content Include="PMAC Script Language\Motion Programs\prog4.pmc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="PMAC Script Language\PLC Programs\plc2.plc">
+    <Content Include="PMAC Script Language\Motion Programs\prog2.pmc">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>
@@ -99,7 +99,6 @@
     <Folder Include="PMAC Script Language\Libraries\" />
     <Folder Include="PMAC Script Language\Motion Programs\" />
     <Folder Include="PMAC Script Language\PLC Programs\" />
-    <None Include="PMAC Script Language\PLC Programs\plc1.plc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Configuration\pp_save.cfg" />

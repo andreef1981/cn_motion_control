@@ -1,0 +1,172 @@
+11
+2
+87,Amp Family,2
+40,Motor Type,0
+89,Amp Max Voltage,910
+84,Amp ISense,1050
+83,Amp Continuous Current,500
+82,Amp Peak Current,700
+88,Amp Peak Current Time,1000
+93,Host Config State,2
+0,Current Cp,233
+1,Current Ci,10
+2,Programmed Current Command,0
+19,Analog Input Scale,0
+1a,Analog Input Offset,0
+21,Boost Current,300
+22,Run Current,300
+23,Time at Boost Current,1000
+24,Desired State,33
+26,Analog Input Deadband,0
+27,Velocity Vp,7457
+28,Velocity Vi,1657
+2f,Programmed Velocity Command,0
+31,Velocity Gains Scalor,0
+36,Velocity Loop Acceleration Limit,1332
+37,Velocity Loop Deceleration Limit,1332
+39,Velocity Fast Stop Ramp,1332
+3a,Velocity Loop Velocity Limit,333333
+3f,Velocity Tracking Time,100
+3e,Velocity Tracking Window,499999333
+41,Motor Manufacturer,SchneiderElectric
+42,Motor Model Number,M-2222-3.0D
+43,Motor Units,Metric
+44,Motor Inertia,260000
+46,Motor Brake,No
+48,Motor Torque Constant,1300
+49,Motor Resistance,85
+4a,Motor Inductance,260
+4b,Motor Peak Torque,3900
+4c,Motor Continuous Torque,3900
+4d,Motor Velocity Limit,100
+4e,Motor Wiring,0
+53,Brake/Stop Delay Time,0
+54,Motor Brake Delay Time,0
+55,Motor Brake Activation Velocity,0
+56,Motor Back Emf Constant,1
+6a,Commanded Current Ramp,0
+70,Output 1 Config,100:44007f
+78,Input 1 Config,17
+79,Input 2 Config,0
+7a,Input 3 Config,0
+7b,Input 4 Config,0
+7c,Input 5 Config,0
+7d,Input 6 Config,0
+80,Amp Model Number,STP-075-07
+86,Servo Period,5
+8a,Voltage Sense,2256
+92,Amp Name,sp filter wheel
+98,Function Generator Config,1
+99,Function Generator Frequency,100
+9a,Function Generator Amplitude,0
+9b,Function Generator Duty Cycle,500
+a5,Input Configuration Register,0
+a7,Fault Mask,767
+a8,Digital Command Config,0
+a9,Digital Command Scaling,65537
+ad,Hardware Type,578
+ae,Current Loop Offset,0
+30,Position Pp,1000
+33,Position Vff,16384
+34,Position Aff,0
+45,Motor Pole Pairs,50
+4f,Motor Hall Offset,0
+50,Motor Hall Type,Digital
+52,Motor Hall Wiring,0
+5f,Velocity Loop Output Filter,8448:200:0:775:1550:775:-12774:32763:5813
+60,Motor Encoder Type,1
+61,Motor Encoder Units,0
+62,Motor Encoder Counts,4000
+63,Motor Encoder Resolution,100
+64,Motor Electrical Distance,100000
+65,Motor Encoder Direction,0
+6c,Position Capture Control Register,0
+71,Output 2 Config,100:4000
+8e,Amp Ref Scale,0
+af,Amp Options Register,2
+b1,Increment Rate,0
+b2,Commutation Mode,0
+ba,Position Following Error Limit,4000
+bb,Position Following Warning Limit,2000
+bc,Position Tracking Window,1000
+bd,Position Tracking Window Time,10
+c8,Trajectory Profile Mode,256
+ca,Trajectory Position Command,0
+cb,Trajectory Max Velocity,200000
+cc,Trajectory Max Accel,64000
+cd,Trajectory Max Decel,64000
+cf,Trajectory Abort Decel,64000
+f0,Input 1 Debounce Time,0
+f1,Input 2 Debounce Time,0
+f2,Input 3 Debounce Time,0
+f3,Input 4 Debounce Time,0
+f4,Input 5 Debounce Time,0
+f5,Input 6 Debounce Time,0
+114,Velocity Vi Drain,0
+10c,Network Heart Beat Time,0
+10d,CANopen Node Guarding Time,0
+10e,CANopen Node Guarding Life Time Factor,0
+109,Camming Master Velocity,0
+105,Camming Configuration,4352
+106,Camming Forward Delay,0
+107,Camming Reverse Delay,0
+104,Phase Init Config,0
+be,Software Limit Deceleration,0
+e4,Phase Init Current,300
+e5,Phase Init Time,400
+58,Gear Ratio,65537
+b6,PWM Deadband,1000
+ea,Detent Correction Gain,0
+57,Micro Steps Per Rev.,1600
+59,Hall Velocity Shift,0
+5a,Multi Mode Port Configuration,0
+5b,Position Encoder Resolution,0
+5c,Position Encoder Direction,0
+5d,Position Encoder Type,0
+67,Analog Encoder Shift,0
+6b,Velocity Loop Command Filter,-7936:200:0:775:1550:775:-12774:32763:5813
+6f,PWM Mode,16
+72,Output 3 Config,0:0
+73,Output 4 Config,0:0
+7e,Input 7 Config,0
+7f,Input 8 Config,0
+b3,Analog Encoder Scale,0
+b8,Positive Software Limit,0
+b9,Negative Software Limit,0
+bf,Home Current Delay Time,250
+c1,Node ID configuration,2048
+c2,Home Configuration,0
+c3,Home Velocity Fast,6667
+c4,Home Velocity Slow,1333
+c5,Home Accel/Decel,2720
+c6,Home Offset,0
+c7,Home Current,56
+ce,Trajectory Max Jerk,42752000
+d0,Input 9 Config,0
+d1,Input 10 Config,0
+d2,Input 11 Config,0
+d3,Input 12 Config,0
+d8,Regen Resistance,0
+d9,Regen Continuous Power,0
+da,Regen Peak Power,0
+db,Regen Peak Power Time,0
+e1,Regen Resistor Model Number,None
+e3,Position Loop Gains Multiplier,100
+e8,uStep Holding Current,50
+e9,uStep Run To Hold Time,250
+f6,Input 7 Debounce Time,0
+f7,Input 8 Debounce Time,0
+f8,Input 9 Debounce Time,0
+f9,Input 10 Debounce Time,0
+fa,Input 11 Debounce Time,0
+fb,Input 12 Debounce Time,0
+103,Network address Input Map,0
+116,CANopen quick stop code,2
+117,CANopen shutdown option code,0
+118,CANopen disable option code,1
+119,CANopen halt option code,1
+11a,Amp Scaling Config,-1
+ee,Stepnet Configuration ,0
+e6,Stepper Max Vel Adjustment,16000
+e7,Stepper Proportional Gain,25
+ed,Hold to Voltage Time,0

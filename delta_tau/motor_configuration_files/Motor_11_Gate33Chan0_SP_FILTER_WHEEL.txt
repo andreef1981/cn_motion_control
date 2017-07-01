@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////
-// MOTOR xxx xxx stage
+// MOTOR Filter Wheel
 //////////////////////////////////////////////////////////////
 
 //Channel PFM Hardware Settings
@@ -129,13 +129,13 @@ Motor[11].ServoCtrl=1								// Control flag to activate servo tasks
 Motor[11].pDac=Gate3[3].Chan[0].Pfm.a				// Command output pointer
 													// (software reference manual p. 417)
 
-Motor[11].pAmpFault=0                  				// Amplifier-fault (input) flag pointer
+Motor[11].pAmpFault=Gate3[3].Chan[0].Status.a      	// Amplifier-fault (input) flag pointer
 													// default=0 disabled
 													// pAmpFault = Gate3[m].Chan[n].Status.a to use
 													// (software reference manual p. 410)
 
 
-Motor[11].AmpFaultLevel=1					// Amplifier-fault level
+Motor[11].AmpFaultLevel=1							// Amplifier-fault level
 													// default=0
 													// needs to be 1 so that high indicates fault
 
@@ -144,7 +144,7 @@ Motor[11].pAmpEnable=Gate3[3].Chan[0].OutCtrl.a		// Amplifier-enable (output) fl
 													// .pAmpEnable=1 enable always
 													// (software reference manual p. 409)
 
-Motor[11].pLimits = Gate3[3].Chan[0].Status.a		// Overtravel limit (input) flag pointer
+Motor[11].pLimits = 0								// Overtravel limit (input) flag pointer
 													// .pLimits = Gate3[3].Chan[0].Status.a use flags
 													// .pLimits = 0 disable flags
 													// (software reference manual p. 433)
@@ -170,15 +170,17 @@ Motor[11].Servo.Kvfb= 40					// PID velocity feedback (“derivative”) gain term
 Motor[11].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[11].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
-Motor[11].Servo.MaxPosErr= 10000.0		// Servo-error input magnitude limit
+Motor[11].Servo.MaxPosErr= 1000000.0	// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[11].JogSpeed=10					// Jog command velocity magnitude
+Motor[11].JogSpeed=0.1					// Jog command velocity magnitude
 										// mu / millisecond
 Motor[11].HomeVel=0.1
 
-Motor[11].JogTa=-200						// Jog accel/decel time or inverse rate
+Motor[11].MaxSpeed=0.1
+
+Motor[11].JogTa=-200					// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
 										// < 0 mu / millisecond^2
 										// -200 -> 0.005 mu/ms^2 -> 5m/s^2 or 0.5g
@@ -200,7 +202,7 @@ Motor[11].HomeOffset=0.0					// Position referencing offset
 
 &11									// Address C.S. 1
 
-#11->22.22X							// Assign motor to CS and define scale
+#11->1A							// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 

@@ -2,14 +2,10 @@
 // The following Sample PROGRAM is the standard template for creating Motion Programs.
 // Sample PROGRAM
 /****************************************/
-// open prog 4
+open prog 2
+local Bist;
+homez 6
 // --------------------User Code Goes Here------------------------
-open prog 4
-local ThisCs; // Local var for # of CS running program
-ThisCs = Ldata.Coord;
-Motor[ThisCs].pLimits=0;
-home ThisCs;
-Motor[ThisCs].pLimits=Gate3[1].Chan[1].Status.a;
 close
 /****************************************/
 
