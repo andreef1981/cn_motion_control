@@ -40,7 +40,7 @@ Gate3[3].Chan[0].EncCtrl=8					// IC channel encoder decode control; default 7;
 											// .EncCtrl=8 internal puls and direction CW
 											// (software reference manual p. 306)
 	
-Gate3[3].Chan[0].CaptCtrl=2					// IC Channel position-capture control, default=1
+Gate3[3].Chan[0].CaptCtrl=2				    // IC Channel position-capture control, default=1
 											// range 0to15
 											// 1 capture on index high
 											// 2 capture on flag high
@@ -168,6 +168,7 @@ Motor[11].Servo.Ki = 0.001				// PID integral term
 Motor[11].Servo.Kvfb= 40					// PID velocity feedback (“derivative”) gain term
 
 Motor[11].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
+Motor[11].InPosBand = 2.0				// 
 Motor[11].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
 Motor[11].Servo.MaxPosErr= 1000000.0	// Servo-error input magnitude limit

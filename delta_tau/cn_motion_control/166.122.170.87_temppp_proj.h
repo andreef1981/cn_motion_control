@@ -24,6 +24,9 @@ enum csglobalQarray {_csglobalQarray_=-1};
 
 enum ptrM {_ptrM_=-1};
 enum ptrMarray {_ptrMarray_=-1};
+#define	CurrentCoordinateSystem	pshm->P[8192]
+#define	FoundMotor	pshm->P[8193]
+#define	filterPosition	pshm->P[8194]
 void SetEnumGlobalVar(enum globalP var, double data)
 {
   pshm->P[var] = data;
@@ -101,7 +104,10 @@ double GetEnumPtrArrayVar(enum ptrMarray var, unsigned index)
 // end of #ifdef _PPScriptMode_
 #else
 #ifdef _EnumMode_
-enum globalP {_globalP_=-1};
+enum globalP {_globalP_=-1
+,CurrentCoordinateSystem=8192
+,FoundMotor=8193
+,filterPosition=8194};
 enum globalParray {_globalParray_=-1};
 enum csglobalQ {_csglobalQ_=-1};
 enum csglobalQarray {_csglobalQarray_=-1};
@@ -184,6 +190,9 @@ double GetEnumPtrArrayVar(enum ptrMarray var, unsigned index)
 // end of #ifdef _EnumMode_
 #else
 // ***** Standard default mode *****
+#define CurrentCoordinateSystem 8192
+#define FoundMotor 8193
+#define filterPosition 8194
 #endif
 #endif
 #endif //_PP_PROJ_H_

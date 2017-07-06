@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////
-// MOTOR xxx xxx stage
+// MOTOR CI filter wheel 2 (closer to detector)
 //////////////////////////////////////////////////////////////
 
 //Channel PFM Hardware Settings
@@ -129,7 +129,7 @@ Motor[17].ServoCtrl=1								// Control flag to activate servo tasks
 Motor[17].pDac=Gate3[4].Chan[2].Pfm.a				// Command output pointer
 													// (software reference manual p. 417)
 
-Motor[17].pAmpFault=0                  				// Amplifier-fault (input) flag pointer
+Motor[17].pAmpFault=Gate3[4].Chan[2].Status.a                  				// Amplifier-fault (input) flag pointer
 													// default=0 disabled
 													// pAmpFault = Gate3[m].Chan[n].Status.a to use
 													// (software reference manual p. 410)
@@ -170,13 +170,15 @@ Motor[17].Servo.Kvfb= 40					// PID velocity feedback (“derivative”) gain term
 Motor[17].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[17].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
-Motor[17].Servo.MaxPosErr= 10000.0		// Servo-error input magnitude limit
+Motor[17].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[17].JogSpeed=10					// Jog command velocity magnitude
+Motor[17].JogSpeed=0.1					// Jog command velocity magnitude
 										// mu / millisecond
 Motor[17].HomeVel=0.1
+
+Motor[17].MaxSpeed=0.1
 
 Motor[17].JogTa=-200						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
@@ -200,7 +202,7 @@ Motor[17].HomeOffset=0.0					// Position referencing offset
 
 &17									// Address C.S. 1
 
-#17->22.22X							// Assign motor to CS and define scale
+#17->1A							// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 

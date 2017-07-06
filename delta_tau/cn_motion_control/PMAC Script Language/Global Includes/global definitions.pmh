@@ -1,0 +1,4 @@
+global CurrentCoordinateSystem; // needed?
+global FoundMotor; // needed?
+
+global filterPosition; // coordinate var?

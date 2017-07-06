@@ -40,7 +40,7 @@ Gate3[2].Chan[3].EncCtrl=8					// IC channel encoder decode control; default 7;
 											// .EncCtrl=8 internal puls and direction CW
 											// (software reference manual p. 306)
 	
-Gate3[2].Chan[3].CaptCtrl=2					// IC Channel position-capture control, default=1
+Gate3[2].Chan[3].CaptCtrl=2				// IC Channel position-capture control, default=1
 											// range 0to15
 											// 1 capture on index high
 											// 2 capture on flag high

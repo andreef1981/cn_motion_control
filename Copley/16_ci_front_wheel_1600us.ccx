@@ -1,6 +1,6 @@
 14
 1
-95,0,Host Config State,2:0:2:1792:-1:0:150:0:0:0:0:0:0:0:0:0:0:0:0:0
+95,0,Host Config State,2:-1:2:1792:-1:-1:150:-1:-1:-1:-1:-1:-1:-1:-1:-1:-1:-1:-1:-1
 87,0,Amp Family,2
 40,0,Motor Type,32
 89,0,Amp Max Voltage,910
@@ -42,7 +42,7 @@
 4e,0,Motor Wiring,0
 53,0,Brake/Stop Delay Time,0
 54,0,Motor Brake Delay Time,0
-55,0,Brake/Stop Activation Velocity,0
+55,0,Motor Brake Activation Velocity,0
 56,0,Motor Back Emf Constant,1
 6a,0,Commanded Current Ramp,0
 70,0,Output 1 Config,100:44007f:0
@@ -54,8 +54,8 @@
 7d,0,Input 6 Config,0
 80,0,Amp Model Number,STP-075-07
 86,0,Servo Period,5
-8a,0,Voltage Sense,2256
-92,0,Amp Name,sp filter wheel
+8a,0,Voltage Sense,2247
+92,0,Amp Name,ci front wheel
 98,0,Function Generator Config,1
 99,0,Function Generator Frequency,100
 9a,0,Function Generator Amplitude,0
@@ -170,4 +170,4 @@ ee,0,Stepnet Configuration ,0
 e6,0,Stepper Max Vel Adjustment,16000
 e7,0,Stepper Proportional Gain,25
 ed,0,Hold to Voltage Time,0
-94c,0,basic host cfg,9
+94c,0,basic host cfg,49

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////
-// MOTOR xxx xxx stage
+// MOTOR CI filter wheel 1 (front closer to entrance)
 //////////////////////////////////////////////////////////////
 
 //Channel PFM Hardware Settings
@@ -129,7 +129,7 @@ Motor[16].ServoCtrl=1								// Control flag to activate servo tasks
 Motor[16].pDac=Gate3[4].Chan[1].Pfm.a				// Command output pointer
 													// (software reference manual p. 417)
 
-Motor[16].pAmpFault=0                  				// Amplifier-fault (input) flag pointer
+Motor[16].pAmpFault=Gate3[4].Chan[1].Status.a                  				// Amplifier-fault (input) flag pointer
 													// default=0 disabled
 													// pAmpFault = Gate3[m].Chan[n].Status.a to use
 													// (software reference manual p. 410)
@@ -144,7 +144,7 @@ Motor[16].pAmpEnable=Gate3[4].Chan[1].OutCtrl.a		// Amplifier-enable (output) fl
 													// .pAmpEnable=1 enable always
 													// (software reference manual p. 409)
 
-Motor[16].pLimits = Gate3[4].Chan[1].Status.a		// Overtravel limit (input) flag pointer
+Motor[16].pLimits = 0		// Overtravel limit (input) flag pointer
 													// .pLimits = Gate3[4].Chan[1].Status.a use flags
 													// .pLimits = 0 disable flags
 													// (software reference manual p. 433)
@@ -170,13 +170,15 @@ Motor[16].Servo.Kvfb= 40					// PID velocity feedback (“derivative”) gain term
 Motor[16].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[16].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
-Motor[16].Servo.MaxPosErr= 10000.0		// Servo-error input magnitude limit
+Motor[16].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[16].JogSpeed=10					// Jog command velocity magnitude
+Motor[16].JogSpeed=0.1					// Jog command velocity magnitude
 										// mu / millisecond
 Motor[16].HomeVel=0.1
+
+Motor[16].MaxSpeed=0.1
 
 Motor[16].JogTa=-200						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
@@ -200,7 +202,7 @@ Motor[16].HomeOffset=0.0					// Position referencing offset
 
 &16									// Address C.S. 1
 
-#16->22.22X							// Assign motor to CS and define scale
+#16->1A						// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 

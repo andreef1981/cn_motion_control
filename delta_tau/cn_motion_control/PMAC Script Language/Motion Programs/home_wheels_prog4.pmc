@@ -1,0 +1,36 @@
+// Power PMAC PROGRAM Template.
+// The following Sample PROGRAM is the standard template for creating Motion Programs.
+// Sample PROGRAM
+/****************************************/
+// open prog 4
+// --------------------User Code Goes Here------------------------
+// This program will successfully home the circular coordinate systems
+
+open prog 4
+
+local ThisCs; // Local var for # of CS running program
+
+local motor_number;
+
+// I just put these in to test
+//csglobal MoveLength = 2313;
+//global JogDecelDist = 4317;
+
+ThisCs = Ldata.coord;
+Ldata.motor = ThisCs;
+// motor_number = Ldata.motor
+//MoveLength = Ldata.coord;
+//JogDecelDist = Ldata.coord;
+CurrentCoordinateSystem = ThisCs; //Ldata.coord;
+home ThisCs;
+
+///motor_number = Coord[Ldata.coord].Motors[0];
+//FoundMotor = motor_number;
+
+
+//Motor[ThisCs].pLimits=0;
+//home ThisCs;
+//Motor[ThisCs].pLimits=Gate3[1].Chan[1].Status.a;
+close
+/****************************************/
+
