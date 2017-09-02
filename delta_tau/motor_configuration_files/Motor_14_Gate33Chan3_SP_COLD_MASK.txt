@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////
-// MOTOR xxx xxx stage
+// MOTOR SM4 cold mask stage
 //////////////////////////////////////////////////////////////
 
 //Channel PFM Hardware Settings
@@ -163,20 +163,22 @@ Motor[14].pEnc2 = EncTable[14].a						// Inner (velocity) loop position feedback
 													              
 // Motor PID servo setup
 
-Motor[14].Servo.Kp = 4					// PID proportiona term		
-Motor[14].Servo.Ki = 0.001				// PID integral term
-Motor[14].Servo.Kvfb= 40					// PID velocity feedback (“derivative”) gain term
+Motor[14].Servo.Kp = 5.25					// PID proportiona term		
+Motor[14].Servo.Ki = 0				// PID integral term
+Motor[14].Servo.Kvfb= 100					// PID velocity feedback (“derivative”) gain term
 
 Motor[14].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[14].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
-Motor[14].Servo.MaxPosErr= 10000.0		// Servo-error input magnitude limit
+Motor[14].Servo.MaxPosErr= 100000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[14].JogSpeed=0.1					// Jog command velocity magnitude
+Motor[14].JogSpeed=0.001					// Jog command velocity magnitude
 										// mu / millisecond
-Motor[14].HomeVel=0.1
+Motor[14].MaxSpeed=0.001
+
+Motor[14].HomeVel=0.001
 
 Motor[14].JogTa=-200						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond

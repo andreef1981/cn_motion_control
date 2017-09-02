@@ -164,7 +164,7 @@ Motor[18].pEnc2 = EncTable[18].a						// Inner (velocity) loop position feedback
 // Motor PID servo setup
 
 Motor[18].Servo.Kp = 10000					// PID proportiona term		
-Motor[18].Servo.Ki = 0.1				// PID integral term
+Motor[18].Servo.Ki = 0.				// PID integral term
 Motor[18].Servo.Kvfb= 0					// PID velocity feedback (“derivative”) gain term
 Motor[18].Servo.Kvff = 0
 
@@ -175,14 +175,14 @@ Motor[18].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[18].JogSpeed=10					// Jog command velocity magnitude
+Motor[18].JogSpeed=1					// Jog command velocity magnitude
 										// mu / millisecond
 										
-Motor[9].MaxSpeed=10
+Motor[18].MaxSpeed=1
 
-Motor[18].HomeVel=10
+Motor[18].HomeVel=1
 
-Motor[18].JogTa=-200						// Jog accel/decel time or inverse rate
+Motor[18].JogTa=-1000						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
 										// < 0 mu / millisecond^2
 										// -200 -> 0.005 mu/ms^2 -> 5m/s^2 or 0.5g

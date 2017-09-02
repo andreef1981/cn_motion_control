@@ -5,6 +5,7 @@
 open prog 7
 // --------------------User Code Goes Here------------------------
 //global filterPosition = 0;
+
 local position = filterPosition*400;
 
 linear;
@@ -15,18 +16,17 @@ td1000;					// 1-second decel time
 ts250;					// 1/4-second S-curve accel/decel time
 tm2000;					// 2-second move time
 
-A(position-100);
-dwell(1000);
+A(position-60);
+dwell(1000); // TODO: take this out
 
 inc
-ta100;					
-td100;					
-ts50;					
-tm500;
+rapid
 while (Gate3[3].Chan[0].UserFlag==0) {
 	A(1)
-	dwell(1);	
+	dwell(10);	
 }
+	
+	
 //A(position);
 
 close
