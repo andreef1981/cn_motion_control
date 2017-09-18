@@ -129,7 +129,7 @@ Motor[15].ServoCtrl=1								// Control flag to activate servo tasks
 Motor[15].pDac=Gate3[4].Chan[0].Pfm.a				// Command output pointer
 													// (software reference manual p. 417)
 
-Motor[15].pAmpFault=0                  				// Amplifier-fault (input) flag pointer
+Motor[15].pAmpFault=Gate3[4].Chan[0].Status.a		// Amplifier-fault (input) flag pointer
 													// default=0 disabled
 													// pAmpFault = Gate3[m].Chan[n].Status.a to use
 													// (software reference manual p. 410)

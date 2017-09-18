@@ -50,28 +50,28 @@ EncTable[22].MaxDelta = 50000 * 256;
  
 EncTable[23].type=8
 EncTable[23].pEnc = EncTable[19].PrevEnc.a   // address of lower 24 bit
-EncTable[23].pEnc1 = EncTable[22].PrevEnc.a  // address of upper 8 bits
+EncTable[23].pEnc1 = EncTable[20].PrevEnc.a  // address of upper 8 bits
 EncTable[23].index1 = 0;									// left shift for sign adjustment 32-26=6
 EncTable[23].index2 = 0;
 EncTable[23].index3 = 0;
 EncTable[23].index4 = 0;
-EncTable[23].ScaleFactor = 1/2 ;
+EncTable[23].ScaleFactor = 1 ;
 
 EncTable[24].type=8
-EncTable[24].pEnc = EncTable[20].PrevEnc.a   // address of lower 24 bit
-EncTable[24].pEnc1 = EncTable[21].PrevEnc.a  // address of upper 8 bits
+EncTable[24].pEnc = EncTable[21].PrevEnc.a   // address of lower 24 bit
+EncTable[24].pEnc1 = EncTable[22].PrevEnc.a  // address of upper 8 bits
 EncTable[24].index1 = 0;									// left shift for sign adjustment 32-26=6
 EncTable[24].index2 = 0;
 EncTable[24].index3 = 0;
 EncTable[24].index4 = 0;
-EncTable[24].ScaleFactor = 1/2 ;
+EncTable[24].ScaleFactor = 1 ;
 
 EncTable[25].type=8
 EncTable[25].pEnc = EncTable[23].PrevEnc.a   // address of lower 24 bit
 EncTable[25].pEnc1 = EncTable[24].PrevEnc.a  // address of upper 8 bits
-EncTable[25].index1 = 0;									// left shift for sign adjustment 32-26=6
-EncTable[25].index2 = 0;
+EncTable[25].index1 = 65 //0.002;									// left shift for sign adjustment 32-26=6
+EncTable[25].index2 = 255;
 EncTable[25].index3 = 0;
-EncTable[25].index4 = 0;
-EncTable[25].ScaleFactor = 1 ;
+EncTable[25].index4 = 15;
+EncTable[25].ScaleFactor = 1/4 ;
 

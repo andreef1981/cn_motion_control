@@ -92,7 +92,7 @@ bc,0,Position Tracking Window,1000
 bd,0,Position Tracking Window Time,10
 c8,0,Trajectory Profile Mode,256
 ca,0,Trajectory Position Command,0
-cb,0,Trajectory Max Velocity,10000
+cb,0,Trajectory Max Velocity,40000
 cc,0,Trajectory Max Accel,3340
 cd,0,Trajectory Max Decel,3340
 cf,0,Trajectory Abort Decel,8000
@@ -152,7 +152,7 @@ da,0,Regen Peak Power,0
 db,0,Regen Peak Power Time,0
 e1,0,Regen Resistor Model Number,None
 e3,0,Position Loop Gains Multiplier,100
-e8,0,uStep Holding Current,100
+e8,0,uStep Holding Current,50
 e9,0,uStep Run To Hold Time,250
 f6,0,Input 7 Debounce Time,0
 f7,0,Input 8 Debounce Time,0
@@ -170,4 +170,4 @@ ee,0,Stepnet Configuration ,0
 e6,0,Stepper Max Vel Adjustment,2000
 e7,0,Stepper Proportional Gain,25
 ed,0,Hold to Voltage Time,0
-94c,0,basic host cfg,85
+94c,0,basic host cfg,100

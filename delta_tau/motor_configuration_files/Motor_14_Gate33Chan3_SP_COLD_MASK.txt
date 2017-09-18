@@ -174,11 +174,11 @@ Motor[14].Servo.MaxPosErr= 100000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[14].JogSpeed=0.001					// Jog command velocity magnitude
+Motor[14].JogSpeed=0.01					// Jog command velocity magnitude
 										// mu / millisecond
-Motor[14].MaxSpeed=0.001
+Motor[14].MaxSpeed=0.01
 
-Motor[14].HomeVel=0.001
+Motor[14].HomeVel=0.01
 
 Motor[14].JogTa=-200						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond

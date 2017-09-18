@@ -13,13 +13,13 @@
 2,0,Programmed Current Command,0
 19,0,Analog Input Scale,0
 1a,0,Analog Input Offset,0
-21,0,Boost Current,100
-22,0,Run Current,100
+21,0,Boost Current,67
+22,0,Run Current,67
 23,0,Time at Boost Current,1000
 24,0,Desired State,33
 26,0,Analog Input Deadband,0
-27,0,Velocity Vp,7457
-28,0,Velocity Vi,1657
+27,0,Velocity Vp,18642
+28,0,Velocity Vi,4143
 2f,0,Programmed Velocity Command,0
 31,0,Velocity Gains Scalor,0
 36,0,Velocity Loop Acceleration Limit,1332
@@ -28,16 +28,16 @@
 3a,0,Velocity Loop Velocity Limit,333333
 3f,0,Velocity Tracking Time,100
 3e,0,Velocity Tracking Window,499999333
-41,0,Motor Manufacturer,SchneiderElectric
-42,0,Motor Model Number,M-2222-3.0D
+41,0,Motor Manufacturer,Oriental Motors
+42,0,Motor Model Number,PK223PB
 43,0,Motor Units,0
-44,0,Motor Inertia,260000
+44,0,Motor Inertia,9000
 46,0,Motor Brake,1
-48,0,Motor Torque Constant,1300
-49,0,Motor Resistance,85
-4a,0,Motor Inductance,260
-4b,0,Motor Peak Torque,3900
-4c,0,Motor Continuous Torque,3900
+48,0,Motor Torque Constant,9701
+49,0,Motor Resistance,560
+4a,0,Motor Inductance,400
+4b,0,Motor Peak Torque,6500
+4c,0,Motor Continuous Torque,6500
 4d,0,Motor Velocity Limit,100
 4e,0,Motor Wiring,0
 53,0,Brake/Stop Delay Time,0
@@ -86,16 +86,16 @@ ae,0,Current Loop Offset,0
 af,0,Amp Options Register,2
 b1,0,Increment Rate,0
 b2,0,Commutation Mode,0
-ba,0,Position Following Error Limit,4000
-bb,0,Position Following Warning Limit,2000
-bc,0,Position Tracking Window,1000
+ba,0,Position Following Error Limit,1600
+bb,0,Position Following Warning Limit,800
+bc,0,Position Tracking Window,400
 bd,0,Position Tracking Window Time,10
 c8,0,Trajectory Profile Mode,256
 ca,0,Trajectory Position Command,0
-cb,0,Trajectory Max Velocity,200000
-cc,0,Trajectory Max Accel,64000
-cd,0,Trajectory Max Decel,64000
-cf,0,Trajectory Abort Decel,64000
+cb,0,Trajectory Max Velocity,26667
+cc,0,Trajectory Max Accel,26720
+cd,0,Trajectory Max Decel,26720
+cf,0,Trajectory Abort Decel,26720
 f0,0,Input 1 Debounce Time,0
 f1,0,Input 2 Debounce Time,0
 f2,0,Input 3 Debounce Time,0
@@ -141,7 +141,7 @@ c4,0,Home Velocity Slow,1333
 c5,0,Home Accel/Decel,2720
 c6,0,Home Offset,0
 c7,0,Home Current,56
-ce,0,Trajectory Max Jerk,42752000
+ce,0,Trajectory Max Jerk,17100800
 d0,0,Input 9 Config,0
 d1,0,Input 10 Config,0
 d2,0,Input 11 Config,0
@@ -152,7 +152,7 @@ da,0,Regen Peak Power,0
 db,0,Regen Peak Power Time,0
 e1,0,Regen Resistor Model Number,None
 e3,0,Position Loop Gains Multiplier,100
-e8,0,uStep Holding Current,50
+e8,0,uStep Holding Current,10
 e9,0,uStep Run To Hold Time,250
 f6,0,Input 7 Debounce Time,0
 f7,0,Input 8 Debounce Time,0
@@ -170,4 +170,4 @@ ee,0,Stepnet Configuration ,0
 e6,0,Stepper Max Vel Adjustment,16000
 e7,0,Stepper Proportional Gain,25
 ed,0,Hold to Voltage Time,0
-94c,0,basic host cfg,31
+94c,0,basic host cfg,103
