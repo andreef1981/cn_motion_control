@@ -20,7 +20,7 @@ Gate3[1].Chan[3].OutputPol=0    			// IC channel phase output inversion control
 											// default=0, range 0to3
 											// (software reference manual p. 315)
 											
-Gate3[1].Chan[3].PfmDirPol=0    			// IC channel PFM direction polarity control
+Gate3[1].Chan[3].PfmDirPol=1    			// IC channel PFM direction polarity control
 											// default=0 range 0ro1
 											// (software reference manual p. 320)
 											
@@ -174,12 +174,12 @@ Motor[6].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[6].JogSpeed=15					// Jog command velocity magnitude
+Motor[6].JogSpeed=10					// Jog command velocity magnitude
 										// mu / millisecond
 										
-Motor[9].MaxSpeed=15
+Motor[6].MaxSpeed=10
 
-Motor[6].HomeVel=15
+Motor[6].HomeVel=10
 
 Motor[6].JogTa=-200						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond

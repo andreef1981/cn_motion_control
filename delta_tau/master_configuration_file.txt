@@ -100,7 +100,7 @@ Gate3[1].Chan[3].OutputPol=0    			// IC channel phase output inversion control
 											// default=0, range 0to3
 											// (software reference manual p. 315)
 											
-Gate3[1].Chan[3].PfmDirPol=0    			// IC channel PFM direction polarity control
+Gate3[1].Chan[3].PfmDirPol=1    			// IC channel PFM direction polarity control
 											// default=0 range 0ro1
 											// (software reference manual p. 320)
 											
@@ -254,12 +254,12 @@ Motor[6].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[6].JogSpeed=15					// Jog command velocity magnitude
+Motor[6].JogSpeed=10					// Jog command velocity magnitude
 										// mu / millisecond
 										
-Motor[9].MaxSpeed=15
+Motor[6].MaxSpeed=10
 
-Motor[6].HomeVel=15
+Motor[6].HomeVel=10
 
 Motor[6].JogTa=-200						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
@@ -680,11 +680,11 @@ Motor[11].Servo.Kp = 4					// PID proportiona term
 Motor[11].Servo.Ki = 0.001				// PID integral term
 Motor[11].Servo.Kvfb= 40					// PID velocity feedback (“derivative”) gain term
 
-Motor[11].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
+Motor[11].Servo.BreakPosErr = 0.5		// Servo gain-break error size (deadband)
 Motor[11].InPosBand = 2.0				// 
 Motor[11].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
-Motor[11].Servo.MaxPosErr= 1000000.0	// Servo-error input magnitude limit
+Motor[11].Servo.MaxPosErr= 1000.0	// Servo-error input magnitude limit
 
 // Motor Speeds
 
@@ -705,22 +705,22 @@ Motor[11].JogTs=-1000					// Jog accel/decel S-curve time or inverse jerk rate
 										// -50 -> 0.02m/s^3
 										// -12500 -> 0.00008 mu/ms^3 -> 80m/s^3 -> 80g/s
 
-Motor[11].BlSize=0						// Backlash size
+Motor[11].BlSize=10						// Backlash size
 
-Motor[11].BlSlewRate =0.0				// Backlash take-up rate
+Motor[11].BlSlewRate =0.1				// Backlash take-up rate
 
-Motor[11].HomeOffset=0.0					// Position referencing offset	
+Motor[11].HomeOffset=0					// Position referencing offset	
 
 
 // Coordinate system
 
 &11									// Address C.S. 1
 
-#11->1A							// Assign motor to CS and define scale
+#11->1A				// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 
-//Coord[11].PosRollOver[0]=18000		// Axis position rollover range for rotary only
+Coord[11].PosRollOver[0]=6400		// Axis position rollover range for rotary only
 									// in axis units!!!! default=0.0 disabled
 									// .PosRollOver[0] for axis A
 									// .PosRollOver[1] for axis B ...
@@ -1541,10 +1541,10 @@ Motor[15].Servo.Kp = 5.25					// PID proportiona term
 Motor[15].Servo.Ki = 0.				// PID integral term
 Motor[15].Servo.Kvfb= 100					// PID velocity feedback (“derivative”) gain term
 
-Motor[15].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
+Motor[15].Servo.BreakPosErr = 0.5		// Servo gain-break error size (deadband)
 Motor[15].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
-Motor[15].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
+Motor[15].Servo.MaxPosErr= 1000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
@@ -1554,7 +1554,7 @@ Motor[15].MaxSpeed=1
 
 Motor[15].HomeVel=1
 
-Motor[15].JogTa=-200						// Jog accel/decel time or inverse rate
+Motor[15].JogTa=-1000						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
 										// < 0 mu / millisecond^2
 										// -200 -> 0.005 mu/ms^2 -> 5m/s^2 or 0.5g
@@ -2187,7 +2187,7 @@ Motor[18].Servo.Ki = 0.				// PID integral term
 Motor[18].Servo.Kvfb= 0					// PID velocity feedback (“derivative”) gain term
 Motor[18].Servo.Kvff = 0
 
-Motor[18].Servo.BreakPosErr = 1.0		// Servo gain-break error size (deadband)
+Motor[18].Servo.BreakPosErr = 500.0		// Servo gain-break error size (deadband)
 Motor[18].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
 Motor[18].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
@@ -2201,7 +2201,7 @@ Motor[18].MaxSpeed=4
 
 Motor[18].HomeVel=4
 
-Motor[18].JogTa=-1000						// Jog accel/decel time or inverse rate
+Motor[18].JogTa=-200						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
 										// < 0 mu / millisecond^2
 										// -200 -> 0.005 mu/ms^2 -> 5m/s^2 or 0.5g
@@ -2290,8 +2290,8 @@ EncTable[22].MaxDelta = 50000 * 256;
 
  
 EncTable[23].type=8
-EncTable[23].pEnc = EncTable[19].PrevEnc.a   // address of lower 24 bit
-EncTable[23].pEnc1 = EncTable[20].PrevEnc.a  // address of upper 8 bits
+EncTable[23].pEnc = EncTable[19].PrevEnc.a   
+EncTable[23].pEnc1 = EncTable[20].PrevEnc.a  
 EncTable[23].index1 = 0;									// left shift for sign adjustment 32-26=6
 EncTable[23].index2 = 0;
 EncTable[23].index3 = 0;
@@ -2299,8 +2299,8 @@ EncTable[23].index4 = 0;
 EncTable[23].ScaleFactor = 1 ;
 
 EncTable[24].type=8
-EncTable[24].pEnc = EncTable[21].PrevEnc.a   // address of lower 24 bit
-EncTable[24].pEnc1 = EncTable[22].PrevEnc.a  // address of upper 8 bits
+EncTable[24].pEnc = EncTable[21].PrevEnc.a   
+EncTable[24].pEnc1 = EncTable[22].PrevEnc.a  
 EncTable[24].index1 = 0;									// left shift for sign adjustment 32-26=6
 EncTable[24].index2 = 0;
 EncTable[24].index3 = 0;
@@ -2310,11 +2310,37 @@ EncTable[24].ScaleFactor = 1 ;
 EncTable[25].type=8
 EncTable[25].pEnc = EncTable[23].PrevEnc.a   // address of lower 24 bit
 EncTable[25].pEnc1 = EncTable[24].PrevEnc.a  // address of upper 8 bits
-EncTable[25].index1 = 0// 65;									// left shift for sign adjustment 32-26=6
-EncTable[25].index2 = 0//255;
+EncTable[25].index1 = 65;									// left shift for sign adjustment 32-26=6
+EncTable[25].index2 = 255;
 EncTable[25].index3 = 0;
-EncTable[25].index4 = 0//15;
+EncTable[25].index4 = 15;
 EncTable[25].ScaleFactor = 1/4 ;
+
+// set control word so that polarity and latching can be set
+// ctrlreg: 
+// $38 input/output data access (binary 00111000)
+// $07 input/output data access (binary 00000111), bits 0-23 inputs 24-47 outputs
+// $40 polarity access (binary 01000000)
+// $c0 latch access (binary 11000000)
+
+// set all signals to non latching non inverted
+ACC65E[6].CtrlReg=$40
+ACC65E[6].DataReg[0]=$00
+ACC65E[6].DataReg[1]=$00
+ACC65E[6].DataReg[2]=$00
+ACC65E[6].DataReg[3]=$00
+ACC65E[6].DataReg[4]=$00
+ACC65E[6].DataReg[5]=$00
+ACC65E[6].CtrlReg=$c0
+ACC65E[6].DataReg[0]=$00
+ACC65E[6].DataReg[1]=$00
+ACC65E[6].DataReg[2]=$00
+ACC65E[6].DataReg[3]=$00
+ACC65E[6].DataReg[4]=$00
+ACC65E[6].DataReg[5]=$00
+
+// back to data access
+ACC65E[6].CtrlReg=$07
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // 

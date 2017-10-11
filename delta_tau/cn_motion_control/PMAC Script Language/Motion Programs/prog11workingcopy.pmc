@@ -1,0 +1,139 @@
+// custom motion program for SP filter wheel
+/****************************************/
+open prog 11
+
+Sys.WpKey=$AAAAAAAA	
+
+Gate3[3].Chan[0].CaptFlagSel=3	// select UserFlag as trigger for move until moves
+								// this wheel needs a 25 steps after move to center on detent
+
+Sys.WpKey=$0 // Write-protect Gate3 registers			// disabling writing to hardware registers
+
+
+
+// going the same direction as the homing works fine. Reversing direction has
+// and will mess with the position counting
+
+// WheelPosCounter contains wheel position value
+
+local ThisCs;						// Local var for # of CS running program
+local MotorNumber;					// Local var for the motor
+local wheelStepSize = 400.0;			// Local var for motor units in between two positions
+local totalPositions = 16;
+local totalSteps = wheelStepSize*totalPositions;
+
+local desiredPosition = DesiredWheelPosition;		// get the wheel position value
+
+local desiredCounts;
+local desiredAdditionalSteps;
+local posSteps;
+local negSteps;
+local bestDirection;
+local commandedSteps;
+local loopCounter;
+
+ThisCs = Ldata.coord;				// Get CS number for which the program is run
+Ldata.motor = ThisCs;				// Asign the right motor locally
+
+// initialize these after homing
+if(FreshlyHomed==1){
+	WheelSubStepsDown = 0;
+	WheelSubStepsUp	= 400;
+	NearestWheelPositionDown = 6000;
+	NearestWheelPositionUp = 400;
+	FreshlyHomed=0;	
+}
+
+
+// take care of no roll over for commanded position
+if(Coord[ThisCs].CdPos[0] < 0){
+	currentPos = (Coord[ThisCs].CdPos[0] % totalSteps) + totalSteps;
+}
+else{
+	currentPos = Coord[ThisCs].CdPos[0] % totalSteps;
+	}
+
+// determine direction for every move by using relative move size
+
+if(desiredPosition > currentPos){
+	posSteps = desiredPosition - currentPos;
+	negSteps = -1*(totalSteps - desiredPosition + currentPos);
+	if(posSteps <= abs(negSteps)){
+		bestDirection = 1.0;
+		commandedSteps = posSteps;
+	}
+	else{
+		bestDirection = -1.0;
+		commandedSteps = abs(negSteps);
+	}
+}
+else{
+	posSteps = totalSteps + desiredPosition - currentPos;
+	negSteps = currentPos - desiredPosition;
+	if(posSteps <= abs(negSteps)){
+		bestDirection = 1.0;
+		commandedSteps = posSteps;
+	}
+	else{
+		bestDirection = -1.0;
+		commandedSteps = abs(negSteps);
+	}
+}
+Checker = commandedSteps;
+// commanded Steps contains information on how many filter positions
+desiredCounts = int(commandedSteps/wheelStepSize);
+desiredAdditionalSteps = commandedSteps % wheelStepSize;
+	
+// go position by position
+loopCounter = 1;
+abs; // absolute moves
+rapid;
+//if(desiredCounts>0){
+	while (loopCounter<=desiredCounts) {
+	A(Coord[ThisCs].CdPos[0]+(bestDirection*wheelStepSize)); // move one position at a time
+	dwell(200)
+	if (Motor11UserFlag==1){
+		WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
+		if(WheelPosCounter<0){
+			WheelPosCounter += totalPositions;
+		}
+	}
+	else{
+	    inc;	//switch to incremental move
+	    while(Motor11UserFlag==0){
+			A(1*bestDirection);
+			dwell(1000)
+			}
+		WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
+		if(WheelPosCounter<0){
+			WheelPosCounter += totalPositions;
+		}
+	}
+	loopCounter += 1;
+	}
+//}
+
+
+
+		
+
+	
+	
+	
+	
+
+//if(WheelPosCounter!=desiredCounts){
+//	disable ThisCs;
+	// buy an encoder as we cannot distinguish between not counting detents and lost steps
+//}
+
+Sys.WpKey=$AAAAAAAA	
+
+Gate3[3].Chan[0].CaptFlagSel=0	
+
+Sys.WpKey=$0
+
+
+close
+/****************************************/
+

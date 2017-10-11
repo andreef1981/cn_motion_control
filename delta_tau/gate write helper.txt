@@ -1,0 +1,6 @@
+Sys.WpKey=$AAAAAAAA	
+
+Gate3[1].Chan[3].PfmDirPol=1	
+
+Sys.WpKey=$0 // Write-protect Gate3 registers			// disabling writing to hardware registers
+

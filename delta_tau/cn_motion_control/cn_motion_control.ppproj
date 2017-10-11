@@ -1,4 +1,4 @@
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -33,7 +33,7 @@
     <CommType>PPmacServer</CommType>
     <Name>cn_motion_control</Name>
     <ProjectFrimwareVers>2.0.2.14</ProjectFrimwareVers>
-    <IDESignature>wcvm8720WCVM</IDESignature>
+    <IDESignature>zozu9877ZOZU</IDESignature>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -69,16 +69,25 @@
     <Content Include="C Language\Background Programs\capp1\capp1.h" />
     <Content Include="C Language\CPLCs\rticplc\rticplc.c" />
     <Content Include="C Language\CPLCs\bgcplc00\bgcplc.c" />
-    <Content Include="PMAC Script Language\Motion Programs\prog5.pmc">
+    <Content Include="PMAC Script Language\Motion Programs\prog1.pmc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="PMAC Script Language\Motion Programs\home_wheels_prog4.pmc">
+    <Content Include="PMAC Script Language\Motion Programs\prog11newv2.pmc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\Motion Programs\prog21_circular_home.pmc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\Motion Programs\prog5.pmc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog2.pmc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog7.pmc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\PLC Programs\plc1.plc">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

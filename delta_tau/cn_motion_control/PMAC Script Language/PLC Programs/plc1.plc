@@ -1,0 +1,25 @@
+// Power PMAC Script PLC Program Template.
+// The following Sample PLC PROGRAM is the standard template for creating Script PLC Programs.
+// Sample PLC PROGRAM
+/****************************************/
+// open plc 1
+// --------------------User Code Goes Here------------------------
+
+/*
+   * This simple PLC program reports the status, current position and velocity
+   * for all motors in the system. It uses the send1 buffer for the reporting
+   */
+   
+open plc 1
+l1=sys.time+1;
+l2=1;
+while (l1>sys.time){};
+while (l2<sys.servomotors){
+	send1 "m[%d]:%x:%x:%f:%f\n",l2,motor[l2].status[0],motor[l2].status[1],motor[l2].actpos-motor[l2].homepos,(motor[l2].actvel/sys.servoperiod);
+    sendall;
+    l2++;
+ } 
+    
+close;
+ 
+/****************************************/

@@ -1,0 +1,13 @@
+SP filter wheel
+Home is 10800 filter
+-400 is 14300 filter
+-800 is 39340 filter
+-1200 is 46510 filter
+
+SM 5 focus range (POS LIMIT as zero) -43945 to 0;
+
+Graging angle 1 for blaze:
+10800 -105.8456
+14300 -108.0656
+39340 -103.8256
+46510 -105.2056

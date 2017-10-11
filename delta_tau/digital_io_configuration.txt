@@ -1,0 +1,26 @@
+// set control word so that polarity and latching can be set
+// ctrlreg: 
+// $38 input/output data access (binary 00111000)
+// $07 input/output data access (binary 00000111), bits 0-23 inputs 24-47 outputs
+// $40 polarity access (binary 01000000)
+// $c0 latch access (binary 11000000)
+
+// set all signals to non latching non inverted
+ACC65E[6].CtrlReg=$40
+ACC65E[6].DataReg[0]=$00
+ACC65E[6].DataReg[1]=$00
+ACC65E[6].DataReg[2]=$00
+ACC65E[6].DataReg[3]=$00
+ACC65E[6].DataReg[4]=$00
+ACC65E[6].DataReg[5]=$00
+ACC65E[6].CtrlReg=$c0
+ACC65E[6].DataReg[0]=$00
+ACC65E[6].DataReg[1]=$00
+ACC65E[6].DataReg[2]=$00
+ACC65E[6].DataReg[3]=$00
+ACC65E[6].DataReg[4]=$00
+ACC65E[6].DataReg[5]=$00
+
+// back to data access
+ACC65E[6].CtrlReg=$07
+

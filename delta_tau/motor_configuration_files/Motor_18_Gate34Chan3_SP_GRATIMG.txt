@@ -182,7 +182,7 @@ Motor[18].MaxSpeed=4
 
 Motor[18].HomeVel=4
 
-Motor[18].JogTa=-1000						// Jog accel/decel time or inverse rate
+Motor[18].JogTa=-200						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
 										// < 0 mu / millisecond^2
 										// -200 -> 0.005 mu/ms^2 -> 5m/s^2 or 0.5g
