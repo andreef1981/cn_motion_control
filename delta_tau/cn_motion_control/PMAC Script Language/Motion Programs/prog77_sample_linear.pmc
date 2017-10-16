@@ -1,0 +1,34 @@
+// Power PMAC PROGRAM Template.
+// The following Sample PROGRAM is the standard template for creating Motion Programs.
+// Sample PROGRAM
+/****************************************/
+open prog 77
+// --------------------User Code Goes Here------------------------
+//global filterPosition = 0;
+
+//local position = filterPosition*400;
+
+linear;
+abs;
+
+ta500;					// 1/2-second accel time
+td1000;					// 1-second decel time
+ts250;					// 1/4-second S-curve accel/decel time
+tm2000;					// 2-second move time
+
+//A(position-60);
+dwell(1000); // TODO: take this out
+
+inc
+rapid
+while (Gate3[3].Chan[0].UserFlag==0) {
+	A(1)
+	dwell(10);	
+}
+	
+	
+//A(position);
+
+close
+/****************************************/
+

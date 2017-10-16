@@ -14,20 +14,29 @@ local wheelStepSize = 400.0;		// Local var for motor units in between two positi
 local totalPositions = 16;			// Local var for # of wheel positions
 local totalSteps = totalPositions*wheelStepSize;
 local desiredPosition = DesiredWheelPosition;		// asign local var from csglobal desired position
+desiredPosition = desiredPosition % totalSteps;
+if(desiredPosition<0){
+	desiredPosition += totalSteps;
+}
+Checker = desiredPosition;
 local desiredCount = floor(desiredPosition/wheelStepSize);	// how many positions to move
-local desiredCountFraction =((desiredPosition/wheelStepSize) - desiredCount)*wheelStepSize; // sub positions to move
+local desiredCountFraction =((desiredPosition/wheelStepSize) - desiredCount); // sub positions to move
 local posPositions;	// local var for how many positions to move +
 local negPositions; // local var for how many positions to move -
 local bestDirection; // local var for the best direction (+1 or -1)
 local commandedPosition; // local var for how many positions to move absolute
 local loopCounter;
-local actualPos;
+//local actualPos;
 local deltaPos;
-local dwellTime = 500,
+local dwellTime = 1000;
 
 ThisCs = Ldata.coord;				// Get CS number for which the program is run
 Ldata.motor = ThisCs;				// Asign the right motor locally
 //FreshlyHomed = 0;
+
+
+
+
 
 /* Get the current actualPosition and make sure it is within 0 to totalSteps */
 actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
@@ -36,8 +45,9 @@ if(actualPos<0){
 }
 deltaPos = floor(abs(actualPos-desiredPosition)/wheelStepSize);
 
+
 // decide which way to move factoring in roll over
-if(desiredCount >= WheelPosCounter){			
+if(desiredCount > WheelPosCounter){			
 	posPositions = desiredCount - WheelPosCounter;
 	negPositions = -1.0*(totalPositions - desiredCount + WheelPosCounter);
 	if(posPositions <= abs(negPositions)){
@@ -61,8 +71,14 @@ if(desiredCount < WheelPosCounter){
 		commandedPosition = abs(negPositions);
 	}	
 }
+if(desiredCount == WheelPosCounter){	
+	commandedPosition = 0;
+	// no direction needed as fractional move only
+}
+
+/* decide which way to move factoring in roll over. Fractional moves need full
+detail on in which direction to move. Especially within the same count. */
 /*
-// decide which way to move factoring in roll over
 if(desiredPosition >= actualPos){			
 	posPositions = desiredPosition - actualPos;
 	negPositions = -1.0*(totalSteps - desiredPosition + actualPos);
@@ -87,8 +103,8 @@ if(desiredPosition < actualPos){
 		commandedPosition = floor(abs(negPositions)/wheelStepSize);
 	}
 }
-
 */
+
 
 // moving negative fractions, commanded position needs to be decreased by one.
 // if((desiredCountFraction!=0) && (bestDirection==-1.0)){
@@ -109,15 +125,9 @@ if(bestDirection==1){
 		// no fractional movement required
 			loopCounter = 1;
 			while(loopCounter<=commandedPosition) {
-				/* If we are not in a detent postion we have to recover without 
-				altering the position count
-				if((deltaPos % wheelStepSize != 0) && (loopCounter ==1)){
-					jog:((wheelStepSize)*bestDirection)^(0);
-				}	*/
 				
 				/* Due to the width of the detent position we have to creep out of 
-				it before starting the triggered move. But stop if we reach desired
-				position */
+				it before starting the triggered move. */
 				while(Motor11UserFlag==1){
 					jog:(bestDirection*1);
 				}
@@ -145,76 +155,289 @@ if(bestDirection==1){
 			}
 		}
 		else{
-		// fractional move required
+		// fractional move required but there could be several filter positions in between
+			loopCounter = 1;
+			while(loopCounter<=commandedPosition) {
+								
+				/* Due to the width of the detent position we have to creep out of 
+				it before starting the triggered move. Desired position cannot be 
+				in this loop. */
+				while(Motor11UserFlag==1){
+					jog:(bestDirection*1);
+				}
+	
+				/* Now move to the next position. Using jog and detent interrupt makes sure we
+				get to the right position withou relying on absolute values*/
+				jog:((wheelStepSize+100)*bestDirection)^(0);
 		
+				// after each move the actual position has to be updated
+				actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+				if(actualPos<0){
+					actualPos += totalSteps;
+				}
+				/* dwelling needed to recognize if detent is engaged. This can potetially be 
+				removed to increas speed */
+	
+				dwell(dwellTime);
+				if (Motor11UserFlag==1){
+					WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
+						if(WheelPosCounter<0){
+						WheelPosCounter += totalPositions;
+						}
+				}
+				loopCounter +=1;
+			}
+			/* now move to the final position. Make this an absolute move to avoid problems
+			going the negative direction*/
+			// now move to the final position
+			abs;
+			rapid;
+			A(desiredPosition);
+			
 		}
 	}
 	else{
 	// not in detent
+		// check if fractional move is required
+		if(desiredCountFraction==0){
+		// no fractional movement required
+			loopCounter = 1;
+			while(loopCounter<=commandedPosition) {
+				
+				/* Due to the width of the detent position we have to creep out of 
+				it before starting the triggered move. */
+				while(Motor11UserFlag==1){
+					jog:(bestDirection*1);
+				}	
+				/* Easy in positive direction, just move to the next position.
+				Using jog and detent interrupt makes sure we
+				get to the right position without relying on absolute values*/
+				jog:((wheelStepSize+100)*bestDirection)^(0);
+		
+				// after each move the actual position has to be updated
+				actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+				if(actualPos<0){
+					actualPos += totalSteps;
+				}
+				/* dwelling needed to recognize if detent is engaged. This can potetially be 
+				removed to increas speed */
 	
+				dwell(dwellTime);
+				if (Motor11UserFlag==1){
+					WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
+						if(WheelPosCounter<0){
+						WheelPosCounter += totalPositions;
+						}
+				}
+				loopCounter +=1;
+			}
+		}
+		else{
+		// fractional move required but there could be several filter positions in between
+			loopCounter = 1;
+			while(loopCounter<=commandedPosition) {
+					
+				/* Due to the width of the detent position we have to creep out of 
+				it before starting the triggered move. */
+				while(Motor11UserFlag==1){
+					jog:(bestDirection*1);
+				}			
+				/* Now move to the next position. Using jog and detent interrupt makes sure we
+				get to the right position withou relying on absolute values*/
+				jog:((wheelStepSize+100)*bestDirection)^(0);
+		
+				// after each move the actual position has to be updated
+				actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+				if(actualPos<0){
+					actualPos += totalSteps;
+				}
+				/* dwelling needed to recognize if detent is engaged. This can potetially be 
+				removed to increas speed */
+	
+				dwell(dwellTime);
+				if (Motor11UserFlag==1){
+					WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
+						if(WheelPosCounter<0){
+						WheelPosCounter += totalPositions;
+						}
+				}
+				loopCounter +=1;
+			}
+			// now move to the final position
+			abs;
+			rapid;
+			A(desiredPosition);
+			
+		}
 	}
 }
 
+///////////////////////////////////////////////////////////////////////////////
 
-
-
-
+// moving negative
+if(bestDirection==-1){
+	// check if we are in a detent position
+	if(Motor11UserFlag==1){
+	// in detent
+		// check if fractional move is required
+		if(desiredCountFraction==0){
+		// no fractional movement required
+			loopCounter = 1;
+			while(loopCounter<=commandedPosition) {
+				
+				/* Due to the width of the detent position we have to creep out of 
+				it before starting the triggered move. */
+				while(Motor11UserFlag==1){
+					jog:(bestDirection*1);
+				}
 	
-	// recover if we are not in a detent position
-	if(Motor11UserFlag==0){
-		// triggered move to reach next deten
-		jog:((wheelStepSize)*bestDirection)^(0);
-	}
-
-
-
-Checker = commandedPosition;
-// use triggered moves to move position by position
-
-Checker=desiredCountFraction;
-// do fractional moves for less than one full position
-if(deltaPos % wheelStepSize != 0) {
-	/* Due to the width of the detent position we have to creep out of 
-	it before starting the triggered move. But stop if we reach desired
-	position */
-	while((Motor11UserFlag==1) && (actualPos!=desiredPosition)){
-		rapid;
-		inc;
-		A(bestDirection*1);
-		// after each move the actual position has to be updated
-		actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
-		if(actualPos<0){
-			actualPos += totalSteps;
-		}
-	}
-	
-	if(actualPos!=desiredPosition){
-	/* Now move to the desired position if we are not there yet.
-	If the move is interrupted by detent, increase the position counter by one*/
-		rapid;
-		abs;
-		A(desiredPosition)^(bestDirection*0); // leave posibility of post trigger move
+				/* Now move to the next position. Using jog and detent interrupt makes sure we
+				get to the right position withou relying on absolute values*/
+				jog:((wheelStepSize+100)*bestDirection)^(0);
 		
-		/* dwelling needed to recognize if detent is engaged. This can potetially be 
-		removed to increas speed */
-		dwell(1000);
-		if (Motor11UserFlag==1){
-			WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
-			if(WheelPosCounter<0){
-				WheelPosCounter += totalPositions;
+				// after each move the actual position has to be updated
+				actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+				if(actualPos<0){
+					actualPos += totalSteps;
+				}
+				/* dwelling needed to recognize if detent is engaged. This can potetially be 
+				removed to increas speed */
+	
+				dwell(dwellTime);
+				if (Motor11UserFlag==1){
+					WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
+						if(WheelPosCounter<0){
+						WheelPosCounter += totalPositions;
+						}
+				}
+				loopCounter +=1;
 			}
 		}
+		else{
+		// fractional move required but there could be several filter positions in between
+			loopCounter = 1;
+			while(loopCounter<=commandedPosition) {
+								
+				/* Due to the width of the detent position we have to creep out of 
+				it before starting the triggered move. Desired position cannot be 
+				in this loop. */
+				while(Motor11UserFlag==1){
+					jog:(bestDirection*1);
+				}
+	
+				/* Now move to the next position. Using jog and detent interrupt makes sure we
+				get to the right position withou relying on absolute values*/
+				jog:((wheelStepSize+100)*bestDirection)^(0);
 		
-		/* Move to the final position if necessary. This has to be done only once because
-		otherwise the commandedPositions variable would be bigger than 1. */
-		rapid;
-		abs;
-		A(desiredPosition); 
+				// after each move the actual position has to be updated
+				actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+				if(actualPos<0){
+					actualPos += totalSteps;
+				}
+				/* dwelling needed to recognize if detent is engaged. This can potetially be 
+				removed to increas speed */
+				
+				dwell(dwellTime);
+				if (Motor11UserFlag==1){
+					WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
+						if(WheelPosCounter<0){
+						WheelPosCounter += totalPositions;
+						}
+				}
+				loopCounter +=1;
+			}
+			// now move to the final position
+			abs;
+			rapid;
+			A(desiredPosition);
+			
+		}
 	}
-	actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
-	if(actualPos<0){
-		actualPos += totalSteps;
+	else{
+	// not in detent
+		// check if fractional move is required
+		if(desiredCountFraction==0){
+		// no fractional movement required
+			commandedPosition += 1; // add an extra move in this case
+			loopCounter = 1;
+			while(loopCounter<=commandedPosition) {
+					
+				/* Due to the width of the detent position we have to creep out of 
+				it before starting the triggered move. */
+				while(Motor11UserFlag==1){
+					jog:(bestDirection*1);
+				}
+				/* Easy in positive direction, just move to the next position.
+				Using jog and detent interrupt makes sure we
+				get to the right position without relying on absolute values*/
+				jog:((wheelStepSize+100)*bestDirection)^(0);
+		
+				// after each move the actual position has to be updated
+				actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+				if(actualPos<0){
+					actualPos += totalSteps;
+				}
+				/* dwelling needed to recognize if detent is engaged. This can potetially be 
+				removed to increas speed */
+				if(loopCounter!=1){
+					dwell(dwellTime);
+					if (Motor11UserFlag==1){
+						WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
+						if(WheelPosCounter<0){
+							WheelPosCounter += totalPositions;
+						}
+					}
+				}
+				loopCounter +=1;
+			}
+		}
+		else{
+		// fractional move required but there could be several filter positions in between
+			commandedPosition += 1; // add an extra move in this case
+			loopCounter = 1;
+			while(loopCounter<=commandedPosition) {
+					
+				/* Due to the width of the detent position we have to creep out of 
+				it before starting the triggered move. */
+				while(Motor11UserFlag==1){
+					jog:(bestDirection*1);
+				}			
+				/* Now move to the next position. Using jog and detent interrupt makes sure we
+				get to the right position withou relying on absolute values*/
+				jog:((wheelStepSize+100)*bestDirection)^(0);
+		
+				// after each move the actual position has to be updated
+				actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+				if(actualPos<0){
+					actualPos += totalSteps;
+				}
+				/* dwelling needed to recognize if detent is engaged. This can potetially be 
+				removed to increas speed */
+	
+				if(loopCounter!=1){
+					dwell(dwellTime);
+					if (Motor11UserFlag==1){
+						WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
+						if(WheelPosCounter<0){
+							WheelPosCounter += totalPositions;
+						}
+					}
+				}
+				loopCounter +=1;
+			}
+			// now move to the final position
+			abs;
+			rapid;
+			A(desiredPosition);
+			
+		}
 	}
+}
+
+// after each move the actual position has to be updated
+actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+if(actualPos<0){
+	actualPos += totalSteps;
 }
 
 /* Built in check to see if we are moving the right amount of positions and if the
@@ -230,9 +453,9 @@ Sys.WpKey=$AAAAAAAA
 Gate3[3].Chan[0].CaptFlagSel=0	
 Sys.WpKey=$0
 
-//send0 "m[%d]:isDone\n",Ldata.coord;
+send0 "m[%d]:isDone\n",Ldata.coord;
 
-//sendall;
+sendall;
 
 close
 /****************************************/

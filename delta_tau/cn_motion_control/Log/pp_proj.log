@@ -9,942 +9,830 @@ Loading PMAC Defaults ($$$***) Configuration
 [PMAC_PROJECT]
 Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
 0 Project Symbols were created for gpascii -2 communication
-LoadRTUserCode() Delta Time (sec) = 0.047009
+LoadRTUserCode() Delta Time (sec) = 0.047013
 [PMAC_PROJECT]
 Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037636
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003787
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.177678
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.003179
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.144053
+Project Preprocessing & Load Total Time (sec) = 0.414415
+[PMAC_CONFIG]
+Successful: SaveConfiguration using /var/ftp/usrflash/Project/Configuration/pp_save.cfg
+Successful: SaveCustomConfiguration using /var/ftp/usrflash/Project/Configuration/pp_custom_save.tpl
+LoadRTUserCode() Delta Time (sec) = 0.047877
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.038201
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003741
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.180377
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.002945
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.144123
+Project Preprocessing & Load Total Time (sec) = 0.418402
+LoadRTUserCode() Delta Time (sec) = 0.047475
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.038310
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003746
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.180106
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.002972
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.141673
+Project Preprocessing & Load Total Time (sec) = 0.415362
+LoadRTUserCode() Delta Time (sec) = 0.046171
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037308
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003780
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.177886
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.003028
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.141675
+Project Preprocessing & Load Total Time (sec) = 0.410907
+LoadRTUserCode() Delta Time (sec) = 0.046881
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.038297
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003916
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.177688
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.002927
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.140321
+Project Preprocessing & Load Total Time (sec) = 0.411112
+LoadRTUserCode() Delta Time (sec) = 0.049879
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.039721
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003731
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.186270
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.003060
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.147551
+Project Preprocessing & Load Total Time (sec) = 0.431378
+LoadRTUserCode() Delta Time (sec) = 0.048190
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.041056
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.004096
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.200500
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.003000
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.146063
+Project Preprocessing & Load Total Time (sec) = 0.443969
+LoadRTUserCode() Delta Time (sec) = 0.048632
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.040652
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.004052
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.181409
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.004559
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.149818
+Project Preprocessing & Load Total Time (sec) = 0.430134
+LoadRTUserCode() Delta Time (sec) = 0.047954
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.041148
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003876
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.181692
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.003094
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145740
+Project Preprocessing & Load Total Time (sec) = 0.424503
+LoadRTUserCode() Delta Time (sec) = 0.048805
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.041273
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003794
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.183206
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.003046
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.149932
+Project Preprocessing & Load Total Time (sec) = 0.431052
+LoadRTUserCode() Delta Time (sec) = 0.048345
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.040699
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003994
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.182909
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.003055
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.153063
+Project Preprocessing & Load Total Time (sec) = 0.433057
+LoadRTUserCode() Delta Time (sec) = 0.048321
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.041030
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.004026
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.182124
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.004421
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.146469
+Project Preprocessing & Load Total Time (sec) = 0.427557
+LoadRTUserCode() Delta Time (sec) = 0.048676
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.041523
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003952
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.182678
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.003058
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.147546
+Project Preprocessing & Load Total Time (sec) = 0.428289
+LoadRTUserCode() Delta Time (sec) = 0.048308
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.040700
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.004027
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.183258
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.003949
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.146631
+Project Preprocessing & Load Total Time (sec) = 0.428029
+LoadRTUserCode() Delta Time (sec) = 0.048140
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.042373
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003928
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.181604
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.002761
+Project Preprocessing & Load Total Time (sec) = 0.279451
+LoadRTUserCode() Delta Time (sec) = 0.048372
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.042347
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.004054
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.181484
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.002970
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145668
+Project Preprocessing & Load Total Time (sec) = 0.425918
+LoadRTUserCode() Delta Time (sec) = 0.044982
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.038483
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003720
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.169703
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.002953
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.137341
+Project Preprocessing & Load Total Time (sec) = 0.398151
+LoadRTUserCode() Delta Time (sec) = 0.049147
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.042529
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.004143
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.187330
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.003027
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.146841
+Project Preprocessing & Load Total Time (sec) = 0.434073
+LoadRTUserCode() Delta Time (sec) = 0.049534
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.042390
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.004090
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.188787
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.003236
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.147316
+Project Preprocessing & Load Total Time (sec) = 0.436395
+LoadRTUserCode() Delta Time (sec) = 0.049036
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.042085
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.004265
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.185867
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.003032
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.146128
+Project Preprocessing & Load Total Time (sec) = 0.431357
+LoadRTUserCode() Delta Time (sec) = 0.049526
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11newv2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.041925
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.004164
+33 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.186956
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.003012
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.146712
+Project Preprocessing & Load Total Time (sec) = 0.433482
+LoadRTUserCode() Delta Time (sec) = 0.049511
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.041739
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.002732
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.033460
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003691
 33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.174511
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.186472
 Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002254
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.143387
-Project Preprocessing & Load Total Time (sec) = 0.412599
-LoadRTUserCode() Delta Time (sec) = 0.049529
+Status: Download to PPMAC Command Processor, Time (sec) = 0.002754
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.147193
+Project Preprocessing & Load Total Time (sec) = 0.424229
+LoadRTUserCode() Delta Time (sec) = 0.049619
 [PMAC_PROJECT]
 Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog17_cifilter2.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog77_sample_linear.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warmfilter.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037837
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.002593
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.182140
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002141
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145857
-Project Preprocessing & Load Total Time (sec) = 0.421155
-LoadRTUserCode() Delta Time (sec) = 0.047813
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037094
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.002921
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.177401
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002382
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.144047
-Project Preprocessing & Load Total Time (sec) = 0.412715
-LoadRTUserCode() Delta Time (sec) = 0.049020
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037624
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003053
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.194069
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002267
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145527
-Project Preprocessing & Load Total Time (sec) = 0.432621
-LoadRTUserCode() Delta Time (sec) = 0.048733
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037756
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003045
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.181521
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002323
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.147795
-Project Preprocessing & Load Total Time (sec) = 0.422312
-LoadRTUserCode() Delta Time (sec) = 0.051633
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc:153:1: Preprocessing Error: Missing } bracket: on string:"close"
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.036904
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.053458
-Project Preprocessing & Load Total Time (sec) = 0.142380
-LoadRTUserCode() Delta Time (sec) = 0.047998
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.036594
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.002919
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.178441
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002410
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145291
-Project Preprocessing & Load Total Time (sec) = 0.414828
-LoadRTUserCode() Delta Time (sec) = 0.049219
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037533
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003118
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.182310
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002532
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145228
-Project Preprocessing & Load Total Time (sec) = 0.420998
-LoadRTUserCode() Delta Time (sec) = 0.049648
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037871
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003178
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.183134
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002376
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145542
-Project Preprocessing & Load Total Time (sec) = 0.422826
-LoadRTUserCode() Delta Time (sec) = 0.048185
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.036818
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.002871
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.179740
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002526
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145857
-Project Preprocessing & Load Total Time (sec) = 0.417150
-LoadRTUserCode() Delta Time (sec) = 0.049080
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.038036
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003129
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.181522
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002444
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145143
-Project Preprocessing & Load Total Time (sec) = 0.420412
-LoadRTUserCode() Delta Time (sec) = 0.049018
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037737
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003185
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.182301
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.055369
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.079642
+32 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.186393
 Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.001906
-Project Preprocessing & Load Total Time (sec) = 0.274859
-LoadRTUserCode() Delta Time (sec) = 0.048007
+Status: Download to PPMAC Command Processor, Time (sec) = 0.002343
+Project Preprocessing & Load Total Time (sec) = 0.374704
+LoadRTUserCode() Delta Time (sec) = 0.049406
 [PMAC_PROJECT]
 Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog17_cifilter2.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog77_sample_linear.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warmfilter.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.036771
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.002791
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.178641
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002372
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.147471
-Project Preprocessing & Load Total Time (sec) = 0.417191
-LoadRTUserCode() Delta Time (sec) = 0.047774
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.036987
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.002870
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.176985
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002381
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.144437
-Project Preprocessing & Load Total Time (sec) = 0.412506
-LoadRTUserCode() Delta Time (sec) = 0.049112
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037627
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003148
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.183524
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002297
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.147074
-Project Preprocessing & Load Total Time (sec) = 0.423957
-LoadRTUserCode() Delta Time (sec) = 0.048787
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037741
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003099
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.184029
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002509
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.146196
-Project Preprocessing & Load Total Time (sec) = 0.423492
-LoadRTUserCode() Delta Time (sec) = 0.048558
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037892
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003099
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.190996
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002339
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.144792
-Project Preprocessing & Load Total Time (sec) = 0.428828
-LoadRTUserCode() Delta Time (sec) = 0.048682
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037665
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003135
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.182184
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002526
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.144799
-Project Preprocessing & Load Total Time (sec) = 0.420086
-LoadRTUserCode() Delta Time (sec) = 0.048577
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.036794
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003051
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.177147
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002426
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.144914
-Project Preprocessing & Load Total Time (sec) = 0.413958
-LoadRTUserCode() Delta Time (sec) = 0.047782
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.036951
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.002905
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.181810
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002316
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145971
-Project Preprocessing & Load Total Time (sec) = 0.419013
-LoadRTUserCode() Delta Time (sec) = 0.048798
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037580
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003086
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.181530
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002355
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145222
-Project Preprocessing & Load Total Time (sec) = 0.419713
-LoadRTUserCode() Delta Time (sec) = 0.047624
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037495
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003090
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.177544
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002425
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145912
-Project Preprocessing & Load Total Time (sec) = 0.415275
-LoadRTUserCode() Delta Time (sec) = 0.048758
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037592
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003147
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.181017
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002405
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145840
-Project Preprocessing & Load Total Time (sec) = 0.419843
-LoadRTUserCode() Delta Time (sec) = 0.048476
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037631
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003026
-34 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.181458
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002576
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145247
-Project Preprocessing & Load Total Time (sec) = 0.419537
-LoadRTUserCode() Delta Time (sec) = 0.047691
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.036988
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003127
-34 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.178051
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002428
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145111
-Project Preprocessing & Load Total Time (sec) = 0.414476
-LoadRTUserCode() Delta Time (sec) = 0.047392
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037282
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003103
-34 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.178181
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.050675
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.008782
+32 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.199763
 Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.001756
-Project Preprocessing & Load Total Time (sec) = 0.268446
-LoadRTUserCode() Delta Time (sec) = 0.047593
+Status: Download to PPMAC Command Processor, Time (sec) = 0.006409
+Project Preprocessing & Load Total Time (sec) = 0.316407
+LoadRTUserCode() Delta Time (sec) = 0.047855
 [PMAC_PROJECT]
 Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog17_cifilter2.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog77_sample_linear.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warmfilter.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.036796
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003117
-34 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.176837
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002475
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.144610
-Project Preprocessing & Load Total Time (sec) = 0.412567
-LoadRTUserCode() Delta Time (sec) = 0.052277
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037647
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003048
-34 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.181970
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002516
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.146040
-Project Preprocessing & Load Total Time (sec) = 0.424622
-LoadRTUserCode() Delta Time (sec) = 0.047896
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037041
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003160
-34 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.177533
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002503
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.144490
-Project Preprocessing & Load Total Time (sec) = 0.413675
-LoadRTUserCode() Delta Time (sec) = 0.048881
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037738
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003159
-34 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.181193
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002495
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.146329
-Project Preprocessing & Load Total Time (sec) = 0.421012
-LoadRTUserCode() Delta Time (sec) = 0.048957
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037399
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003159
-34 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.182316
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.003677
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.144863
-Project Preprocessing & Load Total Time (sec) = 0.421496
-LoadRTUserCode() Delta Time (sec) = 0.048111
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037116
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.002915
-34 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.178278
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002546
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145455
-Project Preprocessing & Load Total Time (sec) = 0.415542
-LoadRTUserCode() Delta Time (sec) = 0.061091
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037369
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003173
-33 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.185778
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002538
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.144703
-Project Preprocessing & Load Total Time (sec) = 0.435749
-LoadRTUserCode() Delta Time (sec) = 0.048114
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037681
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003126
-31 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.178950
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.051244
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.008707
+32 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.196185
 Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.003194
-Project Preprocessing & Load Total Time (sec) = 0.272438
-LoadRTUserCode() Delta Time (sec) = 0.047909
+Status: Download to PPMAC Command Processor, Time (sec) = 0.007058
+Project Preprocessing & Load Total Time (sec) = 0.312304
+LoadRTUserCode() Delta Time (sec) = 0.048523
 [PMAC_PROJECT]
 Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog17_cifilter2.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog77_sample_linear.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warmfilter.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.036991
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003069
-31 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.178312
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002556
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.144130
-Project Preprocessing & Load Total Time (sec) = 0.414102
-LoadRTUserCode() Delta Time (sec) = 0.049357
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037791
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003159
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.049905
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.008398
 32 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.181611
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002529
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.144286
-Project Preprocessing & Load Total Time (sec) = 0.419817
-LoadRTUserCode() Delta Time (sec) = 0.049022
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.196524
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.007056
+Project Preprocessing & Load Total Time (sec) = 0.311774
+LoadRTUserCode() Delta Time (sec) = 0.048522
 [PMAC_PROJECT]
 Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog17_cifilter2.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog77_sample_linear.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warmfilter.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.038014
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003200
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.050581
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.008594
 32 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.181967
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.196813
 Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002468
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.149871
-Project Preprocessing & Load Total Time (sec) = 0.425672
-LoadRTUserCode() Delta Time (sec) = 0.048719
+Status: Download to PPMAC Command Processor, Time (sec) = 0.007953
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.146004
+Project Preprocessing & Load Total Time (sec) = 0.459377
+LoadRTUserCode() Delta Time (sec) = 0.049249
 [PMAC_PROJECT]
 Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog17_cifilter2.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog77_sample_linear.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warmfilter.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037539
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003131
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.052314
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.008977
 32 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.182801
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.214400
 Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002561
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145328
-Project Preprocessing & Load Total Time (sec) = 0.421168
-LoadRTUserCode() Delta Time (sec) = 0.048463
+Status: Download to PPMAC Command Processor, Time (sec) = 0.007907
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.148622
+Project Preprocessing & Load Total Time (sec) = 0.482512
+LoadRTUserCode() Delta Time (sec) = 0.045343
 [PMAC_PROJECT]
 Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog17_cifilter2.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog77_sample_linear.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warmfilter.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.038472
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003259
-32 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.192217
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002437
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.146395
-Project Preprocessing & Load Total Time (sec) = 0.432374
-LoadRTUserCode() Delta Time (sec) = 0.048876
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.047857
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.008023
+34 Project Symbols were created for gpascii -2 communication
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:18:1: warning: "desiredPosition" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:8:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:31:1: warning: "actualPos" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:9:1: warning: this is the location of the previous definition
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.186048
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.002571
+Project Preprocessing & Load Total Time (sec) = 0.290477
+LoadRTUserCode() Delta Time (sec) = 0.044837
 [PMAC_PROJECT]
 Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog17_cifilter2.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog77_sample_linear.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warmfilter.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.038121
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003269
-32 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.183716
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.047322
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.007967
+34 Project Symbols were created for gpascii -2 communication
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:18:1: warning: "desiredPosition" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:8:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:31:1: warning: "actualPos" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:9:1: warning: this is the location of the previous definition
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.183736
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.002549
+Project Preprocessing & Load Total Time (sec) = 0.287125
+[PMAC_INC_PROJECT]
+Start of Incremental Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_disable.txt 
+Including Incremental Project Test File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.048465
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.008158
+34 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.172036
 Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002555
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.146998
-Project Preprocessing & Load Total Time (sec) = 0.424593
-LoadRTUserCode() Delta Time (sec) = 0.049421
+Status: Download to PPMAC Command Processor, Time (sec) = 0.000778
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.137001
+Project Preprocessing & Load Total Time (sec) = 0.367420
+[PMAC_INC_PROJECT]
+Start of Incremental Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_disable.txt 
+Including Incremental Project Test File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Incremental Project Test File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
+Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.048257
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.008062
+34 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.174263
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.002103
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.136395
+Project Preprocessing & Load Total Time (sec) = 0.369931
+LoadRTUserCode() Delta Time (sec) = 0.045096
 [PMAC_PROJECT]
 Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog17_cifilter2.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog77_sample_linear.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warmfilter.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.038620
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003160
-32 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.195124
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002374
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.146120
-Project Preprocessing & Load Total Time (sec) = 0.436005
-LoadRTUserCode() Delta Time (sec) = 0.049171
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.047035
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.007854
+34 Project Symbols were created for gpascii -2 communication
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:18:1: warning: "desiredPosition" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:8:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:31:1: warning: "actualPos" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:9:1: warning: this is the location of the previous definition
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.184669
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.002388
+Project Preprocessing & Load Total Time (sec) = 0.287863
+LoadRTUserCode() Delta Time (sec) = 0.044742
 [PMAC_PROJECT]
 Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog17_cifilter2.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog77_sample_linear.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warmfilter.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.038317
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.003256
-32 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.183312
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002451
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145698
-Project Preprocessing & Load Total Time (sec) = 0.423269
-LoadRTUserCode() Delta Time (sec) = 0.048020
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.046821
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.007810
+34 Project Symbols were created for gpascii -2 communication
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:18:1: warning: "desiredPosition" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:8:1: warning: this is the location of the previous definition
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.184575
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.002109
+Project Preprocessing & Load Total Time (sec) = 0.286822
+LoadRTUserCode() Delta Time (sec) = 0.045264
 [PMAC_PROJECT]
 Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog17_cifilter2.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog77_sample_linear.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warmfilter.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.037129
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.002983
-32 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.178217
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.047242
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.008083
+34 Project Symbols were created for gpascii -2 communication
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc:31:1: warning: "actualPos" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:9:1: warning: this is the location of the previous definition
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.184966
 Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.002574
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.145717
-Project Preprocessing & Load Total Time (sec) = 0.415801
+Status: Download to PPMAC Command Processor, Time (sec) = 0.007515
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.137133
+Project Preprocessing & Load Total Time (sec) = 0.431117
+LoadRTUserCode() Delta Time (sec) = 0.045190
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog17_cifilter2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog77_sample_linear.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warmfilter.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.047473
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.007982
+34 Project Symbols were created for gpascii -2 communication
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc:31:1: warning: "actualPos" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:9:1: warning: this is the location of the previous definition
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.184530
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.007518
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.136986
+Project Preprocessing & Load Total Time (sec) = 0.430572
+[PMAC_CONFIG]
+Successful: SaveConfiguration using /var/ftp/usrflash/Project/Configuration/pp_save.cfg
+Successful: SaveCustomConfiguration using /var/ftp/usrflash/Project/Configuration/pp_custom_save.tpl

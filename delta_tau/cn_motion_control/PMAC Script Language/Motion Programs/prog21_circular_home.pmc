@@ -2,29 +2,30 @@
 // WheelPosCounter back to 0
 /****************************************/
 open prog 21
-enable plc 1;
-
-// make sure we are using the home flag
-Sys.WpKey=$AAAAAAAA	
-Gate3[3].Chan[0].CaptFlagSel=0	
-Sys.WpKey=$0
 
 local ThisCs;			// Local var for # of CS running program
 local MotorNumber;
+
+// make sure we are using the home flag
+Sys.WpKey=$AAAAAAAA	
+switch (ThisCs) {			// Change CaptFlagSel for the right gate
+	case 7: Gate3[2].Chan[0].CaptFlagSel=0; break; // motor 7 is on card2 channel 0
+	case 10: Gate3[2].Chan[3].CaptFlagSel=0; break; // motor 10 is on card2 channel 3
+	case 11: Gate3[3].Chan[0].CaptFlagSel=0; break; // motor 11 is on card3 channel 0
+	case 16: Gate3[4].Chan[1].CaptFlagSel=0; break; // motor 16 is on card4 channel 1
+	case 17: Gate3[4].Chan[2].CaptFlagSel=0; break; // motor 17 is on card4 channel 2
+}
+Sys.WpKey=$0
 
 ThisCs = Ldata.coord;	// Get CS number for which the program is run
 Ldata.motor = ThisCs;	// Asign the right motor locally
 
 WheelPosCounter = 0;
-//FreshlyHomed=1;
-//WheelPosCounter = 0;	// set the wheele position counter back
 
-home ThisCs;			// Home the Motor
+home; 					// Home the Motor
 
-send0 "m[%d]:isDone\n",Ldata.coord;
-
+send0 "m[%d]:isDone\n",Ldata.coord;	// report done
 sendall;
-//	
 
 close
 /****************************************/

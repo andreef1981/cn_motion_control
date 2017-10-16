@@ -15,7 +15,9 @@ l1=sys.time+1;
 l2=1;
 while (l1>sys.time){};
 while (l2<sys.servomotors){
-	send1 "m[%d]:%x:%x:%f:%f\n",l2,motor[l2].status[0],motor[l2].status[1],motor[l2].actpos-motor[l2].homepos,(motor[l2].actvel/sys.servoperiod);
+	send0 "m[%d]:%x:%x:%f:%f\n",l2,motor[l2].status[0],motor[l2].status[1],motor[l2].actpos-motor[l2].homepos,(motor[l2].actvel/sys.servoperiod);
+    send1 "m[%d]:%x:%x:%f:%f\n",l2,motor[l2].status[0],motor[l2].status[1],motor[l2].actpos-motor[l2].homepos,(motor[l2].actvel/sys.servoperiod);
+    //send3 "m[%d]:%x:%x:%f:%f\n",l2,motor[l2].status[0],motor[l2].status[1],motor[l2].actpos-motor[l2].homepos,(motor[l2].actvel/sys.servoperiod);
     sendall;
     l2++;
  } 

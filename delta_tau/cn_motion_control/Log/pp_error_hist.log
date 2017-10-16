@@ -3,19 +3,22 @@
 Loading PMAC Defaults ($$$***) Configuration
 [PMAC_PROJECT]
 [PMAC_PROJECT]
+[PMAC_CONFIG]
 [PMAC_PROJECT]
 [PMAC_PROJECT]
 [PMAC_PROJECT]
 [PMAC_PROJECT]
 [PMAC_PROJECT]
-/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc:153:1: Preprocessing Error: Missing } bracket: on string:"close"
 [PMAC_PROJECT]
 [PMAC_PROJECT]
 [PMAC_PROJECT]
 [PMAC_PROJECT]
 [PMAC_PROJECT]
 [PMAC_PROJECT]
-/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc:81:1: error #31: invalid parameter number in equation:  Q1025=Motor[ThisCS].JogSpeed
+[PMAC_PROJECT]
+[PMAC_PROJECT]
+[PMAC_PROJECT]
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc:22:1: error #31: missing modifier: home Ldata.coord
 Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
 [PMAC_PROJECT]
 [PMAC_PROJECT]
@@ -25,30 +28,51 @@ Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
 [PMAC_PROJECT]
 [PMAC_PROJECT]
 [PMAC_PROJECT]
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:340:1: error #31: invalid data: actualPos = Coord[L0].CdPos[0] % L3
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
 [PMAC_PROJECT]
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc:340:1: error #31: invalid data: actualPos = Coord[L0].CdPos[0] % L3
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
 [PMAC_PROJECT]
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog77_sample_linear.pmc:9:1: error #31: invalid function in equation: L0 = filterPosition*400
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
 [PMAC_PROJECT]
-[PMAC_PROJECT]
-[PMAC_PROJECT]
-[PMAC_PROJECT]
-/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc:56:1: error #31: invalid parameter number in conditional:  if(desiredFraction!=0){
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog77_sample_linear.pmc:19:1: error #31: invalid parameter number in equation: A(position-60)
 Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
 [PMAC_PROJECT]
 [PMAC_PROJECT]
 [PMAC_PROJECT]
-[PMAC_PROJECT]
-[PMAC_PROJECT]
-[PMAC_PROJECT]
-[PMAC_PROJECT]
-[PMAC_PROJECT]
-/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11new.pmc:28:1: error #31: invalid data: FreshlyHomed = 0
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:18:1: warning: "desiredPosition" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:8:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:31:1: warning: "actualPos" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:9:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc:19:1: error #31: invalid data: desiredPosition = Q0
 Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
 [PMAC_PROJECT]
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:18:1: warning: "desiredPosition" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:8:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:31:1: warning: "actualPos" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:9:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc:19:1: error #31: invalid data: desiredPosition = Q0
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+[PMAC_INC_PROJECT]
+[PMAC_INC_PROJECT]
 [PMAC_PROJECT]
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:18:1: warning: "desiredPosition" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:8:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:31:1: warning: "actualPos" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:9:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc:19:1: error #31: invalid data: desiredPosition = Q0
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
 [PMAC_PROJECT]
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:18:1: warning: "desiredPosition" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:8:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc:341:1: error #31: invalid data: actualPos = Coord[L0].CdPos[0] % L3
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
 [PMAC_PROJECT]
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc:31:1: warning: "actualPos" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:9:1: warning: this is the location of the previous definition
 [PMAC_PROJECT]
-[PMAC_PROJECT]
-[PMAC_PROJECT]
-[PMAC_PROJECT]
-[PMAC_PROJECT]
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc:31:1: warning: "actualPos" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:9:1: warning: this is the location of the previous definition
+[PMAC_CONFIG]

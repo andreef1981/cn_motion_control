@@ -1,0 +1,128 @@
+// custom motion program for SP filter wheel
+/****************************************/
+open prog 11
+Sys.WpKey=$AAAAAAAA	
+
+Gate3[3].Chan[0].CaptFlagSel=3	// select UserFlag as trigger for move until moves
+								// this wheel needs a 25 steps after move to center on detent
+
+Sys.WpKey=$0 // Write-protect Gate3 registers			// disabling writing to hardware registers
+
+// WheelPosCounter contains wheel position value
+
+local ThisCs;						// Local var for # of CS running program motor has same #
+local wheelStepSize = 400.0;		// Local var for motor units in between two positions
+local totalPositions = 16;			// Local var for # of wheel positions
+local totalSteps = totalPositions*wheelStepSize;
+local desiredPosition = DesiredWheelPosition;		// asign local var from csglobal desired position
+local desiredCount = floor(desiredPosition/wheelStepSize);	// how many positions to move
+local desiredCountFraction = ((desiredPosition/wheelStepSize) - desiredCount)*wheelStepSize; // sub positions to move
+local posPositions;	// local var for how many positions to move +
+local negPositions; // local var for how many positions to move -
+local bestDirection; // local var for the best direction (+1 or -1)
+local commandedPosition; // local var for how many positions to move absolute
+local loopCounter;
+local actualPos;
+
+ThisCs = Ldata.coord;				// Get CS number for which the program is run
+Ldata.motor = ThisCs;				// Asign the right motor locally
+//FreshlyHomed = 0;
+
+// decide which way to move factoring in roll over
+if(desiredCount >= WheelPosCounter){			
+	posPositions = desiredCount - WheelPosCounter;
+	negPositions = -1.0*(totalPositions - desiredCount + WheelPosCounter);
+	if(posPositions <= abs(negPositions)){
+		bestDirection = 1.0;
+		commandedPosition = posPositions;
+	}		
+	else{
+		bestDirection = -1.0;
+		commandedPosition = abs(negPositions);
+	}	
+}
+if(desiredCount < WheelPosCounter){	
+	posPositions = totalPositions - WheelPosCounter + desiredCount;
+	negPositions = WheelPosCounter - desiredCount;
+	if(posPositions <= abs(negPositions)){
+		bestDirection = 1.0;
+		commandedPosition = posPositions;
+	}
+	else{
+		bestDirection = -1.0;
+		commandedPosition = abs(negPositions);
+	}	
+}
+Checker = commandedPosition;
+// go position by position if move is larger than one filter position
+loopCounter = 1;
+while (loopCounter<=commandedPosition) {
+	// Due to the width of the detent position we have to creep out of it before starting
+	// the triggered move
+	while(Motor11UserFlag==1){
+		jog:(bestDirection*1);
+	}
+	rapid;
+	abs;
+	A(desiredPosition)^(bestDirection*0);
+	dwell(2000);
+	if (Motor11UserFlag==1){
+		WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
+		if(WheelPosCounter<0){
+			WheelPosCounter += totalPositions;
+		}
+	}
+	
+	loopCounter += 1;
+}
+actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+	if(actualPos<0){
+		actualPos += totalSteps;
+	}
+/*
+// do fractional moves if desired
+if(desiredCountFraction!=0){
+	// move needs to be in while loop as we might pass a detent and want to move still after
+	// the interrupt
+	while( actualPos != desiredPosition){
+		
+		// due to detent width repeat until in position or out of detent
+		while(Motor11UserFlag==1){	
+			A(desiredPosition);
+		}
+		// once we are out of the detent we can check for the detent interrupt again and update
+		// WheelPosCounter
+		rapid;
+		abs;
+		A(desiredPosition)^(bestDirection*0);
+		dwell(2000);
+		if (Motor11UserFlag==1){
+			WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
+			if(WheelPosCounter<0){
+				WheelPosCounter += totalPositions;
+			}
+		}
+		actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+		if(actualPos<0){
+			actualPos += totalSteps;
+		}
+	}
+}
+//if(WheelPosCounter!=desiredCount){
+	//disable ThisCs;
+	// buy an encoder as we cannot distinguish between not counting detents and lost steps
+//}
+*/
+Sys.WpKey=$AAAAAAAA	
+
+Gate3[3].Chan[0].CaptFlagSel=0	
+
+Sys.WpKey=$0
+
+//send0 "m[%d]:isDone\n",Ldata.coord;
+
+//sendall;
+
+close
+/****************************************/
+

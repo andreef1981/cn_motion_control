@@ -23,39 +23,41 @@ enum csglobalQ {_csglobalQ_=-1};
 enum csglobalQarray {_csglobalQarray_=-1};
 
 enum ptrM {_ptrM_=-1
-,Motor11UserFlag=8192
-,Input1=8193
-,Input2=8194
-,Input3=8195
-,Input4=8196
-,Input5=8197
-,Input6=8198
-,Input7=8199
-,Input8=8200
-,Input9=8201
-,Input10=8202
-,Input11=8203
-,Input12=8204
-,Input13=8205
-,Input14=8206
-,Input15=8207
-,Input16=8208
-,Input17=8209
-,Input18=8210
-,Input19=8211
-,Input20=8212
-,Input21=8213
-,Input22=8214
-,Input23=8215
-,Input24=8216};
+,Motor7UserFlag=8192
+,Motor10UserFlag=8193
+,Motor11UserFlag=8194
+,Motor16UserFlag=8195
+,Motor17UserFlag=8196
+,Input1=8197
+,Input2=8198
+,Input3=8199
+,Input4=8200
+,Input5=8201
+,Input6=8202
+,Input7=8203
+,Input8=8204
+,Input9=8205
+,Input10=8206
+,Input11=8207
+,Input12=8208
+,Input13=8209
+,Input14=8210
+,Input15=8211
+,Input16=8212
+,Input17=8213
+,Input18=8214
+,Input19=8215
+,Input20=8216
+,Input21=8217
+,Input22=8218
+,Input23=8219
+,Input24=8220};
 enum ptrMarray {_ptrMarray_=-1};
-#define	CurrentCoordinateSystem	pshm->P[8192]
-#define	FoundMotor	pshm->P[8193]
-#define	filterPosition	pshm->P[8194]
-#define	NumberOfArguments(i)	pshm->Coord[i%MAX_COORDS].Q[0]
-#define	DesiredWheelPosition(i)	pshm->Coord[i%MAX_COORDS].Q[1]
+#define	DesiredPosition(i)	pshm->Coord[i%MAX_COORDS].Q[0]
+#define	NumberOfArguments(i)	pshm->Coord[i%MAX_COORDS].Q[1]
 #define	WheelPosCounter(i)	pshm->Coord[i%MAX_COORDS].Q[1024]
 #define	Checker(i)	pshm->Coord[i%MAX_COORDS].Q[1025]
+#define	actualPos(i)	pshm->Coord[i%MAX_COORDS].Q[1026]
 void SetEnumGlobalVar(enum globalP var, double data)
 {
   pshm->P[var] = data;
@@ -133,43 +135,45 @@ double GetEnumPtrArrayVar(enum ptrMarray var, unsigned index)
 // end of #ifdef _PPScriptMode_
 #else
 #ifdef _EnumMode_
-enum globalP {_globalP_=-1
-,CurrentCoordinateSystem=8192
-,FoundMotor=8193
-,filterPosition=8194};
+enum globalP {_globalP_=-1};
 enum globalParray {_globalParray_=-1};
 enum csglobalQ {_csglobalQ_=-1
-,NumberOfArguments=0
-,DesiredWheelPosition=1
+,DesiredPosition=0
+,NumberOfArguments=1
 ,WheelPosCounter=1024
-,Checker=1025};
+,Checker=1025
+,actualPos=1026};
 enum csglobalQarray {_csglobalQarray_=-1};
 enum ptrM {_ptrM_=-1
-,Motor11UserFlag=8192
-,Input1=8193
-,Input2=8194
-,Input3=8195
-,Input4=8196
-,Input5=8197
-,Input6=8198
-,Input7=8199
-,Input8=8200
-,Input9=8201
-,Input10=8202
-,Input11=8203
-,Input12=8204
-,Input13=8205
-,Input14=8206
-,Input15=8207
-,Input16=8208
-,Input17=8209
-,Input18=8210
-,Input19=8211
-,Input20=8212
-,Input21=8213
-,Input22=8214
-,Input23=8215
-,Input24=8216};
+,Motor7UserFlag=8192
+,Motor10UserFlag=8193
+,Motor11UserFlag=8194
+,Motor16UserFlag=8195
+,Motor17UserFlag=8196
+,Input1=8197
+,Input2=8198
+,Input3=8199
+,Input4=8200
+,Input5=8201
+,Input6=8202
+,Input7=8203
+,Input8=8204
+,Input9=8205
+,Input10=8206
+,Input11=8207
+,Input12=8208
+,Input13=8209
+,Input14=8210
+,Input15=8211
+,Input16=8212
+,Input17=8213
+,Input18=8214
+,Input19=8215
+,Input20=8216
+,Input21=8217
+,Input22=8218
+,Input23=8219
+,Input24=8220};
 enum ptrMarray {_ptrMarray_=-1};
 void SetEnumGlobalVar(enum globalP var, double data)
 {
@@ -248,38 +252,40 @@ double GetEnumPtrArrayVar(enum ptrMarray var, unsigned index)
 // end of #ifdef _EnumMode_
 #else
 // ***** Standard default mode *****
-#define CurrentCoordinateSystem 8192
-#define FoundMotor 8193
-#define filterPosition 8194
-#define NumberOfArguments 0
-#define DesiredWheelPosition 1
+#define DesiredPosition 0
+#define NumberOfArguments 1
 #define WheelPosCounter 1024
 #define Checker 1025
-#define Motor11UserFlag 8192
-#define Input1 8193
-#define Input2 8194
-#define Input3 8195
-#define Input4 8196
-#define Input5 8197
-#define Input6 8198
-#define Input7 8199
-#define Input8 8200
-#define Input9 8201
-#define Input10 8202
-#define Input11 8203
-#define Input12 8204
-#define Input13 8205
-#define Input14 8206
-#define Input15 8207
-#define Input16 8208
-#define Input17 8209
-#define Input18 8210
-#define Input19 8211
-#define Input20 8212
-#define Input21 8213
-#define Input22 8214
-#define Input23 8215
-#define Input24 8216
+#define actualPos 1026
+#define Motor7UserFlag 8192
+#define Motor10UserFlag 8193
+#define Motor11UserFlag 8194
+#define Motor16UserFlag 8195
+#define Motor17UserFlag 8196
+#define Input1 8197
+#define Input2 8198
+#define Input3 8199
+#define Input4 8200
+#define Input5 8201
+#define Input6 8202
+#define Input7 8203
+#define Input8 8204
+#define Input9 8205
+#define Input10 8206
+#define Input11 8207
+#define Input12 8208
+#define Input13 8209
+#define Input14 8210
+#define Input15 8211
+#define Input16 8212
+#define Input17 8213
+#define Input18 8214
+#define Input19 8215
+#define Input20 8216
+#define Input21 8217
+#define Input22 8218
+#define Input23 8219
+#define Input24 8220
 #endif
 #endif
 #endif //_PP_PROJ_H_

@@ -69,9 +69,14 @@ EncTable[24].ScaleFactor = 1 ;
 EncTable[25].type=8
 EncTable[25].pEnc = EncTable[23].PrevEnc.a   // address of lower 24 bit
 EncTable[25].pEnc1 = EncTable[24].PrevEnc.a  // address of upper 8 bits
+EncTable[25].index1 = 0;									// left shift for sign adjustment 32-26=6
+EncTable[25].index2 = 0;
+EncTable[25].index3 = 0;
+EncTable[25].index4 = 0;
+EncTable[25].ScaleFactor = 1/4 ;
+
 EncTable[25].index1 = 65;									// left shift for sign adjustment 32-26=6
 EncTable[25].index2 = 255;
-EncTable[25].index3 = 0;
 EncTable[25].index4 = 15;
-EncTable[25].ScaleFactor = 1/4 ;
+
 

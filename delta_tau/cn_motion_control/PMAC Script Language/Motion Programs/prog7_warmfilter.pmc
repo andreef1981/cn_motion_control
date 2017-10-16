@@ -28,6 +28,7 @@ local bestDirection;		// local var for the best direction (+1 or -1)
 local commandedPosition;	// local var for how many positions to move absolute
 local loopCounter;			// local var for the loop
 local dwellTime = 200;		// local var for dwell time to detect user flag
+local actualPos;
 
 ThisCs = Ldata.coord;		// Get CS number for which the program is run
 Ldata.motor = ThisCs;		// Asign the right motor locally
