@@ -1,0 +1,85 @@
+// Homing procedure for linear stages which also resets the 
+// PosCounter back to 0
+/****************************************/
+
+// --------------------User Code Goes Here------------------------
+open prog 22
+
+local ThisCs;			// Local var for # of CS running program
+local MotorNumber;
+
+ThisCs = Ldata.coord;	// Get CS number for which the program is run
+Ldata.motor = ThisCs;	// Asign the right motor locally
+
+/* Check if we are in a limit already first before we make any moves
+make sure we are using the positive limit flag as interrupt and the limits are
+disabled */
+Sys.WpKey=$AAAAAAAA	
+switch (ThisCs) {			// Change CaptFlagSel for the right gate
+	case 3: Gate3[1].Chan[0].CaptFlagSel=1;
+			Motor[3].pLimits=0;
+			break; // motor 3, FM1 a is on card1 channel 0
+	case 4: Gate3[1].Chan[1].CaptFlagSel=1;
+			Motor[4].pLimits=0;
+			break; // motor 4, Fm1 B is on card1 channel 1
+	case 5: Gate3[1].Chan[2].CaptFlagSel=1;
+			Motor[5].pLimits=0;
+			break; // motor 5, fm2 focus is on card1 channel 2
+	case 6: if(Motor6PlusFlag==1){
+				jog:(-50000);
+			}	
+			Gate3[1].Chan[3].CaptFlagSel=1;
+			Motor[6].pLimits=0;
+			break; // motor 6, lamp is on card1 channel 3
+	case 8: Gate3[2].Chan[1].CaptFlagSel=1;
+			Motor[8].pLimits=0;
+			break; // motor 8, modulator is on card2 channel 1
+	case 9: Gate3[2].Chan[2].CaptFlagSel=1;
+			Motor[9].pLimits=0;
+			break; // motor 9, sp pickoff is on card2 channel 2
+	case 15: Gate3[4].Chan[0].CaptFlagSel=1;
+			Motor[15].pLimits=0;
+			break; // motor 15, sm5 focus is on card4 channel 0
+}
+Sys.WpKey=$0
+
+
+
+PosCounter = 0;
+
+home;
+//dwell(5000);
+/* make sure we are using the home limit flag as interrupt and the limits are
+enabled */
+Sys.WpKey=$AAAAAAAA	
+switch (ThisCs) {			// Change CaptFlagSel for the right gate
+	case 3: Gate3[1].Chan[0].CaptFlagSel=0;
+			Motor[3].pLimits=Gate3[1].Chan[0].Status.a;
+			break; // motor 3, FM1 a is on card1 channel 0
+	case 4: Gate3[1].Chan[1].CaptFlagSel=0;
+			Motor[4].pLimits=Gate3[1].Chan[1].Status.a;
+			break; // motor 4, Fm1 B is on card1 channel 1
+	case 5: Gate3[1].Chan[2].CaptFlagSel=0;
+			Motor[5].pLimits=Gate3[1].Chan[2].Status.a;
+			break; // motor 5, fm2 focus is on card1 channel 2
+	case 6: Gate3[1].Chan[3].CaptFlagSel=0;
+			Motor[6].pLimits=Gate3[1].Chan[3].Status.a;
+			break; // motor 6, lamp is on card1 channel 3
+	case 8: Gate3[2].Chan[1].CaptFlagSel=0;
+			Motor[8].pLimits=Gate3[2].Chan[1].Status.a;
+			break; // motor 8, modulator is on card2 channel 1
+	case 9: Gate3[2].Chan[2].CaptFlagSel=0;
+			Motor[9].pLimits=Gate3[2].Chan[2].Status.a;
+			break; // motor 9, sp pickoff is on card2 channel 2
+	case 15: Gate3[4].Chan[0].CaptFlagSel=0;
+			Motor[15].pLimits=Gate3[4].Chan[0].Status.a;
+			break; // motor 15, sm5 focus is on card4 channel 0
+}
+Sys.WpKey=$0
+
+send0 "m[%d]:isDone\n",Ldata.coord;	// report done
+sendall;
+
+close
+/****************************************/
+

@@ -1,12 +1,15 @@
 // Cs global variables
 
 #define DesiredPosition Q0
-#define NumberOfArguments Q1
 
 // Wheel specific to keep track of position
-csglobal WheelPosCounter;
+csglobal PosCounter;
 csglobal Checker;
 csglobal actualPos;
+csglobal PlusInCounter;
+csglobal PlusOutCounter;
+csglobal MinusInCounter;
+csglobal MinusOutCounter;
 
 // pointer to card user flags
 ptr Motor7UserFlag->Gate3[2].Chan[0].UserFlag;
@@ -14,6 +17,12 @@ ptr Motor10UserFlag->Gate3[2].Chan[3].UserFlag;
 ptr Motor11UserFlag->Gate3[3].Chan[0].UserFlag;
 ptr Motor16UserFlag->Gate3[4].Chan[1].UserFlag;
 ptr Motor17UserFlag->Gate3[4].Chan[2].UserFlag;
+
+// pointer to card plus limit flags
+ptr Motor6PlusFlag->Gate3[1].Chan[3].PlusLimit;
+
+// pointer to card plus limit flags
+ptr Motor6MinusFlag->Gate3[1].Chan[3].MinusLimit;
 
 // pointers to IO card
 PTR Input1->ACC65E[6].DataReg[0].0.1;

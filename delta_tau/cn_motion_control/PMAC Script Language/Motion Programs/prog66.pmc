@@ -1,0 +1,57 @@
+// Power PMAC PROGRAM for finding backlash on linear stages
+/****************************************/
+open prog 66
+
+local ThisCs;						// Local var for # of CS running program motor has same #
+local backout=20000;				// how much to backout from limit
+
+PlusInCounter=0;
+PlusOutCounter=0;
+MinusInCounter=0;
+MinusOutCounter=0;
+ThisCs = Ldata.coord;		// Get CS number for which the program is run
+Ldata.motor = ThisCs;		// Asign the right motor locally
+
+Motor[6].pLimits =0;		// no limit stops that would interrupt motion program
+Motor[6].JogSpeed =30;
+
+Sys.WpKey=$AAAAAAAA	
+Gate3[1].Chan[3].CaptFlagSel=1;	// select plimit as triggered move interrupt
+Sys.WpKey=$0
+
+jog:(6000000)^0;		// move into plimit
+dwell(5000);
+jog:(-1*backout);	// back out
+
+while(Motor6PlusFlag==0){	// find plimit slowly
+	jog:(1);
+	PlusInCounter ++;
+}
+dwell(2000)
+while(Motor6PlusFlag==1){	// find backlash at plimit
+	jog:(-1);
+	PlusOutCounter ++;	
+}
+
+Sys.WpKey=$AAAAAAAA	
+Gate3[1].Chan[3].CaptFlagSel=2;	// select mlimit as triggered move interrupt
+Sys.WpKey=$0
+
+jog:(-6000000)^0;
+dwell(5000)
+jog:(backout);
+
+while(Motor6MinusFlag==0){
+	jog:(-1);
+	MinusInCounter ++;
+}
+dwell(2000)
+while(Motor6MinusFlag==1){
+	jog:(1);
+	MinusOutCounter ++;
+}
+
+Motor[6].pLimits = Gate3[1].Chan[3].Status.a; 
+close
+/****************************************/
+

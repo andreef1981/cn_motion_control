@@ -1,5 +1,5 @@
 // Homing procedure for wheels which also resets the 
-// WheelPosCounter back to 0
+// PosCounter back to 0
 /****************************************/
 open prog 21
 
@@ -20,7 +20,7 @@ Sys.WpKey=$0
 ThisCs = Ldata.coord;	// Get CS number for which the program is run
 Ldata.motor = ThisCs;	// Asign the right motor locally
 
-WheelPosCounter = 0;
+PosCounter = 0;
 
 home; 					// Home the Motor
 

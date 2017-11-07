@@ -33,7 +33,7 @@
     <CommType>PPmacServer</CommType>
     <Name>cn_motion_control</Name>
     <ProjectFrimwareVers>2.0.2.14</ProjectFrimwareVers>
-    <IDESignature>xwwp9100XWWP</IDESignature>
+    <IDESignature>ddlz2091DDLZ</IDESignature>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -75,19 +75,16 @@
     <Content Include="PMAC Script Language\Motion Programs\prog11_spfilter.pmc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="PMAC Script Language\Motion Programs\prog16_cifilter1.pmc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="PMAC Script Language\Motion Programs\prog17_cifilter2.pmc">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog21_circular_home.pmc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="PMAC Script Language\Motion Programs\prog5.pmc">
+    <Content Include="PMAC Script Language\Motion Programs\prog22_linear_home.pmc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="PMAC Script Language\Motion Programs\prog7_warmfilter.pmc">
+    <Content Include="PMAC Script Language\Motion Programs\prog66.pmc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\Motion Programs\prog6_callamp.pmc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog77_sample_linear.pmc">

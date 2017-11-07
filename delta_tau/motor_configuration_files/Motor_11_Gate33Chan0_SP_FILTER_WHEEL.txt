@@ -168,7 +168,7 @@ Motor[11].Servo.Ki = 0.001				// PID integral term
 Motor[11].Servo.Kvfb= 40					// PID velocity feedback (“derivative”) gain term
 
 Motor[11].Servo.BreakPosErr = 0.5		// Servo gain-break error size (deadband)
-Motor[11].InPosBand = 2.0				// 
+Motor[11].InPosBand = 1.0				// 
 Motor[11].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
 Motor[11].Servo.MaxPosErr= 1000.0	// Servo-error input magnitude limit
@@ -196,7 +196,7 @@ Motor[11].BlSize=10						// Backlash size
 
 Motor[11].BlSlewRate =0.1				// Backlash take-up rate
 
-Motor[11].HomeOffset=0					// Position referencing offset	
+Motor[11].HomeOffset=10.0					// Position referencing offset	
 
 
 // Coordinate system

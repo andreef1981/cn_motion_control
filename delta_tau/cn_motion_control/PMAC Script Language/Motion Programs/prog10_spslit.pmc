@@ -9,34 +9,41 @@ Gate3[2].Chan[3].CaptFlagSel=3	// select UserFlag as trigger for move until move
 Sys.WpKey=$0					// Write-protect Gate3 registers disabling writing 
 								// to hardware registers
 
-// WheelPosCounter contains wheel position value as a CSglobal
+// PosCounter contains wheel position value as a CSglobal
 
 local ThisCs;						// Local var for # of CS running program motor has same #
 local wheelStepSize = 400.0;		// Local var for motor units in between two positions
 local totalPositions = 16;			// Local var for # of wheel positions
 local totalSteps = totalPositions*wheelStepSize;
-local desiredPosition = DesiredPosition;		// asign local var from csglobal desired position
-desiredPosition = desiredPosition % totalSteps;	// do modulo caluclation as we get negative
-if(desiredPosition<0){							// values from engineering GUI
-	desiredPosition += totalSteps;
+local locdesiredPosition = DesiredPosition;		// asign local var from csglobal desired position
+locdesiredPosition = locdesiredPosition % totalSteps;	// do modulo caluclation as we get negative
+if(locdesiredPosition<0){							// values from engineering GUI
+	locdesiredPosition += totalSteps;
 }
-local desiredCount = floor(desiredPosition/wheelStepSize);	// how many positions to move
-local desiredCountFraction =((desiredPosition/wheelStepSize) - desiredCount); // sub positions to move
+
+local desiredCount = floor(locdesiredPosition/wheelStepSize);	// how many positions to move
+local desiredCountFraction =((locdesiredPosition/wheelStepSize) - desiredCount); // sub positions to move
 local posPositions;			// local var for how many positions to move +
 local negPositions;			// local var for how many positions to move -
 local bestDirection;		// local var for the best direction (+1 or -1)
 local commandedPosition;	// local var for how many positions to move absolute
 local loopCounter;			// local var for the loop
-local dwellTime = 200;		// local var for dwell time to detect user flag
+local dwellTime = 500;		// local var for dwell time to detect user flag
 //local actualPos;
 
 ThisCs = Ldata.coord;		// Get CS number for which the program is run
 Ldata.motor = ThisCs;		// Asign the right motor locally
 
+actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+if(actualPos<0){
+	actualPos += totalSteps;
+}
+Checker=locdesiredPosition;
+
 // decide which way to move factoring in roll over
-if(desiredCount > WheelPosCounter){			
-	posPositions = desiredCount - WheelPosCounter;
-	negPositions = -1.0*(totalPositions - desiredCount + WheelPosCounter);
+if(desiredCount > PosCounter){			
+	posPositions = desiredCount - PosCounter;
+	negPositions = -1.0*(totalPositions - desiredCount + PosCounter);
 	if(posPositions <= abs(negPositions)){
 		bestDirection = 1.0;
 		commandedPosition = posPositions;
@@ -46,9 +53,9 @@ if(desiredCount > WheelPosCounter){
 		commandedPosition = abs(negPositions);
 	}	
 }
-if(desiredCount < WheelPosCounter){	
-	posPositions = totalPositions - WheelPosCounter + desiredCount;
-	negPositions = WheelPosCounter - desiredCount;
+if(desiredCount < PosCounter){	
+	posPositions = totalPositions - PosCounter + desiredCount;
+	negPositions = PosCounter - desiredCount;
 	if(posPositions <= abs(negPositions)){
 		bestDirection = 1.0;
 		commandedPosition = posPositions;
@@ -58,7 +65,7 @@ if(desiredCount < WheelPosCounter){
 		commandedPosition = abs(negPositions);
 	}	
 }
-if(desiredCount == WheelPosCounter){	
+if(desiredCount == PosCounter){	
 	commandedPosition = 0;
 	// no direction needed as fractional move only
 }
@@ -88,10 +95,15 @@ if(bestDirection==1){
 				removed to increas speed */
 				dwell(dwellTime);
 				if (Motor10UserFlag==1){
-					WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
-						if(WheelPosCounter<0){
-						WheelPosCounter += totalPositions;
+					PosCounter = (PosCounter + bestDirection) % totalPositions;
+						if(PosCounter<0){
+						PosCounter += totalPositions;
 						}
+				}
+				// after each move the actual position has to be updated
+				actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+				if(actualPos<0){
+					actualPos += totalSteps;
 				}
 				loopCounter +=1;
 			}
@@ -116,10 +128,15 @@ if(bestDirection==1){
 				removed to increas speed */
 				dwell(dwellTime);
 				if (Motor10UserFlag==1){
-					WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
-						if(WheelPosCounter<0){
-						WheelPosCounter += totalPositions;
+					PosCounter = (PosCounter + bestDirection) % totalPositions;
+						if(PosCounter<0){
+						PosCounter += totalPositions;
 						}
+				}
+				// after each move the actual position has to be updated
+				actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+				if(actualPos<0){
+					actualPos += totalSteps;
 				}
 				loopCounter +=1;
 			}
@@ -128,7 +145,7 @@ if(bestDirection==1){
 			// now move to the final position
 			abs;
 			rapid;
-			A(desiredPosition);
+			A(locdesiredPosition);
 			
 		}
 	}
@@ -155,10 +172,15 @@ if(bestDirection==1){
 				removed to increas speed */
 				dwell(dwellTime);
 				if (Motor10UserFlag==1){
-					WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
-						if(WheelPosCounter<0){
-						WheelPosCounter += totalPositions;
+					PosCounter = (PosCounter + bestDirection) % totalPositions;
+						if(PosCounter<0){
+						PosCounter += totalPositions;
 						}
+				}
+				// after each move the actual position has to be updated
+				actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+				if(actualPos<0){
+					actualPos += totalSteps;
 				}
 				loopCounter +=1;
 			}
@@ -181,17 +203,22 @@ if(bestDirection==1){
 				removed to increas speed */
 				dwell(dwellTime);
 				if (Motor10UserFlag==1){
-					WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
-						if(WheelPosCounter<0){
-						WheelPosCounter += totalPositions;
+					PosCounter = (PosCounter + bestDirection) % totalPositions;
+						if(PosCounter<0){
+						PosCounter += totalPositions;
 						}
+				}
+				// after each move the actual position has to be updated
+				actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+				if(actualPos<0){
+					actualPos += totalSteps;
 				}
 				loopCounter +=1;
 			}
 			// now move to the final position
 			abs;
 			rapid;
-			A(desiredPosition);
+			A(locdesiredPosition);
 			
 		}
 	}
@@ -224,16 +251,22 @@ if(bestDirection==-1){
 				removed to increas speed */
 				dwell(dwellTime);
 				if (Motor10UserFlag==1){
-					WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
-						if(WheelPosCounter<0){
-						WheelPosCounter += totalPositions;
+					PosCounter = (PosCounter + bestDirection) % totalPositions;
+						if(PosCounter<0){
+						PosCounter += totalPositions;
 						}
+				}
+				// after each move the actual position has to be updated
+				actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+				if(actualPos<0){
+					actualPos += totalSteps;
 				}
 				loopCounter +=1;
 			}
 		}
 		else{
 		// fractional move required but there could be several filter positions in between
+			commandedPosition -= 1; // add an extra move in this case
 			loopCounter = 1;
 			while(loopCounter<=commandedPosition) {
 								
@@ -252,17 +285,26 @@ if(bestDirection==-1){
 				removed to increas speed */
 				dwell(dwellTime);
 				if (Motor10UserFlag==1){
-					WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
-						if(WheelPosCounter<0){
-						WheelPosCounter += totalPositions;
+					PosCounter = (PosCounter + bestDirection) % totalPositions;
+						if(PosCounter<0){
+						PosCounter += totalPositions;
 						}
+				}
+				// after each move the actual position has to be updated
+				actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+				if(actualPos<0){
+					actualPos += totalSteps;
 				}
 				loopCounter +=1;
 			}
 			// now move to the final position
 			abs;
 			rapid;
-			A(desiredPosition);
+			A(locdesiredPosition);
+			PosCounter = (PosCounter + bestDirection) % totalPositions;
+						if(PosCounter<0){
+							PosCounter += totalPositions;
+						}
 			
 		}
 	}
@@ -290,11 +332,16 @@ if(bestDirection==-1){
 				if(loopCounter!=1){
 					dwell(dwellTime);
 					if (Motor10UserFlag==1){
-						WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
-						if(WheelPosCounter<0){
-							WheelPosCounter += totalPositions;
+						PosCounter = (PosCounter + bestDirection) % totalPositions;
+						if(PosCounter<0){
+							PosCounter += totalPositions;
 						}
 					}
+				}
+				// after each move the actual position has to be updated
+				actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+				if(actualPos<0){
+					actualPos += totalSteps;
 				}
 				loopCounter +=1;
 			}
@@ -319,18 +366,23 @@ if(bestDirection==-1){
 				if(loopCounter!=1){
 					dwell(dwellTime);
 					if (Motor10UserFlag==1){
-						WheelPosCounter = (WheelPosCounter + bestDirection) % totalPositions;
-						if(WheelPosCounter<0){
-							WheelPosCounter += totalPositions;
+						PosCounter = (PosCounter + bestDirection) % totalPositions;
+						if(PosCounter<0){
+							PosCounter += totalPositions;
 						}
 					}
+				}
+				// after each move the actual position has to be updated
+				actualPos = Coord[ThisCs].CdPos[0] % totalSteps;
+				if(actualPos<0){
+					actualPos += totalSteps;
 				}
 				loopCounter +=1;
 			}
 			// now move to the final position
 			abs;
 			rapid;
-			A(desiredPosition);
+			A(locdesiredPosition);
 			
 		}
 	}
@@ -344,10 +396,24 @@ if(actualPos<0){
 
 /* Built in check to see if we are moving the right amount of positions and if the
 commanded position is within 10% of the desired position. */
-
-if((WheelPosCounter!=desiredCount) || (abs(desiredPosition-actualPos)>wheelStepSize*0.1)){
-	disable ThisCs;
-	// buy an encoder as we cannot distinguish between not counting detents and lost steps
+if(locdesiredPosition==0){
+	if(actualPos>totalSteps-wheelStepSize/2){
+		if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos-totalSteps)>wheelStepSize*0.2)){
+		disable ThisCs;
+		}
+	}
+	else{
+		if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos)>wheelStepSize*0.2)){
+			disable ThisCs;
+			// buy an encoder as we cannot distinguish between not counting detents and lost steps
+		}
+	}	
+}
+else{
+	if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos)>wheelStepSize*0.2)){
+		disable ThisCs;
+		// buy an encoder as we cannot distinguish between not counting detents and lost steps
+	}
 }
 
 // reset the trigger flag selection back to home switch

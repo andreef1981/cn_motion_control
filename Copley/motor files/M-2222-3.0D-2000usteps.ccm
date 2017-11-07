@@ -14,7 +14,7 @@
 4e,0,Motor Wiring,0
 53,0,Brake/Stop Delay Time,0
 54,0,Motor Brake Delay Time,0
-55,0,Motor Brake Activation Velocity,0
+55,0,Brake/Stop Activation Velocity,0
 56,0,Motor Back Emf Constant,1
 45,0,Motor Pole Pairs,50
 4f,0,Motor Hall Offset,0
