@@ -172,8 +172,8 @@ Motor[6].InPosBand=2.0
 Motor[6].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
 Motor[6].Servo.MaxPosErr= 4000000.0		// Servo-error input magnitude limit
-Motor[6].WarnFeLimit = 22000.0			// add BlSize
-Motor[6].FatalFeLimit= 23000.0			// add BlSize
+Motor[6].WarnFeLimit = 42000.0			// add BlSize
+Motor[6].FatalFeLimit= 43000.0			// add BlSize
 // Motor Speeds
 
 Motor[6].JogSpeed=30					// Jog command velocity magnitude
@@ -199,7 +199,7 @@ Motor[6].BlSize=18929.0				// Backlash size (measured 3 november 2017 by motion 
 									// Backlash size (measured 3 november 2017 by motion program at mlimit with 1mu steps
 //Motor[6].BlSize=11353.0			// in mu
 										
-Motor[6].BlSlewRate =30.//1.0				// Backlash take-up rate
+Motor[6].BlSlewRate =5.//1.0				// Backlash take-up rate
 										// mu per servo interrupt
 										
 Motor[6].HomeOffset=0.0					// Position referencing offset	

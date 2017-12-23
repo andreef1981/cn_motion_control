@@ -54,8 +54,8 @@
 7d,0,Input 6 Config,0
 80,0,Amp Model Number,STP-075-07
 86,0,Servo Period,5
-8a,0,Voltage Sense,2247
-92,0,Amp Name,ci back wheel
+8a,0,Voltage Sense,2264
+92,0,Amp Name,pick off
 98,0,Function Generator Config,1
 99,0,Function Generator Frequency,100
 9a,0,Function Generator Amplitude,0
@@ -92,10 +92,10 @@ bc,0,Position Tracking Window,1000
 bd,0,Position Tracking Window Time,10
 c8,0,Trajectory Profile Mode,256
 ca,0,Trajectory Position Command,0
-cb,0,Trajectory Max Velocity,200000
-cc,0,Trajectory Max Accel,64000
-cd,0,Trajectory Max Decel,64000
-cf,0,Trajectory Abort Decel,64000
+cb,0,Trajectory Max Velocity,250000
+cc,0,Trajectory Max Accel,80000
+cd,0,Trajectory Max Decel,80000
+cf,0,Trajectory Abort Decel,80000
 f0,0,Input 1 Debounce Time,0
 f1,0,Input 2 Debounce Time,0
 f2,0,Input 3 Debounce Time,0
@@ -117,7 +117,7 @@ e5,0,Phase Init Time,400
 58,0,Gear Ratio,65537
 b6,0,PWM Deadband,1000
 ea,0,Detent Correction Gain,0
-57,0,Micro Steps Per Rev.,1600
+57,0,Micro Steps Per Rev.,2000
 59,0,Hall Velocity Shift,0
 5a,0,Multi Mode Port Configuration,0
 5b,0,Position Encoder Resolution,0
@@ -136,9 +136,9 @@ b9,0,Negative Software Limit,0
 bf,0,Home Current Delay Time,250
 c1,0,Node ID configuration,2048
 c2,0,Home Configuration,0
-c3,0,Home Velocity Fast,6667
-c4,0,Home Velocity Slow,1333
-c5,0,Home Accel/Decel,2720
+c3,0,Home Velocity Fast,8333
+c4,0,Home Velocity Slow,1667
+c5,0,Home Accel/Decel,3400
 c6,0,Home Offset,0
 c7,0,Home Current,56
 ce,0,Trajectory Max Jerk,42752000
@@ -152,7 +152,7 @@ da,0,Regen Peak Power,0
 db,0,Regen Peak Power Time,0
 e1,0,Regen Resistor Model Number,None
 e3,0,Position Loop Gains Multiplier,100
-e8,0,uStep Holding Current,10
+e8,0,uStep Holding Current,20
 e9,0,uStep Run To Hold Time,250
 f6,0,Input 7 Debounce Time,0
 f7,0,Input 8 Debounce Time,0
@@ -167,7 +167,7 @@ fb,0,Input 12 Debounce Time,0
 119,0,CANopen halt option code,1
 11a,0,Amp Scaling Config,-1
 ee,0,Stepnet Configuration ,0
-e6,0,Stepper Max Vel Adjustment,16000
+e6,0,Stepper Max Vel Adjustment,20000
 e7,0,Stepper Proportional Gain,25
 ed,0,Hold to Voltage Time,0
-94c,0,basic host cfg,35
+94c,0,basic host cfg,12

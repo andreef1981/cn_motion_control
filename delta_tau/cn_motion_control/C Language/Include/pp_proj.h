@@ -28,32 +28,40 @@ enum ptrM {_ptrM_=-1
 ,Motor11UserFlag=8194
 ,Motor16UserFlag=8195
 ,Motor17UserFlag=8196
-,Motor6PlusFlag=8197
-,Motor6MinusFlag=8198
-,Input1=8199
-,Input2=8200
-,Input3=8201
-,Input4=8202
-,Input5=8203
-,Input6=8204
-,Input7=8205
-,Input8=8206
-,Input9=8207
-,Input10=8208
-,Input11=8209
-,Input12=8210
-,Input13=8211
-,Input14=8212
-,Input15=8213
-,Input16=8214
-,Input17=8215
-,Input18=8216
-,Input19=8217
-,Input20=8218
-,Input21=8219
-,Input22=8220
-,Input23=8221
-,Input24=8222};
+,Motor3PlusFlag=8197
+,Motor4PlusFlag=8198
+,Motor5PlusFlag=8199
+,Motor6PlusFlag=8200
+,Motor15PlusFlag=8201
+,Motor3MinusFlag=8202
+,Motor4MinusFlag=8203
+,Motor5MinusFlag=8204
+,Motor6MinusFlag=8205
+,Motor15MinusFlag=8206
+,Input1=8207
+,Input2=8208
+,Input3=8209
+,Input4=8210
+,Input5=8211
+,Input6=8212
+,Input7=8213
+,Input8=8214
+,Input9=8215
+,Input10=8216
+,Input11=8217
+,Input12=8218
+,Input13=8219
+,Input14=8220
+,Input15=8221
+,Input16=8222
+,Input17=8223
+,Input18=8224
+,Input19=8225
+,Input20=8226
+,Input21=8227
+,Input22=8228
+,Input23=8229
+,Input24=8230};
 enum ptrMarray {_ptrMarray_=-1};
 #define	DesiredPosition(i)	pshm->Coord[i%MAX_COORDS].Q[0]
 #define	PosCounter(i)	pshm->Coord[i%MAX_COORDS].Q[1024]
@@ -158,32 +166,40 @@ enum ptrM {_ptrM_=-1
 ,Motor11UserFlag=8194
 ,Motor16UserFlag=8195
 ,Motor17UserFlag=8196
-,Motor6PlusFlag=8197
-,Motor6MinusFlag=8198
-,Input1=8199
-,Input2=8200
-,Input3=8201
-,Input4=8202
-,Input5=8203
-,Input6=8204
-,Input7=8205
-,Input8=8206
-,Input9=8207
-,Input10=8208
-,Input11=8209
-,Input12=8210
-,Input13=8211
-,Input14=8212
-,Input15=8213
-,Input16=8214
-,Input17=8215
-,Input18=8216
-,Input19=8217
-,Input20=8218
-,Input21=8219
-,Input22=8220
-,Input23=8221
-,Input24=8222};
+,Motor3PlusFlag=8197
+,Motor4PlusFlag=8198
+,Motor5PlusFlag=8199
+,Motor6PlusFlag=8200
+,Motor15PlusFlag=8201
+,Motor3MinusFlag=8202
+,Motor4MinusFlag=8203
+,Motor5MinusFlag=8204
+,Motor6MinusFlag=8205
+,Motor15MinusFlag=8206
+,Input1=8207
+,Input2=8208
+,Input3=8209
+,Input4=8210
+,Input5=8211
+,Input6=8212
+,Input7=8213
+,Input8=8214
+,Input9=8215
+,Input10=8216
+,Input11=8217
+,Input12=8218
+,Input13=8219
+,Input14=8220
+,Input15=8221
+,Input16=8222
+,Input17=8223
+,Input18=8224
+,Input19=8225
+,Input20=8226
+,Input21=8227
+,Input22=8228
+,Input23=8229
+,Input24=8230};
 enum ptrMarray {_ptrMarray_=-1};
 void SetEnumGlobalVar(enum globalP var, double data)
 {
@@ -275,32 +291,40 @@ double GetEnumPtrArrayVar(enum ptrMarray var, unsigned index)
 #define Motor11UserFlag 8194
 #define Motor16UserFlag 8195
 #define Motor17UserFlag 8196
-#define Motor6PlusFlag 8197
-#define Motor6MinusFlag 8198
-#define Input1 8199
-#define Input2 8200
-#define Input3 8201
-#define Input4 8202
-#define Input5 8203
-#define Input6 8204
-#define Input7 8205
-#define Input8 8206
-#define Input9 8207
-#define Input10 8208
-#define Input11 8209
-#define Input12 8210
-#define Input13 8211
-#define Input14 8212
-#define Input15 8213
-#define Input16 8214
-#define Input17 8215
-#define Input18 8216
-#define Input19 8217
-#define Input20 8218
-#define Input21 8219
-#define Input22 8220
-#define Input23 8221
-#define Input24 8222
+#define Motor3PlusFlag 8197
+#define Motor4PlusFlag 8198
+#define Motor5PlusFlag 8199
+#define Motor6PlusFlag 8200
+#define Motor15PlusFlag 8201
+#define Motor3MinusFlag 8202
+#define Motor4MinusFlag 8203
+#define Motor5MinusFlag 8204
+#define Motor6MinusFlag 8205
+#define Motor15MinusFlag 8206
+#define Input1 8207
+#define Input2 8208
+#define Input3 8209
+#define Input4 8210
+#define Input5 8211
+#define Input6 8212
+#define Input7 8213
+#define Input8 8214
+#define Input9 8215
+#define Input10 8216
+#define Input11 8217
+#define Input12 8218
+#define Input13 8219
+#define Input14 8220
+#define Input15 8221
+#define Input16 8222
+#define Input17 8223
+#define Input18 8224
+#define Input19 8225
+#define Input20 8226
+#define Input21 8227
+#define Input22 8228
+#define Input23 8229
+#define Input24 8230
 #endif
 #endif
 #endif //_PP_PROJ_H_

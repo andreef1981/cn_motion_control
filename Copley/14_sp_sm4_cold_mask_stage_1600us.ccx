@@ -152,7 +152,7 @@ da,0,Regen Peak Power,0
 db,0,Regen Peak Power Time,0
 e1,0,Regen Resistor Model Number,None
 e3,0,Position Loop Gains Multiplier,100
-e8,0,uStep Holding Current,100
+e8,0,uStep Holding Current,10
 e9,0,uStep Run To Hold Time,250
 f6,0,Input 7 Debounce Time,0
 f7,0,Input 8 Debounce Time,0
@@ -170,4 +170,4 @@ ee,0,Stepnet Configuration ,0
 e6,0,Stepper Max Vel Adjustment,16000
 e7,0,Stepper Proportional Gain,25
 ed,0,Hold to Voltage Time,0
-94c,0,basic host cfg,124
+94c,0,basic host cfg,76

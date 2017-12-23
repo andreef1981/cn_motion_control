@@ -19,10 +19,18 @@ ptr Motor16UserFlag->Gate3[4].Chan[1].UserFlag;
 ptr Motor17UserFlag->Gate3[4].Chan[2].UserFlag;
 
 // pointer to card plus limit flags
+ptr Motor3PlusFlag->Gate3[1].Chan[0].PlusLimit;
+ptr Motor4PlusFlag->Gate3[1].Chan[1].PlusLimit;
+ptr Motor5PlusFlag->Gate3[1].Chan[2].PlusLimit;
 ptr Motor6PlusFlag->Gate3[1].Chan[3].PlusLimit;
+ptr Motor15PlusFlag->Gate3[4].Chan[0].PlusLimit;
 
 // pointer to card plus limit flags
+ptr Motor3MinusFlag->Gate3[1].Chan[0].MinusLimit;
+ptr Motor4MinusFlag->Gate3[1].Chan[1].MinusLimit;
+ptr Motor5MinusFlag->Gate3[1].Chan[2].MinusLimit;
 ptr Motor6MinusFlag->Gate3[1].Chan[3].MinusLimit;
+ptr Motor15MinusFlag->Gate3[4].Chan[3].MinusLimit;
 
 // pointers to IO card
 PTR Input1->ACC65E[6].DataReg[0].0.1;

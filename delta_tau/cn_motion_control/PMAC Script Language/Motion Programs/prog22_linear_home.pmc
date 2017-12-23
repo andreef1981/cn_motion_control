@@ -16,13 +16,22 @@ make sure we are using the positive limit flag as interrupt and the limits are
 disabled */
 Sys.WpKey=$AAAAAAAA	
 switch (ThisCs) {			// Change CaptFlagSel for the right gate
-	case 3: Gate3[1].Chan[0].CaptFlagSel=1;
+	case 3: if(Motor3PlusFlag==1){
+				jog:(-50000);
+			}	
+			Gate3[1].Chan[0].CaptFlagSel=1;
 			Motor[3].pLimits=0;
 			break; // motor 3, FM1 a is on card1 channel 0
-	case 4: Gate3[1].Chan[1].CaptFlagSel=1;
+	case 4: if(Motor4PlusFlag==1){
+				jog:(-20000);
+			}	 
+			Gate3[1].Chan[1].CaptFlagSel=1;
 			Motor[4].pLimits=0;
 			break; // motor 4, Fm1 B is on card1 channel 1
-	case 5: Gate3[1].Chan[2].CaptFlagSel=1;
+	case 5: if(Motor5PlusFlag==1){
+				jog:(-20000);
+			}	
+			Gate3[1].Chan[2].CaptFlagSel=1;
 			Motor[5].pLimits=0;
 			break; // motor 5, fm2 focus is on card1 channel 2
 	case 6: if(Motor6PlusFlag==1){
@@ -37,7 +46,10 @@ switch (ThisCs) {			// Change CaptFlagSel for the right gate
 	case 9: Gate3[2].Chan[2].CaptFlagSel=1;
 			Motor[9].pLimits=0;
 			break; // motor 9, sp pickoff is on card2 channel 2
-	case 15: Gate3[4].Chan[0].CaptFlagSel=1;
+	case 15: if(Motor15PlusFlag==1){
+				jog:(-10000);
+			}	
+			Gate3[4].Chan[0].CaptFlagSel=1;
 			Motor[15].pLimits=0;
 			break; // motor 15, sm5 focus is on card4 channel 0
 }

@@ -169,6 +169,7 @@ Motor[12].Servo.Kvfb= 100					// PID velocity feedback (“derivative”) gain term
 
 Motor[12].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[12].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
+Motor[12].InPosBand = 1.0
 
 Motor[12].Servo.MaxPosErr= 10000.0		// Servo-error input magnitude limit
 
@@ -206,11 +207,6 @@ Motor[12].HomeOffset=0.0					// Position referencing offset
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 
-//Coord[12].PosRollOver[0]=18000		// Axis position rollover range for rotary only
-									// in axis units!!!! default=0.0 disabled
-									// .PosRollOver[0] for axis A
-									// .PosRollOver[1] for axis B ...
-									// 360 -> shortest path in abs move
-									// -360 -> use commanded direction in abs move
+
 									
 									

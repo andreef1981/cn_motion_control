@@ -33,7 +33,7 @@
     <CommType>PPmacServer</CommType>
     <Name>cn_motion_control</Name>
     <ProjectFrimwareVers>2.0.2.14</ProjectFrimwareVers>
-    <IDESignature>ddlz2091DDLZ</IDESignature>
+    <IDESignature>osol5900OSOL</IDESignature>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -73,6 +73,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog11_spfilter.pmc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\Motion Programs\prog15_spsm5_focus.pmc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog21_circular_home.pmc">

@@ -170,26 +170,28 @@ Motor[5].pEnc2 = EncTable[5].a						// Inner (velocity) loop position feedback p
 													              
 // Motor PID servo setup
 
-Motor[5].Servo.Kp = 5.25					// PID proportiona term		
+Motor[5].Servo.Kp = 1.25					// PID proportiona term		
 Motor[5].Servo.Ki = 0.0				// PID integral term
-Motor[5].Servo.Kvfb= 100					// PID velocity feedback (“derivative”) gain term
+Motor[5].Servo.Kvfb= 25					// PID velocity feedback (“derivative”) gain term
 Motor[5].Servo.Kvff= 0									// =0 see user manual p. 286
 
 Motor[5].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[5].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
 Motor[5].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
+Motor[5].WarnFeLimit = 42000.0			// add BlSize
+Motor[5].FatalFeLimit= 43000.0			// add BlSize
 
 // Motor Speeds
 
-Motor[5].JogSpeed=50						// Jog command velocity magnitude
+Motor[5].JogSpeed=1						// Jog command velocity magnitude
 										// mu / millisecond
 										
-Motor[5].MaxSpeed=50
+Motor[5].MaxSpeed=1
 
-Motor[5].FatalFeLimit=30000
 
-Motor[5].HomeVel=-10
+
+Motor[5].HomeVel=-1
 
 Motor[5].JogTa=-1						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
@@ -209,7 +211,7 @@ Motor[5].AbortTs=0
 
 //Motor[5].BlHysteresis =0.0				// Backlash take-up rate
 
-Motor[5].HomeOffset=13280.0					// Position referencing offset	
+Motor[5].HomeOffset=00.0					// Position referencing offset	
 Motor[5].InPosBand = 2.0
 
 // Coordinate system
@@ -226,11 +228,6 @@ Motor[5].InPosBand = 2.0
 									// ratio should be 1 /(3.175/(4000*50)) = 62992.125984251
 									// mu / mm
 
-//Coord[5].PosRollOver[0]=18000		// Axis position rollover range for rotary only
-									// in axis units!!!! default=0.0 disabled
-									// .PosRollOver[0] for axis A
-									// .PosRollOver[1] for axis B ...
-									// 360 -> shortest path in abs move
-									// -360 -> use commanded direction in abs move
+
 									
 									
