@@ -1,7 +1,7 @@
 [PMAC_HARDWARE]
 [PMAC_CONFIG]
 [PMAC_PROJECT]
-/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifilter1.pmc:31:1: warning: "actualPos" redefined
-/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh:9:1: warning: this is the location of the previous definition
 [PMAC_PROJECT]
-[PMAC_PROJECT]
+[PMAC_CONFIG]
+[PMAC_CONFIG]
+[PMAC_INC_PROJECT]

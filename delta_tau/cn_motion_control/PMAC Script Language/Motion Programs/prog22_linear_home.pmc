@@ -46,6 +46,9 @@ switch (ThisCs) {			// Change CaptFlagSel for the right gate
 	case 9: Gate3[2].Chan[2].CaptFlagSel=1;
 			Motor[9].pLimits=0;
 			break; // motor 9, sp pickoff is on card2 channel 2
+	case 14:Gate3[3].Chan[3].CaptFlagSel=1;
+			Motor[14].pLimits=0;
+			break; // motor 14, sp cold mask is on card3 channel 3
 	case 15: if(Motor15PlusFlag==1){
 				jog:(-10000);
 			}	
@@ -83,6 +86,9 @@ switch (ThisCs) {			// Change CaptFlagSel for the right gate
 	case 9: Gate3[2].Chan[2].CaptFlagSel=0;
 			Motor[9].pLimits=Gate3[2].Chan[2].Status.a;
 			break; // motor 9, sp pickoff is on card2 channel 2
+	case 14:Gate3[3].Chan[3].CaptFlagSel=0;
+			Motor[14].pLimits=Gate3[3].Chan[3].Status.a;
+			break; // motor 14, sp cold mask is on card3 channel 3
 	case 15: Gate3[4].Chan[0].CaptFlagSel=0;
 			Motor[15].pLimits=Gate3[4].Chan[0].Status.a;
 			break; // motor 15, sm5 focus is on card4 channel 0

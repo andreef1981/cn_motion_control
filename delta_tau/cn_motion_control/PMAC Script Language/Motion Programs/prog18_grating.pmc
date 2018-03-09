@@ -1,0 +1,29 @@
+// custom motion program for grating stage stage
+/****************************************/
+
+open prog 18
+
+
+local ThisCs;						// Local var for # of CS running program motor has same #
+local LocalDesiredPosition = DesiredPosition;		// asign local var from csglobal desired position
+
+ThisCs = Ldata.coord;		// Get CS number for which the program is run
+Ldata.motor = ThisCs;
+
+//call 19;		// call custom homing still causes problems around 180 degrees
+//homez;		// causes problems with roll over; need to make homing more clever
+
+linear;			// Linear interpolation move mode
+abs;			// Absolute move mode
+ta1000;			// 1-second accel/decel time
+ts0;			// No S-curve accel/decel time
+f1000000;		// Speed of 1e6 axis units [mu] per time unit [s]
+X(LocalDesiredPosition); // Move X-axis to position
+
+//report that move is done
+send0 "m[%d]:isDone\n",Ldata.coord;
+sendall;
+
+close
+/****************************************/
+

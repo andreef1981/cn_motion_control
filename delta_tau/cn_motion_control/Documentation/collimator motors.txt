@@ -1,0 +1,5 @@
+* Moving the collimator motors in positive direction
+  will move the image upwards
+* +200 steps will move about 3.75 mm upwards
+* -200 steps will move about 3.75 mm downwars
+* some lash in the movement but close

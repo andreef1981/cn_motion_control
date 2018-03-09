@@ -2728,7 +2728,7 @@ Gate3[4].Chan[3].OutputPol=0    			// IC channel phase output inversion control
 											// default=0, range 0to3
 											// (software reference manual p. 315)
 											
-Gate3[4].Chan[3].PfmDirPol=0    			// IC channel PFM direction polarity control
+Gate3[4].Chan[3].PfmDirPol=1    			// IC channel PFM direction polarity control
 											// default=0 range 0ro1
 											// (software reference manual p. 320)
 											
@@ -2739,9 +2739,9 @@ Gate3[4].Chan[3].TimerMode=3				// IC Channel encoder timer control; default=0
 											// counter available for external signal 
 											// (software reference manual p. 331)
 
-Gate3[4].Chan[3].EncCtrl=8					// IC channel encoder decode control; default 7; 
+Gate3[4].Chan[3].EncCtrl=7					// IC channel encoder decode control; default 7; 
 											// range 0to15, how to decode input signal,
-											//.EncCtrl=7 mu's are set by quadrature encoder 
+											//.EncCtrl=0 mu's are set by quadrature encoder 
 											// (x4 quadrature decode CW)
 											// .EncCtrl=7 mu's are set by quadrature encoder (x4
 											// quadrature decode CCW
@@ -2863,32 +2863,37 @@ Motor[18].pCaptFlag = Gate3[4].Chan[3].Status.a		// Encoder capture trigger (inp
 Motor[18].pCaptPos = Gate3[4].Chan[3].HomeCapt.a		// Encoder captured position pointer
 													// (software reference manual p. 415)
 
-Motor[18].pEnc = EncTable[18].a						// Outer (position) loop position feedback pointer
+Motor[18].pEnc = EncTable[25].a						// Outer (position) loop position feedback pointer
 													// (software reference manual p. 418)
 
-Motor[18].pEnc2 = EncTable[18].a						// Inner (velocity) loop position feedback pointer
+Motor[18].pEnc2 = EncTable[25].a						// Inner (velocity) loop position feedback pointer
 													// (software reference manual p. 418)
-													              
+//Motor[18].pAbsPos = EncTable[25].PrevEnc.a		// needs to be assigned dynamically to treat 90deg ambiguity												              
+Motor[18].AbsPosFormat = $01002000 // Protocol-specific settings
+Motor[18].AbsPosSf = 1 //(Motor units per sensor LSB) // no scaling regquired is done in subprog19
+//Motor[18].AbsPosOffset = 0 //(Difference between sensor zero and motor zero)
+
+
 // Motor PID servo setup
 
-Motor[18].Servo.Kp = 10000					// PID proportiona term		
+Motor[18].Servo.Kp = 0.006					// PID proportiona term		
 Motor[18].Servo.Ki = 0.				// PID integral term
-Motor[18].Servo.Kvfb= 0					// PID velocity feedback (“derivative”) gain term
+Motor[18].Servo.Kvfb= 1.4					// PID velocity feedback (“derivative”) gain term
 Motor[18].Servo.Kvff = 0
 
-Motor[18].Servo.BreakPosErr = 500.0		// Servo gain-break error size (deadband)
+Motor[18].Servo.BreakPosErr = 419.4304/2		// Servo gain-break error size (deadband)
 Motor[18].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
-
-Motor[18].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
+Motor[18].InPosBand = 419.4304
+Motor[18].Servo.MaxPosErr= 10000000.0		// Servo-error input magnitude limit
 
 // Motor Speeds
 
-Motor[18].JogSpeed=4					// Jog command velocity magnitude
+Motor[18].JogSpeed=2.384185791					// Jog command velocity magnitude
 										// mu / millisecond
 										
-Motor[18].MaxSpeed=4
+Motor[18].MaxSpeed=2.384185791
 
-Motor[18].HomeVel=4
+Motor[18].HomeVel=2.384185791
 
 Motor[18].JogTa=-200						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
@@ -2901,9 +2906,9 @@ Motor[18].JogTs=-1000					// Jog accel/decel S-curve time or inverse jerk rate
 										// -50 -> 0.02m/s^3
 										// -12500 -> 0.00008 mu/ms^3 -> 80m/s^3 -> 80g/s
 										
-Motor[18].FatalFeLimit=1000000
+Motor[18].FatalFeLimit=10000000
 Motor[18].WarnFeLimit=800000
-Motor[18].MaxDac=5000000
+Motor[18].MaxDac=320000
 										
 
 Motor[18].BlSize=0						// Backlash size
@@ -2917,11 +2922,11 @@ Motor[18].HomeOffset=0.0					// Position referencing offset
 
 &18									// Address C.S. 1
 
-#18->1X							// Assign motor to CS and define scale
+#18->1X						// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 
-//Coord[18].PosRollOver[0]=18000		// Axis position rollover range for rotary only
+//Coord[18].PosRollOver[0]=exp2(32)	// Axis position rollover range for rotary only
 									// in axis units!!!! default=0.0 disabled
 									// .PosRollOver[0] for axis A
 									// .PosRollOver[1] for axis B ...
@@ -2930,7 +2935,7 @@ Motor[18].HomeOffset=0.0					// Position referencing offset
 									
 									//Encoder Conversion Table
 
-Acc84E[5].SerialEncCtrl=$63000B
+Acc84E[5].SerialEncCtrl=$63010B
 Acc84E[5].Chan[0].SerialEncCmd=$2114A0	// 32 bit 2bit status and 6bit polynom Biss C encoder
 Acc84E[5].Chan[1].SerialEncCmd=$2114A0
 Acc84E[5].Chan[2].SerialEncCmd=$2114A0
@@ -2943,7 +2948,7 @@ EncTable[19].index1 = 0;									// left shift for sign adjustment 32-26=6
 EncTable[19].index2 = 0;
 EncTable[19].index3 = 0;
 EncTable[19].index4 = 0;
-EncTable[19].ScaleFactor =   1//  1/exp2(32)*360.;    // scale back to offset the left adjustment done by index2
+EncTable[19].ScaleFactor = 1.// 1/exp2(31);    // scale back to offset the left adjustment done by index2
 EncTable[19].MaxDelta = 50000 * 256;
 
 
@@ -2954,8 +2959,9 @@ EncTable[20].index1 = 0;									// left shift for sign adjustment 32-26=6
 EncTable[20].index2 = 0;
 EncTable[20].index3 = 0;
 EncTable[20].index4 = 0;
-EncTable[20].ScaleFactor =   1//  1/exp2(32)*360. //1/exp2(32-SingleTurnRes);    // scale back to offset the left adjustment done by index2
+EncTable[20].ScaleFactor =   1.// 1/exp2(31) //1/exp2(32-SingleTurnRes);    // scale back to offset the left adjustment done by index2
 EncTable[20].MaxDelta = 50000 * 256;
+
 
 EncTable[21].type=2;        // 24+8 bit read entry;
 EncTable[21].pEnc = Acc84E[5].Chan[2].SerialEncDataA.a   // address of lower 24 bit
@@ -2964,8 +2970,9 @@ EncTable[21].index1 = 0;									// left shift for sign adjustment 32-26=6
 EncTable[21].index2 = 0;
 EncTable[21].index3 = 0;
 EncTable[21].index4 = 0;
-EncTable[21].ScaleFactor =  1// 1/exp2(32)*360. //1/exp2(32-SingleTurnRes);    // scale back to offset the left adjustment done by index2
+EncTable[21].ScaleFactor = 1.// 1/exp2(31) //1/exp2(32-SingleTurnRes);    // scale back to offset the left adjustment done by index2
 EncTable[21].MaxDelta = 50000 * 256;
+
 
 EncTable[22].type=2;        // 24+8 bit read entry;
 EncTable[22].pEnc = Acc84E[5].Chan[3].SerialEncDataA.a   // address of lower 24 bit
@@ -2974,7 +2981,7 @@ EncTable[22].index1 = 0;									// left shift for sign adjustment 32-26=6
 EncTable[22].index2 = 0;
 EncTable[22].index3 = 0;
 EncTable[22].index4 = 0;
-EncTable[22].ScaleFactor =  1// 1/exp2(32)*360. //1/exp2(32-SingleTurnRes);    // scale back to offset the left adjustment done by index2
+EncTable[22].ScaleFactor =  1.//1/exp2(32)*360 //1/exp2(32-SingleTurnRes);    // scale back to offset the left adjustment done by index2
 EncTable[22].MaxDelta = 50000 * 256;
 
  
@@ -2990,11 +2997,11 @@ EncTable[23].ScaleFactor = 1 ;
 EncTable[24].type=8
 EncTable[24].pEnc = EncTable[21].PrevEnc.a   
 EncTable[24].pEnc1 = EncTable[22].PrevEnc.a  
-EncTable[24].index1 = 0;									// left shift for sign adjustment 32-26=6
+EncTable[24].index1 = 0;								// left shift for sign adjustment 32-26=6
 EncTable[24].index2 = 0;
 EncTable[24].index3 = 0;
 EncTable[24].index4 = 0;
-EncTable[24].ScaleFactor = 1 ;
+EncTable[24].ScaleFactor = 1 ;	
 
 EncTable[25].type=8
 EncTable[25].pEnc = EncTable[23].PrevEnc.a   // address of lower 24 bit
@@ -3003,14 +3010,7 @@ EncTable[25].index1 = 0;									// left shift for sign adjustment 32-26=6
 EncTable[25].index2 = 0;
 EncTable[25].index3 = 0;
 EncTable[25].index4 = 0;
-EncTable[25].ScaleFactor = 1/4 ;
-
-EncTable[25].index1 = 65;									// left shift for sign adjustment 32-26=6
-EncTable[25].index2 = 255;
-EncTable[25].index4 = 15;
-
-
-// set control word so that polarity and latching can be set
+EncTable[25].ScaleFactor = 1/4 // set control word so that polarity and latching can be set
 // ctrlreg: 
 // $38 input/output data access (binary 00111000)
 // $07 input/output data access (binary 00000111), bits 0-23 inputs 24-47 outputs

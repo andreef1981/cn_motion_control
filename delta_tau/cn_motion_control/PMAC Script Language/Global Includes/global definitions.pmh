@@ -1,3 +1,6 @@
+// value to be used for grating absolute power on assigned in prog19
+//Sys.Idata[2]=0.0;
+
 // Cs global variables
 
 #define DesiredPosition Q0

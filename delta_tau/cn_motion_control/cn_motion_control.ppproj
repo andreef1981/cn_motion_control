@@ -33,7 +33,7 @@
     <CommType>PPmacServer</CommType>
     <Name>cn_motion_control</Name>
     <ProjectFrimwareVers>2.0.2.14</ProjectFrimwareVers>
-    <IDESignature>osol5900OSOL</IDESignature>
+    <IDESignature>qtje6690QTJE</IDESignature>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -69,6 +69,9 @@
     <Content Include="C Language\Background Programs\capp1\capp1.h" />
     <Content Include="C Language\CPLCs\rticplc\rticplc.c" />
     <Content Include="C Language\CPLCs\bgcplc00\bgcplc.c" />
+    <Content Include="Documentation\collimator motors.txt">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog10_spslit.pmc">
       <SubType>Content</SubType>
     </Content>
@@ -76,6 +79,15 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog15_spsm5_focus.pmc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\Motion Programs\prog18_grating.pmc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\Motion Programs\prog19_sub_grating_homing.pmc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\Motion Programs\prog20_grating_home.pmc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog21_circular_home.pmc">
@@ -94,6 +106,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="PMAC Script Language\PLC Programs\plc1.plc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\PLC Programs\prog25_encoder table.plc">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>
