@@ -93,9 +93,9 @@ bd,0,Position Tracking Window Time,10
 c8,0,Trajectory Profile Mode,256
 ca,0,Trajectory Position Command,0
 cb,0,Trajectory Max Velocity,3333
-cc,0,Trajectory Max Accel,3340
-cd,0,Trajectory Max Decel,3340
-cf,0,Trajectory Abort Decel,3340
+cc,0,Trajectory Max Accel,26720
+cd,0,Trajectory Max Decel,26720
+cf,0,Trajectory Abort Decel,26720
 f0,0,Input 1 Debounce Time,0
 f1,0,Input 2 Debounce Time,0
 f2,0,Input 3 Debounce Time,0
@@ -136,12 +136,12 @@ b9,0,Negative Software Limit,0
 bf,0,Home Current Delay Time,250
 c1,0,Node ID configuration,2048
 c2,0,Home Configuration,0
-c3,0,Home Velocity Fast,833
-c4,0,Home Velocity Slow,167
-c5,0,Home Accel/Decel,340
+c3,0,Home Velocity Fast,6667
+c4,0,Home Velocity Slow,1333
+c5,0,Home Accel/Decel,2720
 c6,0,Home Offset,0
 c7,0,Home Current,56
-ce,0,Trajectory Max Jerk,2137600
+ce,0,Trajectory Max Jerk,17100800
 d0,0,Input 9 Config,0
 d1,0,Input 10 Config,0
 d2,0,Input 11 Config,0
@@ -167,7 +167,7 @@ fb,0,Input 12 Debounce Time,0
 119,0,CANopen halt option code,1
 11a,0,Amp Scaling Config,-1
 ee,0,Stepnet Configuration ,0
-e6,0,Stepper Max Vel Adjustment,2000
+e6,0,Stepper Max Vel Adjustment,16000
 e7,0,Stepper Proportional Gain,25
 ed,0,Hold to Voltage Time,0
-94c,0,basic host cfg,100
+94c,0,basic host cfg,97

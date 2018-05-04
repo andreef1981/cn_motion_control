@@ -1,9 +1,9 @@
-// custom motion program for SP slit wheel
+// custom motion program for warm filter wheel
 /****************************************/
-open prog 10
+open prog 7
 
 Sys.WpKey=$AAAAAAAA	
-Gate3[2].Chan[3].CaptFlagSel=3	// select UserFlag as trigger for move until moves
+Gate3[2].Chan[0].CaptFlagSel=3	// select UserFlag as trigger for move until moves
 								// this wheel needs a 25 steps after move to center 
 								// on detent
 Sys.WpKey=$0					// Write-protect Gate3 registers disabling writing 
@@ -13,8 +13,7 @@ Sys.WpKey=$0					// Write-protect Gate3 registers disabling writing
 
 local ThisCs;						// Local var for # of CS running program motor has same #
 local wheelStepSize = 400.0;		// Local var for motor units in between two positions
-local totalPositions = 16;			// Local var for # of wheel positions
-local localCheckPer = 0.2;			// endposition has to be within xx percent of step size
+local totalPositions = 6;			// Local var for # of wheel positions
 local totalSteps = totalPositions*wheelStepSize;
 local locdesiredPosition = DesiredPosition;		// asign local var from csglobal desired position
 locdesiredPosition = locdesiredPosition % totalSteps;	// do modulo caluclation as we get negative
@@ -74,7 +73,7 @@ if(desiredCount == PosCounter){
 // moving positive
 if(bestDirection==1){
 	// check if we are in a detent position
-	if(Motor10UserFlag==1){
+	if(Motor7UserFlag==1){
 	// in detent
 		// check if fractional move is required
 		if(desiredCountFraction==0){
@@ -84,7 +83,7 @@ if(bestDirection==1){
 				
 				/* Due to the width of the detent position we have to creep out of 
 				it before starting the triggered move. */
-				while(Motor10UserFlag==1){
+				while(Motor7UserFlag==1){
 					jog:(bestDirection*1);
 				}
 	
@@ -95,7 +94,7 @@ if(bestDirection==1){
 				/* dwelling needed to recognize if detent is engaged. This can potetially be 
 				removed to increas speed */
 				dwell(dwellTime);
-				if (Motor10UserFlag==1){
+				if (Motor7UserFlag==1){
 					PosCounter = (PosCounter + bestDirection) % totalPositions;
 						if(PosCounter<0){
 						PosCounter += totalPositions;
@@ -117,7 +116,7 @@ if(bestDirection==1){
 				/* Due to the width of the detent position we have to creep out of 
 				it before starting the triggered move. Desired position cannot be 
 				in this loop. */
-				while(Motor10UserFlag==1){
+				while(Motor7UserFlag==1){
 					jog:(bestDirection*1);
 				}
 	
@@ -128,7 +127,7 @@ if(bestDirection==1){
 				/* dwelling needed to recognize if detent is engaged. This can potetially be 
 				removed to increas speed */
 				dwell(dwellTime);
-				if (Motor10UserFlag==1){
+				if (Motor7UserFlag==1){
 					PosCounter = (PosCounter + bestDirection) % totalPositions;
 						if(PosCounter<0){
 						PosCounter += totalPositions;
@@ -160,7 +159,7 @@ if(bestDirection==1){
 				
 				/* Due to the width of the detent position we have to creep out of 
 				it before starting the triggered move. */
-				while(Motor10UserFlag==1){
+				while(Motor7UserFlag==1){
 					jog:(bestDirection*1);
 				}	
 				/* Easy in positive direction, just move to the next position.
@@ -172,7 +171,7 @@ if(bestDirection==1){
 				/* dwelling needed to recognize if detent is engaged. This can potetially be 
 				removed to increas speed */
 				dwell(dwellTime);
-				if (Motor10UserFlag==1){
+				if (Motor7UserFlag==1){
 					PosCounter = (PosCounter + bestDirection) % totalPositions;
 						if(PosCounter<0){
 						PosCounter += totalPositions;
@@ -193,7 +192,7 @@ if(bestDirection==1){
 					
 				/* Due to the width of the detent position we have to creep out of 
 				it before starting the triggered move. */
-				while(Motor10UserFlag==1){
+				while(Motor7UserFlag==1){
 					jog:(bestDirection*1);
 				}			
 				/* Now move to the next position. Using jog and detent interrupt makes sure we
@@ -203,7 +202,7 @@ if(bestDirection==1){
 				/* dwelling needed to recognize if detent is engaged. This can potetially be 
 				removed to increas speed */
 				dwell(dwellTime);
-				if (Motor10UserFlag==1){
+				if (Motor7UserFlag==1){
 					PosCounter = (PosCounter + bestDirection) % totalPositions;
 						if(PosCounter<0){
 						PosCounter += totalPositions;
@@ -230,7 +229,7 @@ if(bestDirection==1){
 // moving negative
 if(bestDirection==-1){
 	// check if we are in a detent position
-	if(Motor10UserFlag==1){
+	if(Motor7UserFlag==1){
 	// in detent
 		// check if fractional move is required
 		if(desiredCountFraction==0){
@@ -240,7 +239,7 @@ if(bestDirection==-1){
 				
 				/* Due to the width of the detent position we have to creep out of 
 				it before starting the triggered move. */
-				while(Motor10UserFlag==1){
+				while(Motor7UserFlag==1){
 					jog:(bestDirection*1);
 				}
 	
@@ -251,7 +250,7 @@ if(bestDirection==-1){
 				/* dwelling needed to recognize if detent is engaged. This can potetially be 
 				removed to increas speed */
 				dwell(dwellTime);
-				if (Motor10UserFlag==1){
+				if (Motor7UserFlag==1){
 					PosCounter = (PosCounter + bestDirection) % totalPositions;
 						if(PosCounter<0){
 						PosCounter += totalPositions;
@@ -274,7 +273,7 @@ if(bestDirection==-1){
 				/* Due to the width of the detent position we have to creep out of 
 				it before starting the triggered move. Desired position cannot be 
 				in this loop. */
-				while(Motor10UserFlag==1){
+				while(Motor7UserFlag==1){
 					jog:(bestDirection*1);
 				}
 	
@@ -285,7 +284,7 @@ if(bestDirection==-1){
 				/* dwelling needed to recognize if detent is engaged. This can potetially be 
 				removed to increas speed */
 				dwell(dwellTime);
-				if (Motor10UserFlag==1){
+				if (Motor7UserFlag==1){
 					PosCounter = (PosCounter + bestDirection) % totalPositions;
 						if(PosCounter<0){
 						PosCounter += totalPositions;
@@ -320,7 +319,7 @@ if(bestDirection==-1){
 					
 				/* Due to the width of the detent position we have to creep out of 
 				it before starting the triggered move. */
-				while(Motor10UserFlag==1){
+				while(Motor7UserFlag==1){
 					jog:(bestDirection*1);
 				}
 				/* Easy in positive direction, just move to the next position.
@@ -332,7 +331,7 @@ if(bestDirection==-1){
 				removed to increas speed */
 				if(loopCounter!=1){
 					dwell(dwellTime);
-					if (Motor10UserFlag==1){
+					if (Motor7UserFlag==1){
 						PosCounter = (PosCounter + bestDirection) % totalPositions;
 						if(PosCounter<0){
 							PosCounter += totalPositions;
@@ -355,7 +354,7 @@ if(bestDirection==-1){
 					
 				/* Due to the width of the detent position we have to creep out of 
 				it before starting the triggered move. */
-				while(Motor10UserFlag==1){
+				while(Motor7UserFlag==1){
 					jog:(bestDirection*1);
 				}			
 				/* Now move to the next position. Using jog and detent interrupt makes sure we
@@ -366,7 +365,7 @@ if(bestDirection==-1){
 				removed to increas speed */
 				if(loopCounter!=1){
 					dwell(dwellTime);
-					if (Motor10UserFlag==1){
+					if (Motor7UserFlag==1){
 						PosCounter = (PosCounter + bestDirection) % totalPositions;
 						if(PosCounter<0){
 							PosCounter += totalPositions;
@@ -399,19 +398,19 @@ if(actualPos<0){
 commanded position is within 10% of the desired position. */
 if(locdesiredPosition==0){
 	if(actualPos>totalSteps-wheelStepSize/2){
-		if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos-totalSteps)>wheelStepSize*localCheckPer)){
+		if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos-totalSteps)>wheelStepSize*0.2)){
 		disable ThisCs;
 		}
 	}
 	else{
-		if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos)>wheelStepSize*localCheckPer)){
+		if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos)>wheelStepSize*0.2)){
 			disable ThisCs;
 			// buy an encoder as we cannot distinguish between not counting detents and lost steps
 		}
 	}	
 }
 else{
-	if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos)>wheelStepSize*localCheckPer)){
+	if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos)>wheelStepSize*0.2)){
 		disable ThisCs;
 		// buy an encoder as we cannot distinguish between not counting detents and lost steps
 	}
@@ -419,7 +418,7 @@ else{
 
 // reset the trigger flag selection back to home switch
 Sys.WpKey=$AAAAAAAA	
-Gate3[2].Chan[3].CaptFlagSel=0	
+Gate3[2].Chan[0].CaptFlagSel=0	
 Sys.WpKey=$0
 
 // report that move is done

@@ -1,14 +1,6 @@
-// custom motion program for warm calibration stage
+// custom motion program for warm modulator stage
 /****************************************/
-open prog 6
-
-/*
-order of limit switches is
-plim
-user
-home
-mlim
-*/
+open prog 8
 
 local ThisCs;						// Local var for # of CS running program motor has same #
 local LocalDesiredPosition = DesiredPosition;		// asign local var from csglobal desired position

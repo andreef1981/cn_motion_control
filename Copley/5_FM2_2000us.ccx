@@ -8,18 +8,18 @@
 83,0,Amp Continuous Current,500
 82,0,Amp Peak Current,700
 88,0,Amp Peak Current Time,1000
-0,0,Current Cp,233
-1,0,Current Ci,10
+0,0,Current Cp,232
+1,0,Current Ci,9
 2,0,Programmed Current Command,0
 19,0,Analog Input Scale,0
 1a,0,Analog Input Offset,0
-21,0,Boost Current,67
-22,0,Run Current,67
+21,0,Boost Current,300
+22,0,Run Current,300
 23,0,Time at Boost Current,1000
 24,0,Desired State,33
 26,0,Analog Input Deadband,0
-27,0,Velocity Vp,18642
-28,0,Velocity Vi,4143
+27,0,Velocity Vp,14914
+28,0,Velocity Vi,3314
 2f,0,Programmed Velocity Command,0
 31,0,Velocity Gains Scalor,0
 36,0,Velocity Loop Acceleration Limit,1332
@@ -28,16 +28,16 @@
 3a,0,Velocity Loop Velocity Limit,333333
 3f,0,Velocity Tracking Time,100
 3e,0,Velocity Tracking Window,499999333
-41,0,Motor Manufacturer,Oriental Motors
-42,0,Motor Model Number,PKP223U09B2
+41,0,Motor Manufacturer,SchneiderElectric
+42,0,Motor Model Number,M-2222-3.0D
 43,0,Motor Units,0
-44,0,Motor Inertia,9000
+44,0,Motor Inertia,260000
 46,0,Motor Brake,1
-48,0,Motor Torque Constant,9701
-49,0,Motor Resistance,560
-4a,0,Motor Inductance,400
-4b,0,Motor Peak Torque,6500
-4c,0,Motor Continuous Torque,6500
+48,0,Motor Torque Constant,1300
+49,0,Motor Resistance,85
+4a,0,Motor Inductance,260
+4b,0,Motor Peak Torque,3900
+4c,0,Motor Continuous Torque,3900
 4d,0,Motor Velocity Limit,100
 4e,0,Motor Wiring,0
 53,0,Brake/Stop Delay Time,0
@@ -54,8 +54,8 @@
 7d,0,Input 6 Config,0
 80,0,Amp Model Number,STP-075-07
 86,0,Servo Period,5
-8a,0,Voltage Sense,2261
-92,0,Amp Name,sp sm3B
+8a,0,Voltage Sense,2255
+92,0,Amp Name,FM2
 98,0,Function Generator Config,1
 99,0,Function Generator Frequency,100
 9a,0,Function Generator Amplitude,0
@@ -86,16 +86,16 @@ ae,0,Current Loop Offset,0
 af,0,Amp Options Register,2
 b1,0,Increment Rate,0
 b2,0,Commutation Mode,0
-ba,0,Position Following Error Limit,1600
-bb,0,Position Following Warning Limit,800
-bc,0,Position Tracking Window,400
+ba,0,Position Following Error Limit,2000
+bb,0,Position Following Warning Limit,1000
+bc,0,Position Tracking Window,500
 bd,0,Position Tracking Window Time,10
 c8,0,Trajectory Profile Mode,256
 ca,0,Trajectory Position Command,0
-cb,0,Trajectory Max Velocity,3333
-cc,0,Trajectory Max Accel,26720
-cd,0,Trajectory Max Decel,26720
-cf,0,Trajectory Abort Decel,26720
+cb,0,Trajectory Max Velocity,250000
+cc,0,Trajectory Max Accel,80000
+cd,0,Trajectory Max Decel,80000
+cf,0,Trajectory Abort Decel,80000
 f0,0,Input 1 Debounce Time,0
 f1,0,Input 2 Debounce Time,0
 f2,0,Input 3 Debounce Time,0
@@ -117,7 +117,7 @@ e5,0,Phase Init Time,400
 58,0,Gear Ratio,65537
 b6,0,PWM Deadband,1000
 ea,0,Detent Correction Gain,0
-57,0,Micro Steps Per Rev.,200
+57,0,Micro Steps Per Rev.,2000
 59,0,Hall Velocity Shift,0
 5a,0,Multi Mode Port Configuration,0
 5b,0,Position Encoder Resolution,0
@@ -136,12 +136,12 @@ b9,0,Negative Software Limit,0
 bf,0,Home Current Delay Time,250
 c1,0,Node ID configuration,2048
 c2,0,Home Configuration,0
-c3,0,Home Velocity Fast,6667
-c4,0,Home Velocity Slow,1333
-c5,0,Home Accel/Decel,2720
+c3,0,Home Velocity Fast,8333
+c4,0,Home Velocity Slow,1667
+c5,0,Home Accel/Decel,3400
 c6,0,Home Offset,0
 c7,0,Home Current,56
-ce,0,Trajectory Max Jerk,17100800
+ce,0,Trajectory Max Jerk,133600
 d0,0,Input 9 Config,0
 d1,0,Input 10 Config,0
 d2,0,Input 11 Config,0
@@ -167,7 +167,7 @@ fb,0,Input 12 Debounce Time,0
 119,0,CANopen halt option code,1
 11a,0,Amp Scaling Config,-1
 ee,0,Stepnet Configuration ,0
-e6,0,Stepper Max Vel Adjustment,16000
+e6,0,Stepper Max Vel Adjustment,20000
 e7,0,Stepper Proportional Gain,25
 ed,0,Hold to Voltage Time,0
-94c,0,basic host cfg,13
+94c,0,basic host cfg,91

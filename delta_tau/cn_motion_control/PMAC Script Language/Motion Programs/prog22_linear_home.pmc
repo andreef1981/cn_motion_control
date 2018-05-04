@@ -17,7 +17,7 @@ disabled */
 Sys.WpKey=$AAAAAAAA	
 switch (ThisCs) {			// Change CaptFlagSel for the right gate
 	case 3: if(Motor3PlusFlag==1){
-				jog:(-50000);
+				jog:(-20000);
 			}	
 			Gate3[1].Chan[0].CaptFlagSel=1;
 			Motor[3].pLimits=0;
@@ -33,6 +33,7 @@ switch (ThisCs) {			// Change CaptFlagSel for the right gate
 			}	
 			Gate3[1].Chan[2].CaptFlagSel=1;
 			Motor[5].pLimits=0;
+			//Motor[5].MaxPos=10000;
 			break; // motor 5, fm2 focus is on card1 channel 2
 	case 6: if(Motor6PlusFlag==1){
 				jog:(-50000);
@@ -40,7 +41,10 @@ switch (ThisCs) {			// Change CaptFlagSel for the right gate
 			Gate3[1].Chan[3].CaptFlagSel=1;
 			Motor[6].pLimits=0;
 			break; // motor 6, lamp is on card1 channel 3
-	case 8: Gate3[2].Chan[1].CaptFlagSel=1;
+	case 8: if(Motor8PlusFlag==1){
+				jog:(-10000);
+			}	
+			Gate3[2].Chan[1].CaptFlagSel=1;
 			Motor[8].pLimits=0;
 			break; // motor 8, modulator is on card2 channel 1
 	case 9: Gate3[2].Chan[2].CaptFlagSel=1;
@@ -58,8 +62,6 @@ switch (ThisCs) {			// Change CaptFlagSel for the right gate
 }
 Sys.WpKey=$0
 
-
-
 PosCounter = 0;
 
 home;
@@ -68,19 +70,24 @@ home;
 enabled */
 Sys.WpKey=$AAAAAAAA	
 switch (ThisCs) {			// Change CaptFlagSel for the right gate
-	case 3: Gate3[1].Chan[0].CaptFlagSel=0;
+	case 3: jog:(-1608817)	// move to center
+			Gate3[1].Chan[0].CaptFlagSel=0;
 			Motor[3].pLimits=Gate3[1].Chan[0].Status.a;
 			break; // motor 3, FM1 a is on card1 channel 0
-	case 4: Gate3[1].Chan[1].CaptFlagSel=0;
+	case 4: jog:(-1966953)	// move to center
+			Gate3[1].Chan[1].CaptFlagSel=0;
 			Motor[4].pLimits=Gate3[1].Chan[1].Status.a;
 			break; // motor 4, Fm1 B is on card1 channel 1
-	case 5: Gate3[1].Chan[2].CaptFlagSel=0;
+	case 5: jog:(-15000)	// move out of limit
+			//Motor[5].MaxPos=-1000;
+			Gate3[1].Chan[2].CaptFlagSel=0;
 			Motor[5].pLimits=Gate3[1].Chan[2].Status.a;
 			break; // motor 5, fm2 focus is on card1 channel 2
 	case 6: Gate3[1].Chan[3].CaptFlagSel=0;
 			Motor[6].pLimits=Gate3[1].Chan[3].Status.a;
 			break; // motor 6, lamp is on card1 channel 3
-	case 8: Gate3[2].Chan[1].CaptFlagSel=0;
+	case 8: jog:(-20000)	// move out of limit
+			Gate3[2].Chan[1].CaptFlagSel=0;
 			Motor[8].pLimits=Gate3[2].Chan[1].Status.a;
 			break; // motor 8, modulator is on card2 channel 1
 	case 9: Gate3[2].Chan[2].CaptFlagSel=0;

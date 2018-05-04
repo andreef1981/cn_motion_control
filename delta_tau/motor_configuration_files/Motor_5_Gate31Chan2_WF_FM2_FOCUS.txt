@@ -20,7 +20,7 @@ Gate3[1].Chan[2].OutputPol=0    			// IC channel phase output inversion control
 											// default=0, range 0to3
 											// (software reference manual p. 315)
 											
-Gate3[1].Chan[2].PfmDirPol=0    			// IC channel PFM direction polarity control
+Gate3[1].Chan[2].PfmDirPol=1    			// IC channel PFM direction polarity control
 											// default=0 range 0ro1
 											// (software reference manual p. 320)
 											
@@ -31,7 +31,7 @@ Gate3[1].Chan[2].TimerMode=0				// IC Channel encoder timer control; default=0
 											// counter available for external signal 
 											// (software reference manual p. 331)
 
-Gate3[1].Chan[2].EncCtrl=7				// IC channel encoder decode control; default 7; 
+Gate3[1].Chan[2].EncCtrl=3				// IC channel encoder decode control; default 7; 
 											// range 0to15, how to decode input signal,
 											//.EncCtrl=3 mu's are set by quadrature encoder 
 											// (x4 quadrature decode CW)
@@ -47,8 +47,6 @@ Gate3[1].Chan[2].CaptCtrl=2					// IC Channel position-capture control, default=
 											// 10 capture on flag low
 											// 15: Capture on (Index high AND Flag high)
 											// (software reference manual p. 304)
-
-//Gate3[1].Chan[2].CaptFlagSel=0	
 
 //Encoder Conversion Table
 
@@ -163,37 +161,43 @@ Motor[5].pEnc = EncTable[5].a						// Outer (position) loop position feedback po
 
 Motor[5].pEnc2 = EncTable[5].a						// Inner (velocity) loop position feedback pointer
 													// (software reference manual p. 418)
-													
+Motor[5].pEncLoss=Gate3[1].Chan[2].Status.a													
+Motor[5].EncLossBit=28
+Motor[5].EncLossLevel=1
 
 //Motor[5].pEncStatus = Gate3[1].Chan[2].Status.a
 													// break controll see user manula p. 383
 													              
 // Motor PID servo setup
 
-Motor[5].Servo.Kp = 1.25					// PID proportiona term		
+Motor[5].Servo.Kp = 4.					// PID proportiona term		
 Motor[5].Servo.Ki = 0.0				// PID integral term
-Motor[5].Servo.Kvfb= 25					// PID velocity feedback (“derivative”) gain term
-Motor[5].Servo.Kvff= 0									// =0 see user manual p. 286
+Motor[5].Servo.Kvfb= 0					// PID velocity feedback (“derivative”) gain term
 
 Motor[5].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
+Motor[5].InPosBand=2.0
 Motor[5].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
-Motor[5].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
-Motor[5].WarnFeLimit = 42000.0			// add BlSize
-Motor[5].FatalFeLimit= 43000.0			// add BlSize
+Motor[5].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
+Motor[5].WarnFeLimit = 1000.0			// add BlSize
+Motor[5].FatalFeLimit= 10000.0			// add BlSize
+
+//Motor[5].MinPos = -1171900.
+//Motor[5].MaxPos = -1000.
+Motor[5].HomeOffset = 0.					// Position referencing offset	
 
 // Motor Speeds
 
-Motor[5].JogSpeed=1						// Jog command velocity magnitude
+Motor[5].JogSpeed=15						// Jog command velocity magnitude
 										// mu / millisecond
 										
-Motor[5].MaxSpeed=1
+Motor[5].MaxSpeed=15
 
 
 
-Motor[5].HomeVel=-1
+Motor[5].HomeVel=5
 
-Motor[5].JogTa=-1						// Jog accel/decel time or inverse rate
+Motor[5].JogTa=-200						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
 										// < 0 mu / millisecond^2
 										// -200 -> 0.005 mu/ms^2 -> 5m/s^2 or 0.5g
@@ -204,29 +208,20 @@ Motor[5].JogTs=-10000					// Jog accel/decel S-curve time or inverse jerk rate
 										// -50 -> 0.02m/s^3
 										// -12500 -> 0.00008 mu/ms^3 -> 80m/s^3 -> 80g/s
 										
-Motor[5].AbortTa=-2						// deceleration for abort (hit limit switch
+Motor[5].AbortTa=-200						// deceleration for abort (hit limit switch
 Motor[5].AbortTs=0									
 
 //Motor[5].BlSize=0.0					// Backlash size
 
 //Motor[5].BlHysteresis =0.0				// Backlash take-up rate
 
-Motor[5].HomeOffset=00.0					// Position referencing offset	
-Motor[5].InPosBand = 2.0
+Motor[5].HomeOffset=0.0					// Position referencing offset	
+
 
 // Coordinate system
 
 &5									// Address C.S. 1
-
 #5->1X
-//#5->62992.125984251X				// Assign motor to CS and define scale
-									// X, Y, Z,.... linear
-									// A, B, C, AA, BB, CC .... rotary
-									// stage does 3.175 mm per revolution of lead screw
-									// worm assembly has ratio of 50:1, Schneider encoder
-									// gives 4000 steps per revolution so the final Cs
-									// ratio should be 1 /(3.175/(4000*50)) = 62992.125984251
-									// mu / mm
 
 
 									

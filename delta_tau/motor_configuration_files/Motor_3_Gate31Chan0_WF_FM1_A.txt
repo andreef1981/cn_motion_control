@@ -20,7 +20,7 @@ Gate3[1].Chan[0].OutputPol=0    			// IC channel phase output inversion control
 											// default=0, range 0to3
 											// (software reference manual p. 315)
 											
-Gate3[1].Chan[0].PfmDirPol=0    			// IC channel PFM direction polarity control
+Gate3[1].Chan[0].PfmDirPol=1    			// IC channel PFM direction polarity control
 											// default=0 range 0ro1
 											// (software reference manual p. 320)
 											
@@ -31,7 +31,7 @@ Gate3[1].Chan[0].TimerMode=0				// IC Channel encoder timer control; default=0
 											// counter available for external signal 
 											// (software reference manual p. 331)
 
-Gate3[1].Chan[0].EncCtrl=7				// IC channel encoder decode control; default 7; 
+Gate3[1].Chan[0].EncCtrl=3				// IC channel encoder decode control; default 7; 
 											// range 0to15, how to decode input signal,
 											// .EncCtrl=3 mu's are set by quadrature encoder 
 											// (x4 quadrature decode CW)
@@ -40,7 +40,7 @@ Gate3[1].Chan[0].EncCtrl=7				// IC channel encoder decode control; default 7;
 											// .EncCtrl=8 internal puls and direction CW
 											// (software reference manual p. 306)
 	
-Gate3[1].Chan[0].CaptCtrl=10					// IC Channel position-capture control, default=1
+Gate3[1].Chan[0].CaptCtrl=2					// IC Channel position-capture control, default=1
 											// range 0to15
 											// 1 capture on index high
 											// 2 capture on flag high
@@ -164,6 +164,9 @@ Motor[3].pEnc = EncTable[3].a						// Outer (position) loop position feedback po
 Motor[3].pEnc2 = EncTable[3].a						// Inner (velocity) loop position feedback pointer
 													// (software reference manual p. 418)
 													
+Motor[3].pEncLoss=Gate3[1].Chan[0].Status.a													
+Motor[3].EncLossBit=28
+Motor[3].EncLossLevel=1
 
 //Motor[3].pEncStatus = Gate3[1].Chan[0].Status.a
 													// break controll see user manula p. 383
@@ -175,13 +178,13 @@ Motor[3].Servo.Ki = 0.0				// PID integral term
 Motor[3].Servo.Kvfb= 25.0					// PID velocity feedback (“derivative”) gain term
 											// =0 see user manual p. 286
 
-Motor[3].Servo.BreakPosErr = 1.0		// Servo gain-break error size (deadband)
+Motor[3].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[3].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
-Motor[3].InPosBand = 1.0
+Motor[3].InPosBand = 2.0
 
-Motor[3].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
-Motor[3].WarnFeLimit = 42000.0			// add BlSize
-Motor[3].FatalFeLimit= 43000.0			// add BlSize
+Motor[3].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
+Motor[3].WarnFeLimit = 4000.0			// add BlSize
+Motor[3].FatalFeLimit= 5000.0			// add BlSize
 
 // Motor Speeds
 
@@ -192,7 +195,7 @@ Motor[3].MaxSpeed=30
 
 
 
-Motor[3].HomeVel=-1
+Motor[3].HomeVel=1
 
 Motor[3].JogTa=-0.5					// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond
@@ -220,14 +223,4 @@ Motor[3].HomeOffset=0.0					// Position referencing offset
 &3									// Address C.S. 1
 
 #3->1X
-//#3->121.20342027744X					//
-									// Assign motor to CS and define scale
-									// X, Y, Z,.... linear
-									// A, B, C, AA, BB, CC .... rotary
-									// stage does 160 urad per revolution Schneider encoder
-									// gives 4000 steps per revolution so the final Cs
-									// ratio should be 1 /(160/(4000)) = 25 mu / urad
-									// or 121.20342027744 mu / arcsec
-
-
-									
+					

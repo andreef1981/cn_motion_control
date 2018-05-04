@@ -4,7 +4,7 @@ open prog 11
 
 Sys.WpKey=$AAAAAAAA	
 Gate3[3].Chan[0].CaptFlagSel=3	// select UserFlag as trigger for move until moves
-								// this wheel needs a 25 steps after move to center 
+								// this wheel needs a xx steps after move to center 
 								// on detent
 Sys.WpKey=$0					// Write-protect Gate3 registers disabling writing 
 								// to hardware registers
@@ -14,6 +14,7 @@ Sys.WpKey=$0					// Write-protect Gate3 registers disabling writing
 local ThisCs;						// Local var for # of CS running program motor has same #
 local wheelStepSize = 400.0;		// Local var for motor units in between two positions
 local totalPositions = 16;			// Local var for # of wheel positions
+local localCheckPer = 0.2;			// endposition has to be within xx percent of step size
 local totalSteps = totalPositions*wheelStepSize;
 local locdesiredPosition = DesiredPosition;		// asign local var from csglobal desired position
 locdesiredPosition = locdesiredPosition % totalSteps;	// do modulo caluclation as we get negative
@@ -398,12 +399,12 @@ if(actualPos<0){
 commanded position is within 10% of the desired position. */
 if(locdesiredPosition==0){
 	if(actualPos>totalSteps-wheelStepSize/2){
-		if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos-totalSteps)>wheelStepSize*0.2)){
+		if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos-totalSteps)>wheelStepSize*localCheckPer)){
 		disable ThisCs;
 		}
 	}
 	else{
-		if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos)>wheelStepSize*0.2)){
+		if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos)>wheelStepSize*localCheckPer)){
 			disable ThisCs;
 			// buy an encoder as we cannot distinguish between not counting detents and lost steps
 		}

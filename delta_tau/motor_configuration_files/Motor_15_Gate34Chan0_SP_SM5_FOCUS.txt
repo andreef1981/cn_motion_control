@@ -161,7 +161,9 @@ Motor[15].pEnc = EncTable[15].a						// Outer (position) loop position feedback 
 
 Motor[15].pEnc2 = EncTable[15].a						// Inner (velocity) loop position feedback pointer
 													// (software reference manual p. 418)
-													              
+
+Motor[15].pEncLoss=Gate3[4].Chan[0].Status.a														              
+
 // Motor PID servo setup
 
 Motor[15].Servo.Kp = 1.25					// PID proportiona term		
