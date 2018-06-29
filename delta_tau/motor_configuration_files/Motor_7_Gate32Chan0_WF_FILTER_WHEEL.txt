@@ -176,7 +176,7 @@ Motor[7].WarnFeLimit = 4000.0			// add BlSize
 Motor[7].FatalFeLimit= 5000.0
 // Motor Speeds
 
-Motor[7].JogSpeed=0.1					// Jog command velocity magnitude
+Motor[7].JogSpeed=0.01					// Jog command velocity magnitude
 										// mu / millisecond
 Motor[7].HomeVel=0.1
 

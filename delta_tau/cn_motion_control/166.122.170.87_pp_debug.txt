@@ -35,6 +35,11 @@
 8,23
 9,25
 <end>
+</var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc26_enable_motors.plc>,26
+0,7
+1,8
+2,10
+<end>
 </var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/prog25_encoder table.plc>,25
 0,7
 1,8
@@ -57,4 +62,5 @@
 18,28
 19,29
 20,30
+21,31
 <end>

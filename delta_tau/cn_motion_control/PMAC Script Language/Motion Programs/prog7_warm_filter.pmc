@@ -12,7 +12,7 @@ Sys.WpKey=$0					// Write-protect Gate3 registers disabling writing
 // PosCounter contains wheel position value as a CSglobal
 
 local ThisCs;						// Local var for # of CS running program motor has same #
-local wheelStepSize = 400.0;		// Local var for motor units in between two positions
+local wheelStepSize = 500.0;		// Local var for motor units in between two positions
 local totalPositions = 6;			// Local var for # of wheel positions
 local totalSteps = totalPositions*wheelStepSize;
 local locdesiredPosition = DesiredPosition;		// asign local var from csglobal desired position

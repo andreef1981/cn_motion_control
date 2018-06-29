@@ -129,7 +129,7 @@ Motor[14].ServoCtrl=1								// Control flag to activate servo tasks
 Motor[14].pDac=Gate3[3].Chan[3].Pfm.a				// Command output pointer
 													// (software reference manual p. 417)
 
-Motor[14].pAmpFault=0                  				// Amplifier-fault (input) flag pointer
+Motor[14].pAmpFault=0                 				// Amplifier-fault (input) flag pointer
 													// default=0 disabled
 													// pAmpFault = Gate3[m].Chan[n].Status.a to use
 													// (software reference manual p. 410)
@@ -168,9 +168,12 @@ Motor[14].Servo.Ki = 0				// PID integral term
 Motor[14].Servo.Kvfb= 100					// PID velocity feedback (“derivative”) gain term
 
 Motor[14].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
+Motor[14].InPosBand=2.0
 Motor[14].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
-Motor[14].Servo.MaxPosErr= 100000.0		// Servo-error input magnitude limit
+Motor[14].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
+Motor[9].WarnFeLimit = 200.0			// add BlSize
+Motor[9].FatalFeLimit= 400.0
 
 // Motor Speeds
 
@@ -190,6 +193,8 @@ Motor[14].JogTs=-1000					// Jog accel/decel S-curve time or inverse jerk rate
 										// < 0 mu / millisecond^3
 										// -50 -> 0.02m/s^3
 										// -12500 -> 0.00008 mu/ms^3 -> 80m/s^3 -> 80g/s
+Motor[14].AbortTa=-50						// deceleration for abort (hit limit switch
+Motor[14].AbortTs=0
 
 Motor[14].BlSize=0						// Backlash size
 

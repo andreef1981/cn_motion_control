@@ -163,6 +163,8 @@ Motor[15].pEnc2 = EncTable[15].a						// Inner (velocity) loop position feedback
 													// (software reference manual p. 418)
 
 Motor[15].pEncLoss=Gate3[4].Chan[0].Status.a														              
+Motor[15].EncLossBit=28
+Motor[15].EncLossLevel=1
 
 // Motor PID servo setup
 
@@ -170,13 +172,13 @@ Motor[15].Servo.Kp = 1.25					// PID proportiona term
 Motor[15].Servo.Ki = 0.				// PID integral term
 Motor[15].Servo.Kvfb= 25					// PID velocity feedback (“derivative”) gain term
 
-Motor[15].Servo.BreakPosErr = 1.0		// Servo gain-break error size (deadband)
-Motor[15].InPosBand=1.0
+Motor[15].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
+Motor[15].InPosBand=2.0
 Motor[15].Servo.Kbreak = 0.				// Servo “gain break” relative gain within this dead band
 
-Motor[15].Servo.MaxPosErr= 100000.0		// Servo-error input magnitude limit
-Motor[15].WarnFeLimit = 42000.0			// add BlSize
-Motor[15].FatalFeLimit= 43000.0			// add BlSize
+Motor[15].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
+Motor[15].WarnFeLimit = 400.0			// add BlSize
+Motor[15].FatalFeLimit= 500.0			// add BlSize
 
 // Motor Speeds
 
@@ -184,7 +186,7 @@ Motor[15].JogSpeed=1                  // Jog command velocity magnitude0
 										// mu / millisecond
 Motor[15].MaxSpeed=1 
 
-Motor[15].HomeVel=0.1
+Motor[15].HomeVel=0.5
 
 Motor[15].JogTa=-200.						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond

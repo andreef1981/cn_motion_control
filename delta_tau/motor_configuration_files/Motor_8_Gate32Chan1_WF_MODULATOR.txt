@@ -166,7 +166,7 @@ Motor[8].EncLossLevel=1
 													              
 // Motor PID servo setup
 
-Motor[8].Servo.Kp = 0					// PID proportiona term		
+Motor[8].Servo.Kp = 2					// PID proportiona term		
 Motor[8].Servo.Ki = 0.0				// PID integral term
 Motor[8].Servo.Kvfb= 0					// PID velocity feedback (“derivative”) gain term
 

@@ -129,7 +129,7 @@ Motor[10].ServoCtrl=1								// Control flag to activate servo tasks
 Motor[10].pDac=Gate3[2].Chan[3].Pfm.a				// Command output pointer
 													// (software reference manual p. 417)
 
-Motor[10].pAmpFault=Gate3[2].Chan[3].Status.a								// Amplifier-fault (input) flag pointer
+Motor[10].pAmpFault=0//Gate3[2].Chan[3].Status.a								// Amplifier-fault (input) flag pointer
 													// default=0 disabled
 													// pAmpFault = Gate3[m].Chan[n].Status.a to use
 													// (software reference manual p. 410)
@@ -164,7 +164,7 @@ Motor[10].pEnc2 = EncTable[10].a						// Inner (velocity) loop position feedback
 // Motor PID servo setup
 
 Motor[10].Servo.Kp = 4								// PID proportiona term		
-Motor[10].Servo.Ki = 0.001							// PID integral term
+Motor[10].Servo.Ki = 0.0							// PID integral term
 Motor[10].Servo.Kvfb= 40							// PID velocity feedback (“derivative”) gain term
 
 Motor[10].Servo.BreakPosErr = 2.0
@@ -196,11 +196,11 @@ Motor[10].JogTs=-1000					// Jog accel/decel S-curve time or inverse jerk rate
 Motor[10].AbortTa=-200						// deceleration for abort (hit limit switch
 Motor[10].AbortTs=0	
 
-Motor[10].BlSize=10						// Backlash size
+Motor[10].BlSize=0						// Backlash size
 
-Motor[10].BlSlewRate =0.1				// Backlash take-up rate
+Motor[10].BlSlewRate =0				// Backlash take-up rate
 
-Motor[10].HomeOffset=10.0					// Position referencing offset	
+Motor[10].HomeOffset=0.0					// Position referencing offset	
 
 
 // Coordinate system

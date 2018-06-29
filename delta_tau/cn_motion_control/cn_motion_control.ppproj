@@ -33,7 +33,7 @@
     <CommType>PPmacServer</CommType>
     <Name>cn_motion_control</Name>
     <ProjectFrimwareVers>2.0.2.14</ProjectFrimwareVers>
-    <IDESignature>xgtu9219XGTU</IDESignature>
+    <IDESignature>mkdj5355MKDJ</IDESignature>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -81,6 +81,9 @@
     <Content Include="PMAC Script Language\Motion Programs\prog11_spfilter.pmc">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="PMAC Script Language\Motion Programs\prog14_coldmask.pmc">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog15_spsm5_focus.pmc">
       <SubType>Content</SubType>
     </Content>
@@ -117,7 +120,13 @@
     <Content Include="PMAC Script Language\Motion Programs\prog8_modulator.pmc">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="PMAC Script Language\Motion Programs\prog9_pickoff.pmc">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="PMAC Script Language\PLC Programs\plc1.plc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\PLC Programs\plc26_enable_motors.plc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="PMAC Script Language\PLC Programs\prog25_encoder table.plc">

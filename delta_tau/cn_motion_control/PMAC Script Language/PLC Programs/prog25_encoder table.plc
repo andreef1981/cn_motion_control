@@ -27,5 +27,6 @@ dwell(500)
 EncTable[22].index2 = 255;
 dwell(500)
 EncTable[22].index4 = 15;
+dwell(1500)
 close
 /****************************************/

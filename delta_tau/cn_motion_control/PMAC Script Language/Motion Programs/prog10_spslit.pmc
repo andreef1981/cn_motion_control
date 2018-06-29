@@ -399,8 +399,8 @@ if(actualPos<0){
 commanded position is within 10% of the desired position. */
 if(locdesiredPosition==0){
 	if(actualPos>totalSteps-wheelStepSize/2){
-		if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos-totalSteps)>wheelStepSize*localCheckPer)){
-		disable ThisCs;
+		if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos)-totalSteps)>wheelStepSize*localCheckPer){
+			disable ThisCs;
 		}
 	}
 	else{
@@ -408,7 +408,8 @@ if(locdesiredPosition==0){
 			disable ThisCs;
 			// buy an encoder as we cannot distinguish between not counting detents and lost steps
 		}
-	}	
+	}
+	homez	
 }
 else{
 	if((PosCounter!=desiredCount) || (abs(locdesiredPosition-actualPos)>wheelStepSize*localCheckPer)){
