@@ -33,7 +33,7 @@
     <CommType>PPmacServer</CommType>
     <Name>cn_motion_control</Name>
     <ProjectFrimwareVers>2.0.2.14</ProjectFrimwareVers>
-    <IDESignature>mkdj5355MKDJ</IDESignature>
+    <IDESignature>aeiu1279AEIU</IDESignature>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -87,6 +87,9 @@
     <Content Include="PMAC Script Language\Motion Programs\prog15_spsm5_focus.pmc">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="PMAC Script Language\Motion Programs\prog16_cifw1.pmc">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog18_grating.pmc">
       <SubType>Content</SubType>
     </Content>
@@ -100,6 +103,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog22_linear_home.pmc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\Motion Programs\prog33citest.pmc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog3_fm1a_azimuth.pmc">
@@ -129,7 +135,7 @@
     <Content Include="PMAC Script Language\PLC Programs\plc26_enable_motors.plc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="PMAC Script Language\PLC Programs\prog25_encoder table.plc">
+    <Content Include="PMAC Script Language\PLC Programs\plc25_encoder table.plc">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

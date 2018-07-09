@@ -2,3 +2,17 @@
 [PMAC_CONFIG]
 [PMAC_PROJECT]
 [PMAC_PROJECT]
+[PMAC_PROJECT]
+[PMAC_PROJECT]
+[PMAC_INC_PROJECT]
+[PMAC_INC_PROJECT]
+[PMAC_INC_PROJECT]
+[PMAC_INC_PROJECT]
+[PMAC_INC_PROJECT]
+[PMAC_INC_PROJECT]
+[PMAC_PROJECT]
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifw1.pmc:10:1: error #31: invalid function in equation: L3 = L3 % totalSteps
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+[PMAC_PROJECT]
+[PMAC_PROJECT]
+[PMAC_CONFIG]

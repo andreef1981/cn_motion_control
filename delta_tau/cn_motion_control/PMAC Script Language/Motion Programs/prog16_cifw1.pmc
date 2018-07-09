@@ -1,0 +1,35 @@
+// custom motion program for sp sm5 focus stage
+/****************************************/
+open prog 16
+
+local ThisCs;						// Local var for # of CS running program motor has same #
+local wheelStepSize = 2000.0;		// Local var for motor units in between two positions
+local totalPositions = 9;	
+local LocalDesiredPosition = DesiredPosition;		// asign local var from csglobal desired position
+local totalSteps = totalPositions*wheelStepSize;
+
+LocalDesiredPosition = LocalDesiredPosition % totalSteps;	// do modulo caluclation as we get negative
+
+local desiredCount = floor(LocalDesiredPosition/wheelStepSize);	// how many positions to move
+local desiredCountFraction =((LocalDesiredPosition/wheelStepSize) - desiredCount); // sub positions to move
+
+Ldata.motor = ThisCs;		// Asign the right motor locally
+
+//while(Motor15PlusFlag==1){	// move out of plimit
+//	jog:(-1);
+//}
+//abort
+	
+jog=(LocalDesiredPosition)//^(0)
+
+if(desiredCountFraction==0){
+	// Verify that we are in position
+	if(Motor16UserFlag==0){
+		//report that move is done
+		send0 "m[%d]:isDone\n",Ldata.coord;
+		sendall;
+	}
+}
+close
+/****************************************/
+
