@@ -1,0 +1,30 @@
+// PLC to send status reports from prog35.  
+open plc 10
+	
+	local csNum = 0, iter = 0, pos = 0;
+	while ( csNum < noOfCS ) 
+	{
+		//Ldata.coord = csNum;
+		Ldata.coord = csArray(csNum);
+		
+		if ( updateReady > 0.5 ) 
+		{
+			// ADB: I take care to set iter and pos locally
+			// and reset updateReady in order to avoid races
+			// with servo loop.
+			iter = iteration
+			pos = curPosition
+			updateReady = 0
+			
+			// Send status report
+			send 0 "m[%d]:custom:4:ready:1:%d:%d:",Ldata.coord,iter,pos
+			// send 3 should only be used if a reader is on the other end, otherwise
+			// it can block other sends.
+			// send 3 "m[%d]:custom:4:ready:1:%d:%d:",Ldata.coord,iter,pos
+			sendall
+		}
+		csNum++
+	}
+				
+close
+/****************************************/

@@ -1,0 +1,2 @@
+SUBPROGmyinpos	SUBPROG	myinpos	100000
+SUBPROGwaitTilInPos	SUBPROG	waitTilInPos	100001

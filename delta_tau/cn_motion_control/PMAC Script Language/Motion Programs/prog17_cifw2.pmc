@@ -1,10 +1,10 @@
-// custom motion program for sp slit wheel stage
+// custom motion program for ci fw2 focus stage
 /****************************************/
-open prog 10
+open prog 17
 
 local ThisCs;						// Local var for # of CS running program motor has same #
-local wheelStepSize = 1000.0;		// Local var for motor units in between two positions
-local totalPositions = 16;	
+local wheelStepSize = 2000.0;		// Local var for motor units in between two positions
+local totalPositions = 9;	
 local LocalDesiredPosition = DesiredPosition;		// asign local var from csglobal desired position
 local totalSteps = totalPositions*wheelStepSize;
 

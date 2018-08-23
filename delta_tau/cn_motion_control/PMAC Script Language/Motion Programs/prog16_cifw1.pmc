@@ -1,4 +1,4 @@
-// custom motion program for sp sm5 focus stage
+// custom motion program for ci fw1 stage
 /****************************************/
 open prog 16
 
@@ -12,15 +12,24 @@ LocalDesiredPosition = LocalDesiredPosition % totalSteps;	// do modulo caluclati
 
 local desiredCount = floor(LocalDesiredPosition/wheelStepSize);	// how many positions to move
 local desiredCountFraction =((LocalDesiredPosition/wheelStepSize) - desiredCount); // sub positions to move
-
+Checker = desiredCountFraction
 Ldata.motor = ThisCs;		// Asign the right motor locally
 
 //while(Motor15PlusFlag==1){	// move out of plimit
 //	jog:(-1);
 //}
 //abort
-	
+/*
+abs;	
+rapid;
+A(LocalDesiredPosition)//^(0)
+*/
 jog=(LocalDesiredPosition)//^(0)
+//report that move is done
+send0 "m[%d]:isDone\n",Ldata.coord;
+sendall;
+
+/*dwell(100); // how long to dwell
 
 if(desiredCountFraction==0){
 	// Verify that we are in position
@@ -30,6 +39,8 @@ if(desiredCountFraction==0){
 		sendall;
 	}
 }
+*/
+
 close
 /****************************************/
 

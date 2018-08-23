@@ -1,0 +1,91 @@
+// Power PMAC PROGRAM Template.
+// The following Sample PROGRAM is the standard template for creating Motion Programs.
+// Sample PROGRAM
+/****************************************/
+csglobal moveCount;
+csglobal iteration;
+csglobal curPosition;
+csglobal updateReady;
+
+open prog 35
+
+	local thisCoord, currentPos, nextPosDemand, startQIdx, currentQIdx, waitTime;
+	iteration = 0
+	curPosition = 0
+
+	// Reset the abort flag
+	Q8000 = 0
+
+	// Record the CS number for use
+	thisCoord=Ldata.coord
+	// ABS move, rapid mode
+	abs
+	rapid
+	// Ensure we are at the expected position
+	currentPos = Motor[thisCoord].Pos-Motor[thisCoord].HomePos
+	X(currentPos) TM(100) TA(0) TD(0) TS(0)
+
+	// Enable the status PLC
+	enable plc10
+
+	// ABS move, Linear mode
+	abs
+	linear
+
+	// This check either sets up the triggered time base or no time card is
+	// available a software trigger is used to start the motion
+	if (externalTimeBase == 1){
+		// Config for triggered time base
+		enable plc8
+		EncTable[1].Type = 10
+		EncTable[1].pEnc1 = Acc24E3[0].Chan[0].Status.a
+
+		// Switch coord sys to external time base
+		Coord[thisCoord].pDesTimeBase=EncTable[1].DeltaPos.a
+		Coord[thisCoord].TimeBaseSlew=1
+	} else {
+		// Block on motorBarrier until it's set. This allows us to 
+		// synchronize motors to the same servo cycle when external
+		// time-base is not used (e.g testing).
+		motorStartTrigger = 0
+		while ( motorStartTrigger == 0 ) {} // wait until trigger
+	}
+
+	// Reset the move counter
+	moveCount = 0
+
+	// Perform the initial dwell, read the current position and 
+	// use this as the demand for the CS move
+	currentPos = Motor[thisCoord].Pos-Motor[thisCoord].HomePos
+	X(currentPos) TM(firstDwell) TA(0) TD(0) TS(0)
+
+	// Now loop over the calculated number of moves for this CS
+	while (moveCount < numberOfMoves && Q8000 == 0){		
+		curPosition++=
+
+		// Move the CS axis to the demand specified by the Q vars, using the 
+		// specified Ta and Td and taking the specified move time
+		X(movePos(moveCount)) TM(moveTime(moveCount)) TA(argTa) TD(argTd) TS(0)
+
+		// THIS WAS USED DUE TO VBI MOTION PROGRAM AND ASSOCIATED JIRA TICKETS.
+		// SEE BELOW...
+		//
+		// We use an explicit zero-distance move rather than a delay here in order to 
+		// get around the problems described in [#VBI-202].  TS is zero for this move
+		// because it can not be independently specified for incoming and outgoing
+		// moves.  It is instead included in TA and TD.
+		X(movePos(moveCount)) TM(dwellTime(moveCount)) TA(0) TD(0) TS(0)
+
+		moveCount++
+
+		// Signal to the status program that we are ready for an update
+		updateReady = 1
+	}
+
+	send 0 "m[%d]:isDone:", thisCoord
+	//send 3 "m[%d]:isDone:", thisCoord			// not sure if we should use buffer 3
+	sendall
+
+close
+/****************************************/
+

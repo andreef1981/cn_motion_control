@@ -171,8 +171,8 @@ Motor[16].Servo.Kp = 1.25					// PID proportiona term
 Motor[16].Servo.Ki = 0.00				// PID integral term
 Motor[16].Servo.Kvfb= 25					// PID velocity feedback (“derivative”) gain term
 
-Motor[16].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
-Motor[16].InPosBand=2.0
+Motor[16].Servo.BreakPosErr = 2.5		// Servo gain-break error size (deadband)
+Motor[16].InPosBand=2.5
 Motor[16].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
 Motor[16].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
@@ -198,7 +198,7 @@ Motor[16].JogTs=-1000					// Jog accel/decel S-curve time or inverse jerk rate
 										// -50 -> 0.02m/s^3
 										// -12500 -> 0.00008 mu/ms^3 -> 80m/s^3 -> 80g/s
 
-Motor[16].BlSize=55.						// Backlash size
+Motor[16].BlSize=32.						// Backlash size
 
 Motor[16].BlSlewRate =10.0				// Backlash take-up rate
 
@@ -213,7 +213,7 @@ Motor[16].HomeOffset=0.0					// Position referencing offset
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 
-//Coord[16].PosRollOver[0]=18000		// Axis position rollover range for rotary only
+Coord[16].PosRollOver[0]=-18000		// Axis position rollover range for rotary only
 									// in axis units!!!! default=0.0 disabled
 									// .PosRollOver[0] for axis A
 									// .PosRollOver[1] for axis B ...

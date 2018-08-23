@@ -1,0 +1,29 @@
+/****************************************/
+// Subprogram for calculating in position.
+/****************************************/
+open subprog myinpos( motornum, &inposcount, feThresh )
+
+	if (Motor[motornum].DesVelZero == 1 && abs(Motor[motornum].PosError) <= feThresh ){
+		inposcount++
+	} else 
+		inposcount = 0
+	
+	return;
+close
+
+/****************************************/
+// Subprogram for waiting until motor is in poisiton.
+/****************************************/
+open subprog waitTilInPos( motornum, feThresh, forCount )
+    local inposCount = 0, threshCount = forCount;
+    while ( inposCount < threshCount ) {
+		if ( Motor[motornum].DesVelZero == 1 && abs(Motor[motornum].PosError) <= feThresh )
+			inposCount++
+		else
+			inposCount = 0
+		dwell (Sys.ServoPeriod)
+	}
+	
+	return;
+	
+close

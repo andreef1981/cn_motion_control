@@ -23,53 +23,54 @@ enum csglobalQ {_csglobalQ_=-1};
 enum csglobalQarray {_csglobalQarray_=-1};
 
 enum ptrM {_ptrM_=-1
-,Motor6UserFlag=8192
-,Motor7UserFlag=8193
-,Motor9UserFlag=8194
-,Motor10UserFlag=8195
-,Motor11UserFlag=8196
-,Motor16UserFlag=8197
-,Motor17UserFlag=8198
-,Motor3PlusFlag=8199
-,Motor4PlusFlag=8200
-,Motor5PlusFlag=8201
-,Motor6PlusFlag=8202
-,Motor8PlusFlag=8203
-,Motor9PlusFlag=8204
-,Motor14PlusFlag=8205
-,Motor15PlusFlag=8206
-,Motor3MinusFlag=8207
-,Motor4MinusFlag=8208
-,Motor5MinusFlag=8209
-,Motor6MinusFlag=8210
-,Motor8MinusFlag=8211
-,Motor9MinusFlag=8212
-,Motor14MinusFlag=8213
-,Motor15MinusFlag=8214
-,Input1=8215
-,Input2=8216
-,Input3=8217
-,Input4=8218
-,Input5=8219
-,Input6=8220
-,Input7=8221
-,Input8=8222
-,Input9=8223
-,Input10=8224
-,Input11=8225
-,Input12=8226
-,Input13=8227
-,Input14=8228
-,Input15=8229
-,Input16=8230
-,Input17=8231
-,Input18=8232
-,Input19=8233
-,Input20=8234
-,Input21=8235
-,Input22=8236
-,Input23=8237
-,Input24=8238};
+,Motor2UserFlag=8192
+,Motor6UserFlag=8193
+,Motor7UserFlag=8194
+,Motor9UserFlag=8195
+,Motor10UserFlag=8196
+,Motor11UserFlag=8197
+,Motor16UserFlag=8198
+,Motor17UserFlag=8199
+,Motor3PlusFlag=8200
+,Motor4PlusFlag=8201
+,Motor5PlusFlag=8202
+,Motor6PlusFlag=8203
+,Motor8PlusFlag=8204
+,Motor9PlusFlag=8205
+,Motor14PlusFlag=8206
+,Motor15PlusFlag=8207
+,Motor3MinusFlag=8208
+,Motor4MinusFlag=8209
+,Motor5MinusFlag=8210
+,Motor6MinusFlag=8211
+,Motor8MinusFlag=8212
+,Motor9MinusFlag=8213
+,Motor14MinusFlag=8214
+,Motor15MinusFlag=8215
+,Input1=8216
+,Input2=8217
+,Input3=8218
+,Input4=8219
+,Input5=8220
+,Input6=8221
+,Input7=8222
+,Input8=8223
+,Input9=8224
+,Input10=8225
+,Input11=8226
+,Input12=8227
+,Input13=8228
+,Input14=8229
+,Input15=8230
+,Input16=8231
+,Input17=8232
+,Input18=8233
+,Input19=8234
+,Input20=8235
+,Input21=8236
+,Input22=8237
+,Input23=8238
+,Input24=8239};
 enum ptrMarray {_ptrMarray_=-1};
 #define	DesiredPosition(i)	pshm->Coord[i%MAX_COORDS].Q[0]
 #define	PosCounter(i)	pshm->Coord[i%MAX_COORDS].Q[1024]
@@ -79,6 +80,23 @@ enum ptrMarray {_ptrMarray_=-1};
 #define	PlusOutCounter(i)	pshm->Coord[i%MAX_COORDS].Q[1028]
 #define	MinusInCounter(i)	pshm->Coord[i%MAX_COORDS].Q[1029]
 #define	MinusOutCounter(i)	pshm->Coord[i%MAX_COORDS].Q[1030]
+#define	externalTimeBase	pshm->P[8192]
+#define	motorStartTrigger	pshm->P[8193]
+#define	csArray(i)	pshm->P[(8194+i)%MAX_P]
+#define	numArgs(i)	pshm->Coord[i%MAX_COORDS].Q[0]
+#define	argVelocity(i)	pshm->Coord[i%MAX_COORDS].Q[1]
+#define	argTa(i)	pshm->Coord[i%MAX_COORDS].Q[2]
+#define	argTd(i)	pshm->Coord[i%MAX_COORDS].Q[3]
+#define	firstDwell(i)	pshm->Coord[i%MAX_COORDS].Q[4]
+#define	moveCount(i)	pshm->Coord[i%MAX_COORDS].Q[1031]
+#define	iteration(i)	pshm->Coord[i%MAX_COORDS].Q[1032]
+#define	curPosition(i)	pshm->Coord[i%MAX_COORDS].Q[1033]
+#define	updateReady(i)	pshm->Coord[i%MAX_COORDS].Q[1034]
+#define	sTime	pshm->P[8200]
+#define	eTime	pshm->P[8201]
+#define	totMovTime	pshm->P[8202]
+#define	triggerHighOnMove	pshm->P[8203]
+#define	triggerHighOnInPos	pshm->P[8204]
 void SetEnumGlobalVar(enum globalP var, double data)
 {
   pshm->P[var] = data;
@@ -156,8 +174,16 @@ double GetEnumPtrArrayVar(enum ptrMarray var, unsigned index)
 // end of #ifdef _PPScriptMode_
 #else
 #ifdef _EnumMode_
-enum globalP {_globalP_=-1};
-enum globalParray {_globalParray_=-1};
+enum globalP {_globalP_=-1
+,externalTimeBase=8192
+,motorStartTrigger=8193
+,sTime=8200
+,eTime=8201
+,totMovTime=8202
+,triggerHighOnMove=8203
+,triggerHighOnInPos=8204};
+enum globalParray {_globalParray_=-1
+,csArray=8194};
 enum csglobalQ {_csglobalQ_=-1
 ,DesiredPosition=0
 ,PosCounter=1024
@@ -166,56 +192,66 @@ enum csglobalQ {_csglobalQ_=-1
 ,PlusInCounter=1027
 ,PlusOutCounter=1028
 ,MinusInCounter=1029
-,MinusOutCounter=1030};
+,MinusOutCounter=1030
+,numArgs=0
+,argVelocity=1
+,argTa=2
+,argTd=3
+,firstDwell=4
+,moveCount=1031
+,iteration=1032
+,curPosition=1033
+,updateReady=1034};
 enum csglobalQarray {_csglobalQarray_=-1};
 enum ptrM {_ptrM_=-1
-,Motor6UserFlag=8192
-,Motor7UserFlag=8193
-,Motor9UserFlag=8194
-,Motor10UserFlag=8195
-,Motor11UserFlag=8196
-,Motor16UserFlag=8197
-,Motor17UserFlag=8198
-,Motor3PlusFlag=8199
-,Motor4PlusFlag=8200
-,Motor5PlusFlag=8201
-,Motor6PlusFlag=8202
-,Motor8PlusFlag=8203
-,Motor9PlusFlag=8204
-,Motor14PlusFlag=8205
-,Motor15PlusFlag=8206
-,Motor3MinusFlag=8207
-,Motor4MinusFlag=8208
-,Motor5MinusFlag=8209
-,Motor6MinusFlag=8210
-,Motor8MinusFlag=8211
-,Motor9MinusFlag=8212
-,Motor14MinusFlag=8213
-,Motor15MinusFlag=8214
-,Input1=8215
-,Input2=8216
-,Input3=8217
-,Input4=8218
-,Input5=8219
-,Input6=8220
-,Input7=8221
-,Input8=8222
-,Input9=8223
-,Input10=8224
-,Input11=8225
-,Input12=8226
-,Input13=8227
-,Input14=8228
-,Input15=8229
-,Input16=8230
-,Input17=8231
-,Input18=8232
-,Input19=8233
-,Input20=8234
-,Input21=8235
-,Input22=8236
-,Input23=8237
-,Input24=8238};
+,Motor2UserFlag=8192
+,Motor6UserFlag=8193
+,Motor7UserFlag=8194
+,Motor9UserFlag=8195
+,Motor10UserFlag=8196
+,Motor11UserFlag=8197
+,Motor16UserFlag=8198
+,Motor17UserFlag=8199
+,Motor3PlusFlag=8200
+,Motor4PlusFlag=8201
+,Motor5PlusFlag=8202
+,Motor6PlusFlag=8203
+,Motor8PlusFlag=8204
+,Motor9PlusFlag=8205
+,Motor14PlusFlag=8206
+,Motor15PlusFlag=8207
+,Motor3MinusFlag=8208
+,Motor4MinusFlag=8209
+,Motor5MinusFlag=8210
+,Motor6MinusFlag=8211
+,Motor8MinusFlag=8212
+,Motor9MinusFlag=8213
+,Motor14MinusFlag=8214
+,Motor15MinusFlag=8215
+,Input1=8216
+,Input2=8217
+,Input3=8218
+,Input4=8219
+,Input5=8220
+,Input6=8221
+,Input7=8222
+,Input8=8223
+,Input9=8224
+,Input10=8225
+,Input11=8226
+,Input12=8227
+,Input13=8228
+,Input14=8229
+,Input15=8230
+,Input16=8231
+,Input17=8232
+,Input18=8233
+,Input19=8234
+,Input20=8235
+,Input21=8236
+,Input22=8237
+,Input23=8238
+,Input24=8239};
 enum ptrMarray {_ptrMarray_=-1};
 void SetEnumGlobalVar(enum globalP var, double data)
 {
@@ -302,53 +338,71 @@ double GetEnumPtrArrayVar(enum ptrMarray var, unsigned index)
 #define PlusOutCounter 1028
 #define MinusInCounter 1029
 #define MinusOutCounter 1030
-#define Motor6UserFlag 8192
-#define Motor7UserFlag 8193
-#define Motor9UserFlag 8194
-#define Motor10UserFlag 8195
-#define Motor11UserFlag 8196
-#define Motor16UserFlag 8197
-#define Motor17UserFlag 8198
-#define Motor3PlusFlag 8199
-#define Motor4PlusFlag 8200
-#define Motor5PlusFlag 8201
-#define Motor6PlusFlag 8202
-#define Motor8PlusFlag 8203
-#define Motor9PlusFlag 8204
-#define Motor14PlusFlag 8205
-#define Motor15PlusFlag 8206
-#define Motor3MinusFlag 8207
-#define Motor4MinusFlag 8208
-#define Motor5MinusFlag 8209
-#define Motor6MinusFlag 8210
-#define Motor8MinusFlag 8211
-#define Motor9MinusFlag 8212
-#define Motor14MinusFlag 8213
-#define Motor15MinusFlag 8214
-#define Input1 8215
-#define Input2 8216
-#define Input3 8217
-#define Input4 8218
-#define Input5 8219
-#define Input6 8220
-#define Input7 8221
-#define Input8 8222
-#define Input9 8223
-#define Input10 8224
-#define Input11 8225
-#define Input12 8226
-#define Input13 8227
-#define Input14 8228
-#define Input15 8229
-#define Input16 8230
-#define Input17 8231
-#define Input18 8232
-#define Input19 8233
-#define Input20 8234
-#define Input21 8235
-#define Input22 8236
-#define Input23 8237
-#define Input24 8238
+#define externalTimeBase 8192
+#define motorStartTrigger 8193
+#define csArray 8194
+#define numArgs 0
+#define argVelocity 1
+#define argTa 2
+#define argTd 3
+#define firstDwell 4
+#define moveCount 1031
+#define iteration 1032
+#define curPosition 1033
+#define updateReady 1034
+#define sTime 8200
+#define eTime 8201
+#define totMovTime 8202
+#define triggerHighOnMove 8203
+#define triggerHighOnInPos 8204
+#define Motor2UserFlag 8192
+#define Motor6UserFlag 8193
+#define Motor7UserFlag 8194
+#define Motor9UserFlag 8195
+#define Motor10UserFlag 8196
+#define Motor11UserFlag 8197
+#define Motor16UserFlag 8198
+#define Motor17UserFlag 8199
+#define Motor3PlusFlag 8200
+#define Motor4PlusFlag 8201
+#define Motor5PlusFlag 8202
+#define Motor6PlusFlag 8203
+#define Motor8PlusFlag 8204
+#define Motor9PlusFlag 8205
+#define Motor14PlusFlag 8206
+#define Motor15PlusFlag 8207
+#define Motor3MinusFlag 8208
+#define Motor4MinusFlag 8209
+#define Motor5MinusFlag 8210
+#define Motor6MinusFlag 8211
+#define Motor8MinusFlag 8212
+#define Motor9MinusFlag 8213
+#define Motor14MinusFlag 8214
+#define Motor15MinusFlag 8215
+#define Input1 8216
+#define Input2 8217
+#define Input3 8218
+#define Input4 8219
+#define Input5 8220
+#define Input6 8221
+#define Input7 8222
+#define Input8 8223
+#define Input9 8224
+#define Input10 8225
+#define Input11 8226
+#define Input12 8227
+#define Input13 8228
+#define Input14 8229
+#define Input15 8230
+#define Input16 8231
+#define Input17 8232
+#define Input18 8233
+#define Input19 8234
+#define Input20 8235
+#define Input21 8236
+#define Input22 8237
+#define Input23 8238
+#define Input24 8239
 #endif
 #endif
 #endif //_PP_PROJ_H_

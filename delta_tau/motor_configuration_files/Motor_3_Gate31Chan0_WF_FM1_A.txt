@@ -195,7 +195,7 @@ Motor[3].MaxSpeed=30
 
 
 
-Motor[3].HomeVel=1
+Motor[3].HomeVel=10
 
 Motor[3].JogTa=-0.5					// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond

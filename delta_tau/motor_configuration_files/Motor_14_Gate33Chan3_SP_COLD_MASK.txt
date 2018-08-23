@@ -172,8 +172,8 @@ Motor[14].InPosBand=2.0
 Motor[14].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
 
 Motor[14].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
-Motor[9].WarnFeLimit = 200.0			// add BlSize
-Motor[9].FatalFeLimit= 400.0
+Motor[14].WarnFeLimit = 200.0			// add BlSize
+Motor[14].FatalFeLimit= 400.0
 
 // Motor Speeds
 

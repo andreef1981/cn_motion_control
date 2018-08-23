@@ -33,7 +33,7 @@
     <CommType>PPmacServer</CommType>
     <Name>cn_motion_control</Name>
     <ProjectFrimwareVers>2.0.2.14</ProjectFrimwareVers>
-    <IDESignature>aeiu1279AEIU</IDESignature>
+    <IDESignature>czjn1872CZJN</IDESignature>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -75,6 +75,12 @@
     <Content Include="Documentation\motor_ranges.txt">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="PMAC Script Language\Global Includes\osl_global_definitions.pmh">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\Libraries\subprog2.pmc">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog10_spslit.pmc">
       <SubType>Content</SubType>
     </Content>
@@ -88,6 +94,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog16_cifw1.pmc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\Motion Programs\prog17_cifw2.pmc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog18_grating.pmc">
@@ -105,7 +114,7 @@
     <Content Include="PMAC Script Language\Motion Programs\prog22_linear_home.pmc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="PMAC Script Language\Motion Programs\prog33citest.pmc">
+    <Content Include="PMAC Script Language\Motion Programs\prog35.pmc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="PMAC Script Language\Motion Programs\prog3_fm1a_azimuth.pmc">
@@ -132,10 +141,19 @@
     <Content Include="PMAC Script Language\PLC Programs\plc1.plc">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="PMAC Script Language\PLC Programs\plc10.plc">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="PMAC Script Language\PLC Programs\plc26_enable_motors.plc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="PMAC Script Language\PLC Programs\plc25_encoder table.plc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\PLC Programs\plc5.plc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\PLC Programs\plc8.plc">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

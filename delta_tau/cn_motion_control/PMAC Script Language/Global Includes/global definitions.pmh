@@ -15,6 +15,7 @@ csglobal MinusInCounter;
 csglobal MinusOutCounter;
 
 // pointer to card user flags
+ptr Motor2UserFlag->Gate3[0].Chan[1].UserFlag;
 ptr Motor6UserFlag->Gate3[1].Chan[3].UserFlag;
 ptr Motor7UserFlag->Gate3[2].Chan[0].UserFlag;
 ptr Motor9UserFlag->Gate3[2].Chan[2].UserFlag;

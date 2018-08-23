@@ -13,79 +13,21 @@ Successful Custom Configuration using "/var/ftp/usrflash/Project/Configuration/p
 Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/osl_global_definitions.pmh 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog14_coldmask.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog15_spsm5_focus.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog18_grating.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog19_sub_grating_homing.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog20_grating_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog22_linear_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3_fm1a_azimuth.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog4_fm1b_elevation.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5_fm2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog6_callamp.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warm_filter.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog8_modulator.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog9_pickoff.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc26_enable_motors.plc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/prog25_encoder table.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-55 Project Symbols were created for gpascii -2 communication
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-LoadRTUserCode() Delta Time (sec) = 0.044532
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog14_coldmask.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog15_spsm5_focus.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog18_grating.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog19_sub_grating_homing.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog20_grating_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog22_linear_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3_fm1a_azimuth.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog4_fm1b_elevation.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5_fm2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog6_callamp.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warm_filter.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog8_modulator.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog9_pickoff.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc26_enable_motors.plc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/prog25_encoder table.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.074979
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.008129
-55 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.184542
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.008237
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.136474
-Project Preprocessing & Load Total Time (sec) = 0.458212
-LoadRTUserCode() Delta Time (sec) = 0.047035
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog2.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog14_coldmask.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog15_spsm5_focus.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifw1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog17_cifw2.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog18_grating.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog19_sub_grating_homing.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog20_grating_home.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog22_linear_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog35.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3_fm1a_azimuth.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog4_fm1b_elevation.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5_fm2.pmc 
@@ -94,244 +36,56 @@ Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Pr
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog8_modulator.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog9_pickoff.pmc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc26_enable_motors.plc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/prog25_encoder table.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.083346
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.008887
-55 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.194261
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.008585
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.138348
-Project Preprocessing & Load Total Time (sec) = 0.481405
-LoadRTUserCode() Delta Time (sec) = 0.044822
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog14_coldmask.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog15_spsm5_focus.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifw1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog18_grating.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog19_sub_grating_homing.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog20_grating_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog22_linear_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog33citest.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3_fm1a_azimuth.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog4_fm1b_elevation.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5_fm2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog6_callamp.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warm_filter.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog8_modulator.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog9_pickoff.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc26_enable_motors.plc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/prog25_encoder table.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.083829
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.009761
-55 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.191548
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.010229
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.137777
-Project Preprocessing & Load Total Time (sec) = 0.478948
-[PMAC_INC_PROJECT]
-Start of Incremental Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_disable.txt 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog33citest.pmc 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.085215
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.009717
-55 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.179825
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.004077
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.137036
-Project Preprocessing & Load Total Time (sec) = 0.416816
-[PMAC_INC_PROJECT]
-Start of Incremental Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_disable.txt 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog33citest.pmc 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.085601
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.009666
-55 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.179435
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.003957
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.137954
-Project Preprocessing & Load Total Time (sec) = 0.417572
-[PMAC_INC_PROJECT]
-Start of Incremental Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_disable.txt 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog33citest.pmc 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.085433
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.009581
-55 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.179800
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.004067
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.137002
-Project Preprocessing & Load Total Time (sec) = 0.416762
-[PMAC_INC_PROJECT]
-Start of Incremental Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_disable.txt 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.100208
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.011328
-55 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.209230
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.001647
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.159459
-Project Preprocessing & Load Total Time (sec) = 0.483087
-[PMAC_INC_PROJECT]
-Start of Incremental Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_disable.txt 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.113494
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.011800
-55 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.209674
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.001671
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.162147
-Project Preprocessing & Load Total Time (sec) = 0.499947
-[PMAC_INC_PROJECT]
-Start of Incremental Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_disable.txt 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifw1.pmc 
-Including Incremental Project Test File: /var/ftp/usrflash/Project/Configuration/pp_inc_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.100534
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.011351
-55 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.207179
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.001701
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.171948
-Project Preprocessing & Load Total Time (sec) = 0.493809
-LoadRTUserCode() Delta Time (sec) = 0.053531
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog14_coldmask.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog15_spsm5_focus.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifw1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog18_grating.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog19_sub_grating_homing.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog20_grating_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog22_linear_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog33citest.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3_fm1a_azimuth.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog4_fm1b_elevation.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5_fm2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog6_callamp.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warm_filter.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog8_modulator.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog9_pickoff.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc26_enable_motors.plc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/prog25_encoder table.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.108152
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.011395
-55 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.225727
-Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.005450
-Project Preprocessing & Load Total Time (sec) = 0.406017
-LoadRTUserCode() Delta Time (sec) = 0.045534
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog14_coldmask.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog15_spsm5_focus.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifw1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog18_grating.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog19_sub_grating_homing.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog20_grating_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog22_linear_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog33citest.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3_fm1a_azimuth.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog4_fm1b_elevation.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5_fm2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog6_callamp.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warm_filter.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog8_modulator.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog9_pickoff.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc26_enable_motors.plc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/prog25_encoder table.plc 
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.085112
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.009794
-55 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.193870
-Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.010407
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.139924
-Project Preprocessing & Load Total Time (sec) = 0.485710
-LoadRTUserCode() Delta Time (sec) = 0.046897
-[PMAC_PROJECT]
-Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
-Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog14_coldmask.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog15_spsm5_focus.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifw1.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog18_grating.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog19_sub_grating_homing.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog20_grating_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog22_linear_home.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog33citest.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3_fm1a_azimuth.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog4_fm1b_elevation.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5_fm2.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog6_callamp.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warm_filter.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog8_modulator.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog9_pickoff.pmc 
-Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc10.plc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc25_encoder table.plc 
 Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc26_enable_motors.plc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc5.plc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc8.plc 
 Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
-Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.086589
-Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.009936
-55 Project Symbols were created for gpascii -2 communication
-Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.199218
+78 Project Symbols were created for gpascii -2 communication
 Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
-Status: Download to PPMAC Command Processor, Time (sec) = 0.009853
-Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.138084
-Project Preprocessing & Load Total Time (sec) = 0.491590
+LoadRTUserCode() Delta Time (sec) = 0.052776
+[PMAC_PROJECT]
+Start of Project Loading using INI File: "/var/ftp/usrflash/Project/Configuration/pp_proj.ini"
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_disable.txt 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/global definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Global Includes/osl_global_definitions.pmh 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Libraries/subprog2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog10_spslit.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog11_spfilter.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog14_coldmask.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog15_spsm5_focus.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog16_cifw1.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog17_cifw2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog18_grating.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog19_sub_grating_homing.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog20_grating_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog21_circular_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog22_linear_home.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog35.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog3_fm1a_azimuth.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog4_fm1b_elevation.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog5_fm2.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog6_callamp.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog7_warm_filter.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog8_modulator.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog9_pickoff.pmc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc1.plc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc10.plc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc25_encoder table.plc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc26_enable_motors.plc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc5.plc 
+Including Project File: /var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/plc8.plc 
+Including Project File: /var/ftp/usrflash/Project/Configuration/pp_startup.txt 
+Status: Pass 1 Create debug file, #defines, *.h & .sym files, Time (sec) = 0.113291
+Status: Pass 2 Verify prog calls, local stack & labels, Time (sec)  = 0.007812
+78 Project Symbols were created for gpascii -2 communication
+Status: Create PPMAC Symbol Table & Run CPP Time (sec) = 0.221117
+Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+Status: Download to PPMAC Command Processor, Time (sec) = 0.008228
+Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.161174
+Project Preprocessing & Load Total Time (sec) = 0.565724
 [PMAC_CONFIG]
 Successful: SaveConfiguration using /var/ftp/usrflash/Project/Configuration/pp_save.cfg
 Successful: SaveCustomConfiguration using /var/ftp/usrflash/Project/Configuration/pp_custom_save.tpl

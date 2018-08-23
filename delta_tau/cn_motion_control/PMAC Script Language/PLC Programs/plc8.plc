@@ -1,0 +1,54 @@
+// Simple plc used by prog35 to arm trigger for triggered time base.
+// This can't be done in the motion program because the motion
+// program must lookahead to the first move which this prevents.
+open plc 8
+
+// First check to see that program is active or hasn't been cancelled via
+// Q8000.  If it has, we need to reset triggered time base back to defaults.
+local coordNum = 1;
+local coordIndex = 0;
+local coordsDone = 0
+
+// First reset enc table type after trigger.
+if (EncTable[1].type == 10) EncTable[1].index1 = 3
+
+while (coordIndex < noOfCS) 
+{
+	coordNum = csArray(coordIndex)
+	if ( Coord[coordNum].Q[8000] >= 1 || Coord[coordNum].ProgActive == 0 ) 
+	{
+		coordsDone |= (1 << (coordIndex))
+	}
+	
+	coordIndex++
+}
+
+if ( coordsDone ==  63 )
+{
+	// send 3 should only be used if a reader is on the other end, otherwise
+	// it can block other sends.
+    // send 3 "Coordinate systems done - cleaning up and disabling plcs"
+
+	coordIndex = 0
+	while ( coordIndex < noOfCS ) {
+		coordNum = csArray(coordIndex)
+		Coord[coordNum].pDesTimeBase=Coord[coordNum].DesTimeBase.a
+		Coord[coordNum].TimeBaseSlew=0.00001
+		//send 0 "m[%d]:isDone:", coordNum
+		// send 3 should only be used if a reader is on the other end, otherwise
+		// it can block other sends.
+		// send 3 "m[%d]:isDone (plc8):", coordNum
+		//sendall
+		coordIndex++
+	}
+	
+	EncTable[1].type = 1
+	EncTable[1].index1 = 0
+	
+	disable plc8
+	disable plc10
+	disable plc5
+}
+
+close
+/****************************************/

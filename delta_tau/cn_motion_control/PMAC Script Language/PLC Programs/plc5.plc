@@ -1,0 +1,54 @@
+// Realtime PLC to monitor moves and trigger EQU pulse for external timestamping.
+// This should be kicked off from prog50.
+global sTime, eTime, totMovTime, triggerHighOnMove, triggerHighOnInPos;
+
+
+// Trigger high on move if true else trigger
+// high on in position.
+triggerHighOnMove = 1
+triggerHighOnInPos = 0
+  
+open plc 5
+local lastServoCount, inpos3, inpos4, inpos15, inpos5, inpos16, inpos18;
+
+// Wait until the motion program tells us we've started.
+while (EncTable[1].type == 10) {
+	Acc24E3[0].Chan[0].EquOutPol = triggerHighOnInPos
+	// Uncomment line below to see the LED on/off on OSL power PMAC
+	// Acc68E[0].DataReg[3] = triggerHighOnInPos
+}
+
+// Only run this once per servo cycle.
+while ( Sys.ServoCount == lastServoCount ) {}
+
+lastServoCount = Sys.ServoCount
+
+// Note lengthy boolean logic statements must appear on same line as conditional.
+call myinpos(3, &inpos3, 10)
+call myinpos(4, &inpos4, 10)
+call myinpos(15, &inpos15, 10)
+call myinpos(5, &inpos5, 10)
+call myinpos(16, &inpos16, 10)
+call myinpos(18, &inpos18, 10)
+
+// Trigger EQU to triggerOnStartState on first move start in any CS. 
+if (inpos3 == 0 || inpos4 == 0 || inpos15 == 0 || inpos5 == 0 || inpos16 == 0 || inpos18 == 0)
+{ 
+	sTime = Sys.time 
+	Acc24E3[0].Chan[0].EquOutPol = triggerHighOnMove
+	// Uncomment line below to see the LED on/off on OSL power PMAC
+	// Acc68E[0].DataReg[3] = triggerHighOnMove
+}
+ 
+// Drive EQU to triggerOnStopState after moves in every CS have completed.
+if ( inpos3 > 10 && inpos4 > 10 && inpos15 > 10 && inpos5 > 10 && inpos16 > 10 && inpos18 > 10  )
+{
+	Acc24E3[0].Chan[0].EquOutPol = triggerHighOnInPos
+	// Uncomment line below to see the LED on/off on OSL power PMAC
+	// Acc68E[0].DataReg[3] = triggerHighOnInPos
+	eTime = Sys.time
+	totMovTime = eTime - sTime
+}
+
+close
+/****************************************/

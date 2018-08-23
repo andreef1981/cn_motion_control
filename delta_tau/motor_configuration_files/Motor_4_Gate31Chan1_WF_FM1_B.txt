@@ -193,7 +193,7 @@ Motor[4].JogSpeed=30						// Jog command velocity magnitude
 Motor[4].MaxSpeed=30
 
 
-Motor[4].HomeVel=1
+Motor[4].HomeVel=10
 
 Motor[4].JogTa=-0.5						// Jog accel/decel time or inverse rate
 										// > 0 mu / millisecond

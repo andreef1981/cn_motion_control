@@ -12,22 +12,71 @@ Ldata.motor = ThisCs;	// Asign the right motor locally
 // make sure we are using the home flag
 Sys.WpKey=$AAAAAAAA	
 switch (ThisCs) {			// Change CaptFlagSel for the right gate
-	case 7: Gate3[2].Chan[0].CaptFlagSel=0; break; // motor 7 is on card2 channel 0
-	case 10: Gate3[2].Chan[3].CaptFlagSel=0; break; // motor 10 is on card2 channel 3
-	case 11: Gate3[3].Chan[0].CaptFlagSel=0; break; // motor 11 is on card3 channel 0
+	case 7:		if(Gate3[2].Chan[0].HomeFlag==1){
+					jog:(-200);
+				}
+				Gate3[2].Chan[0].CaptFlagSel=0;
+				while(Gate3[2].Chan[0].HomeFlag==0){
+						home;
+						}
+				break; // motor 7 is on card2 channel 0
+	case 10:	if(Gate3[2].Chan[3].HomeFlag==1){
+					jog:(200);
+				}
+				Gate3[2].Chan[3].CaptFlagSel=0;
+				while(Gate3[2].Chan[3].HomeFlag==0){
+						home;
+						} // motor 10 is on card2 channel 3
+				break;
+	case 11:	if(Gate3[3].Chan[0].HomeFlag==1){
+					jog:(-200);
+				}
+				Gate3[3].Chan[0].CaptFlagSel=0;
+				while(Gate3[3].Chan[0].HomeFlag==0){
+						home;
+						}
+				break; // motor 11 is on card3 channel 0
 	case 16:	if(Gate3[4].Chan[1].HomeFlag==0){
-					jog:(100);
+					jog:(-200);
 				}
 				Gate3[4].Chan[1].CaptFlagSel=0;
+				while(Gate3[4].Chan[1].HomeFlag==1){
+						home;
+						}
 				break; // motor 16 is on card4 channel 1
-	case 17: Gate3[4].Chan[2].CaptFlagSel=0; break; // motor 17 is on card4 channel 2
+	case 17:	if(Gate3[4].Chan[2].HomeFlag==0){
+					jog:(-200);
+				}
+				Gate3[4].Chan[2].CaptFlagSel=0;
+				while(Gate3[4].Chan[2].HomeFlag==1){
+						home;
+						}
+				break; // motor 17 is on card4 channel 2
 }
 Sys.WpKey=$0
 
 PosCounter = 0;
 
-home; 					// Home the Motor
+//home; 					// Home the Motor
 
+switch (ThisCs) {			// Change CaptFlagSel for the right gate
+	case 7:		jog=(5);
+				homez;
+				break; // motor 7 is on card2 channel 0
+	case 10:	//jog=(26);
+				//homez;
+				break; // motor 10 is on card2 channel 3
+	case 11:	//jog=(26);
+				//homez;
+				break; // motor 11 is on card3 channel 0
+	case 16:	//jog=(26);
+				//homez;
+				
+				break; // motor 16 is on card4 channel 1
+	case 17:	//jog=(26);
+				//homez;
+				break; // motor 17 is on card4 channel 2
+}
 send0 "m[%d]:isDone\n",Ldata.coord;	// report done
 sendall;
 

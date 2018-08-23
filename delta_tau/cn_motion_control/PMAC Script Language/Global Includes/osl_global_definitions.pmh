@@ -1,0 +1,51 @@
+// Global variable indicating if externalTimeBase is to be used for motion.  If this is set to
+// 0 then the test variable (motorStartTrigger) can be used to synchronise the motion start
+global externalTimeBase = 0;
+
+// Global variable used for testing the motor movements without a time card.  This variable should 
+// be set to 1 to soft trigger the start of movements.
+global motorStartTrigger = 0;
+
+// Global array to store the CS numbers of motors that might be used for real time motion
+// This array is used to loop over the motors when checking for status
+global csArray(6);
+csArray(0) = 3;    // FM1
+csArray(1) = 4;    // FM1b
+csArray(2) = 15;   // sm5
+csArray(3) = 5;    // fm2
+csArray(4) = 16;   // fw1
+csArray(5) = 18;   // gt
+
+#define noOfCS 6
+
+#define numArgs Q0
+#define argVelocity Q1
+#define argTa Q2
+#define argTd Q3
+#define firstDwell Q4
+#define moveBaseQIdx 5
+#define movePos(x) Q(moveBaseQIdx + x*3)
+#define moveTime(x) Q(moveBaseQIdx + x*3 + 1)
+#define dwellTime(x) Q(moveBaseQIdx + x*3 + 2)
+
+#define numberOfMoves (Q0-4)/3
+
+//-----------------------------------------------
+// External Time Base Config
+//-----------------------------------------------
+Acc24E3[0].Chan[0].EncCtrl=4
+EncTable[1].type=1
+// The scale factor used below scales the encoder values to units of ms
+// as expected by the element that pDesTimeBase points to.  The raw encoder
+// reading contains 8-bits of sub-count interpolation, hence the first 
+// scaling of 256.  The second scaling is due to the fact that the input
+// signal is 32kHz, thus to scale to ms must be divided 32.
+EncTable[1].ScaleFactor=1/(256*32)
+EncTable[1].pEnc = Acc24E3[0].Chan[0].ServoCapt.a
+EncTable[1].pEnc1 = Acc24E3[0].Chan[0].Status.a
+
+// Triggered time base setup
+// Index input, rising edge
+Acc24E3[0].Chan[0].CaptCtrl=1
+
+

@@ -1,86 +1,86 @@
-1		ThisCs	0	1
-2		wheelStepSize	1	1
-3		totalPositions	2	1
-4		localCheckPer	3	1
-5		totalSteps	4	1
-6		locdesiredPosition	5	1
-7		desiredCount	6	1
-8		desiredCountFraction	7	1
-9		posPositions	8	1
-10		negPositions	9	1
-11		bestDirection	10	1
-12		commandedPosition	11	1
-13		loopCounter	12	1
-14		dwellTime	13	1
-15		ThisCs	0	1
-16		wheelStepSize	1	1
-17		totalPositions	2	1
-18		localCheckPer	3	1
-19		totalSteps	4	1
-20		locdesiredPosition	5	1
-21		desiredCount	6	1
-22		desiredCountFraction	7	1
-23		posPositions	8	1
-24		negPositions	9	1
-25		bestDirection	10	1
-26		commandedPosition	11	1
-27		loopCounter	12	1
-28		dwellTime	13	1
-29		ThisCs	0	1
-30		LocalDesiredPosition	1	1
-31		ThisCs	0	1
-32		LocalDesiredPosition	1	1
-33		ThisCs	0	1
-34		wheelStepSize	1	1
-35		totalPositions	2	1
-36		LocalDesiredPosition	3	1
-37		totalSteps	4	1
-38		desiredCount	5	1
-39		desiredCountFraction	6	1
-40		ThisCs	0	1
-41		LocalDesiredPosition	1	1
-42		ThisCs	0	1
-43		ThisCs	0	1
-44		ThisCs	0	1
-45		MotorNumber	1	1
-46		ThisCs	0	1
-47		MotorNumber	1	1
-48		ThisCs	0	1
-49		wheelStepSize	1	1
-50		totalPositions	2	1
-51		localCheckPer	3	1
-52		totalSteps	4	1
-53		locdesiredPosition	5	1
-54		desiredCount	6	1
-55		desiredCountFraction	7	1
-56		posPositions	8	1
-57		negPositions	9	1
-58		bestDirection	10	1
-59		commandedPosition	11	1
-60		loopCounter	12	1
-61		dwellTime	13	1
-62		ThisCs	0	1
-63		LocalDesiredPosition	1	1
-64		ThisCs	0	1
-65		LocalDesiredPosition	1	1
-66		ThisCs	0	1
-67		LocalDesiredPosition	1	1
-68		ThisCs	0	1
-69		LocalDesiredPosition	1	1
-70		ThisCs	0	1
-71		wheelStepSize	1	1
-72		totalPositions	2	1
-73		totalSteps	3	1
-74		locdesiredPosition	4	1
-75		desiredCount	5	1
-76		desiredCountFraction	6	1
-77		posPositions	7	1
-78		negPositions	8	1
-79		bestDirection	9	1
-80		commandedPosition	10	1
-81		loopCounter	11	1
-82		dwellTime	12	1
-83		ThisCs	0	1
-84		LocalDesiredPosition	1	1
-85		ThisCs	0	1
-86		LocalDesiredPosition	1	1
+1	SUBPROGmyinpos	motornum	0	1
+2	SUBPROGmyinpos	inposcount	1	1
+3	SUBPROGmyinpos	feThresh	2	1
+4	SUBPROGwaitTilInPos	motornum	0	1
+5	SUBPROGwaitTilInPos	feThresh	1	1
+6	SUBPROGwaitTilInPos	forCount	2	1
+7	SUBPROGwaitTilInPos	inposCount	3	1
+8	SUBPROGwaitTilInPos	threshCount	4	1
+9	SUBPROGwaitTilInPos	ThisCs	0	1
+10	SUBPROGwaitTilInPos	wheelStepSize	1	1
+11	SUBPROGwaitTilInPos	totalPositions	2	1
+12	SUBPROGwaitTilInPos	LocalDesiredPosition	3	1
+13	SUBPROGwaitTilInPos	totalSteps	4	1
+14	SUBPROGwaitTilInPos	desiredCount	5	1
+15	SUBPROGwaitTilInPos	desiredCountFraction	6	1
+16	SUBPROGwaitTilInPos	ThisCs	0	1
+17	SUBPROGwaitTilInPos	wheelStepSize	1	1
+18	SUBPROGwaitTilInPos	totalPositions	2	1
+19	SUBPROGwaitTilInPos	LocalDesiredPosition	3	1
+20	SUBPROGwaitTilInPos	totalSteps	4	1
+21	SUBPROGwaitTilInPos	desiredCount	5	1
+22	SUBPROGwaitTilInPos	desiredCountFraction	6	1
+23	SUBPROGwaitTilInPos	ThisCs	0	1
+24	SUBPROGwaitTilInPos	LocalDesiredPosition	1	1
+25	SUBPROGwaitTilInPos	ThisCs	0	1
+26	SUBPROGwaitTilInPos	LocalDesiredPosition	1	1
+27	SUBPROGwaitTilInPos	ThisCs	0	1
+28	SUBPROGwaitTilInPos	wheelStepSize	1	1
+29	SUBPROGwaitTilInPos	totalPositions	2	1
+30	SUBPROGwaitTilInPos	LocalDesiredPosition	3	1
+31	SUBPROGwaitTilInPos	totalSteps	4	1
+32	SUBPROGwaitTilInPos	desiredCount	5	1
+33	SUBPROGwaitTilInPos	desiredCountFraction	6	1
+34	SUBPROGwaitTilInPos	ThisCs	0	1
+35	SUBPROGwaitTilInPos	wheelStepSize	1	1
+36	SUBPROGwaitTilInPos	totalPositions	2	1
+37	SUBPROGwaitTilInPos	LocalDesiredPosition	3	1
+38	SUBPROGwaitTilInPos	totalSteps	4	1
+39	SUBPROGwaitTilInPos	desiredCount	5	1
+40	SUBPROGwaitTilInPos	desiredCountFraction	6	1
+41	SUBPROGwaitTilInPos	ThisCs	0	1
+42	SUBPROGwaitTilInPos	LocalDesiredPosition	1	1
+43	SUBPROGwaitTilInPos	ThisCs	0	1
+44	SUBPROGwaitTilInPos	ThisCs	0	1
+45	SUBPROGwaitTilInPos	ThisCs	0	1
+46	SUBPROGwaitTilInPos	MotorNumber	1	1
+47	SUBPROGwaitTilInPos	ThisCs	0	1
+48	SUBPROGwaitTilInPos	MotorNumber	1	1
+49	SUBPROGwaitTilInPos	thisCoord	0	1
+50	SUBPROGwaitTilInPos	currentPos	1	1
+51	SUBPROGwaitTilInPos	nextPosDemand	2	1
+52	SUBPROGwaitTilInPos	startQIdx	3	1
+53	SUBPROGwaitTilInPos	currentQIdx	4	1
+54	SUBPROGwaitTilInPos	waitTime	5	1
+55	SUBPROGwaitTilInPos	ThisCs	0	1
+56	SUBPROGwaitTilInPos	LocalDesiredPosition	1	1
+57	SUBPROGwaitTilInPos	ThisCs	0	1
+58	SUBPROGwaitTilInPos	LocalDesiredPosition	1	1
+59	SUBPROGwaitTilInPos	ThisCs	0	1
+60	SUBPROGwaitTilInPos	LocalDesiredPosition	1	1
+61	SUBPROGwaitTilInPos	ThisCs	0	1
+62	SUBPROGwaitTilInPos	LocalDesiredPosition	1	1
+63	SUBPROGwaitTilInPos	ThisCs	0	1
+64	SUBPROGwaitTilInPos	wheelStepSize	1	1
+65	SUBPROGwaitTilInPos	totalPositions	2	1
+66	SUBPROGwaitTilInPos	LocalDesiredPosition	3	1
+67	SUBPROGwaitTilInPos	totalSteps	4	1
+68	SUBPROGwaitTilInPos	desiredCount	5	1
+69	SUBPROGwaitTilInPos	desiredCountFraction	6	1
+70	SUBPROGwaitTilInPos	ThisCs	0	1
+71	SUBPROGwaitTilInPos	LocalDesiredPosition	1	1
+72	SUBPROGwaitTilInPos	ThisCs	0	1
+73	SUBPROGwaitTilInPos	LocalDesiredPosition	1	1
+74	SUBPROGwaitTilInPos	csNum	0	1
+75	SUBPROGwaitTilInPos	iter	1	1
+76	SUBPROGwaitTilInPos	pos	2	1
+77	SUBPROGwaitTilInPos	lastServoCount	0	1
+78	SUBPROGwaitTilInPos	inpos3	1	1
+79	SUBPROGwaitTilInPos	inpos4	2	1
+80	SUBPROGwaitTilInPos	inpos15	3	1
+81	SUBPROGwaitTilInPos	inpos5	4	1
+82	SUBPROGwaitTilInPos	inpos16	5	1
+83	SUBPROGwaitTilInPos	inpos18	6	1
+84	SUBPROGwaitTilInPos	coordNum	0	1
+85	SUBPROGwaitTilInPos	coordIndex	1	1
+86	SUBPROGwaitTilInPos	coordsDone	2	1
