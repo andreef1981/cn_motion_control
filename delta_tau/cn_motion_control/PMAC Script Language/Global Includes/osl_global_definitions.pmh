@@ -1,6 +1,6 @@
 // Global variable indicating if externalTimeBase is to be used for motion.  If this is set to
 // 0 then the test variable (motorStartTrigger) can be used to synchronise the motion start
-global externalTimeBase = 0;
+global externalTimeBase = 1;
 
 // Global variable used for testing the motor movements without a time card.  This variable should 
 // be set to 1 to soft trigger the start of movements.
@@ -33,6 +33,7 @@ csArray(5) = 18;   // gt
 //-----------------------------------------------
 // External Time Base Config
 //-----------------------------------------------
+Sys.WpKey=$aaaaaaaa
 Acc24E3[0].Chan[0].EncCtrl=4
 EncTable[1].type=1
 // The scale factor used below scales the encoder values to units of ms

@@ -210,8 +210,16 @@ Motor[7].HomeOffset=0.0					// Position referencing offset
 
 &7									// Address C.S. 1
 
-#7->1X							// Assign motor to CS and define scale
+#7->1A							// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
+									
+Coord[7].PosRollOver[0]=7500		// Axis position rollover range for rotary only
+									// in axis units!!!! default=0.0 disabled
+									// .PosRollOver[0] for axis A
+									// .PosRollOver[1] for axis B ...
+									// 360 -> shortest path in abs move
+									// -360 -> use commanded direction in abs move
+									
 
 									

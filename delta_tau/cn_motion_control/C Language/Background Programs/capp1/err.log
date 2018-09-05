@@ -1,0 +1,9 @@
+In file included from capp1.c:35:
+../../Include/pp_proj.h:409:1: warning: "moveCount" redefined
+../../Include/pp_proj.h:405:1: warning: this is the location of the previous definition
+../../Include/pp_proj.h:410:1: warning: "iteration" redefined
+../../Include/pp_proj.h:406:1: warning: this is the location of the previous definition
+../../Include/pp_proj.h:411:1: warning: "curPosition" redefined
+../../Include/pp_proj.h:407:1: warning: this is the location of the previous definition
+../../Include/pp_proj.h:412:1: warning: "updateReady" redefined
+../../Include/pp_proj.h:408:1: warning: this is the location of the previous definition

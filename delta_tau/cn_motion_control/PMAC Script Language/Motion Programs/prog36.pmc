@@ -7,7 +7,7 @@ csglobal iteration;
 csglobal curPosition;
 csglobal updateReady;
 
-open prog 35
+open prog 36
 
 	local thisCoord, currentPos, nextPosDemand, startQIdx, currentQIdx, waitTime;
 	iteration = 0
@@ -23,7 +23,7 @@ open prog 35
 	rapid
 	// Ensure we are at the expected position
 	currentPos = Motor[thisCoord].Pos-Motor[thisCoord].HomePos
-	X(currentPos) TM(100) TA(0) TD(0) TS(0)
+	A(currentPos) TM(100) TA(0) TD(0) TS(0)
 
 	// Enable the status PLC
 	enable plc10
@@ -51,14 +51,13 @@ open prog 35
 		motorStartTrigger = 0
 		while ( motorStartTrigger == 0 ) {} // wait until trigger
 	}
-
 	// Reset the move counter
 	moveCount = 0
 
 	// Perform the initial dwell, read the current position and 
 	// use this as the demand for the CS move
 	currentPos = Motor[thisCoord].Pos-Motor[thisCoord].HomePos
-	X(currentPos) TM(firstDwell) TA(0) TD(0) TS(0)
+	A(currentPos) TM(firstDwell) TA(0) TD(0) TS(0)
 
 	// Now loop over the calculated number of moves for this CS
 	while (moveCount < numberOfMoves && Q8000 == 0){		
@@ -66,7 +65,7 @@ open prog 35
 
 		// Move the CS axis to the demand specified by the Q vars, using the 
 		// specified Ta and Td and taking the specified move time
-		X(movePos(moveCount)) TM(moveTime(moveCount)) TA(argTa) TD(argTd) TS(0)
+		A(movePos(moveCount)) TM(moveTime(moveCount)) TA(argTa) TD(argTd) TS(0)
 		
 		// THIS WAS USED DUE TO VBI MOTION PROGRAM AND ASSOCIATED JIRA TICKETS.
 		// SEE BELOW...
@@ -75,7 +74,7 @@ open prog 35
 		// get around the problems described in [#VBI-202].  TS is zero for this move
 		// because it can not be independently specified for incoming and outgoing
 		// moves.  It is instead included in TA and TD.
-		X(movePos(moveCount)) TM(dwellTime(moveCount)) TA(0) TD(0) TS(0)
+		A(movePos(moveCount)) TM(dwellTime(moveCount)) TA(0) TD(0) TS(0)
 		
 		moveCount++
 

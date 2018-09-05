@@ -179,7 +179,7 @@ Motor[4].Servo.Kvfb= 25.					// PID velocity feedback (“derivative”) gain term
 
 Motor[4].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[4].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
-Motor[4].InPosBand = 2.0
+Motor[4].InPosBand = 3.0
 
 Motor[4].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
 Motor[4].WarnFeLimit = 4000.0			// add BlSize

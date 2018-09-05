@@ -37,7 +37,7 @@ switch (ThisCs) {			// Change CaptFlagSel for the right gate
 						}
 				break; // motor 11 is on card3 channel 0
 	case 16:	if(Gate3[4].Chan[1].HomeFlag==0){
-					jog:(-200);
+					jog:(-500);
 				}
 				Gate3[4].Chan[1].CaptFlagSel=0;
 				while(Gate3[4].Chan[1].HomeFlag==1){
@@ -45,7 +45,7 @@ switch (ThisCs) {			// Change CaptFlagSel for the right gate
 						}
 				break; // motor 16 is on card4 channel 1
 	case 17:	if(Gate3[4].Chan[2].HomeFlag==0){
-					jog:(-200);
+					jog:(-500);
 				}
 				Gate3[4].Chan[2].CaptFlagSel=0;
 				while(Gate3[4].Chan[2].HomeFlag==1){

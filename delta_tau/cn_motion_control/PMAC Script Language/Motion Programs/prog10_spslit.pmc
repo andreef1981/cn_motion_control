@@ -19,12 +19,12 @@ Ldata.motor = ThisCs;		// Asign the right motor locally
 //	jog:(-1);
 //}
 //abort
-/*
+
 abs;	
 rapid;
 A(LocalDesiredPosition)//^(0)
-*/
-jog=(LocalDesiredPosition)//^(0)
+
+//jog=(LocalDesiredPosition)//^(0)
 //report that move is done
 send0 "m[%d]:isDone\n",Ldata.coord;
 sendall;

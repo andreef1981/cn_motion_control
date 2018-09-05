@@ -261,7 +261,7 @@ Motor[3].Servo.Kvfb= 25.0					// PID velocity feedback (“derivative”) gain term
 
 Motor[3].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[3].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
-Motor[3].InPosBand = 2.0
+Motor[3].InPosBand = 3.0
 
 Motor[3].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
 Motor[3].WarnFeLimit = 4000.0			// add BlSize
@@ -485,7 +485,7 @@ Motor[4].Servo.Kvfb= 25.					// PID velocity feedback (“derivative”) gain term
 
 Motor[4].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[4].Servo.Kbreak = 0				// Servo “gain break” relative gain within this dead band
-Motor[4].InPosBand = 2.0
+Motor[4].InPosBand = 3.0
 
 Motor[4].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
 Motor[4].WarnFeLimit = 4000.0			// add BlSize
@@ -1191,9 +1191,17 @@ Motor[7].HomeOffset=0.0					// Position referencing offset
 
 &7									// Address C.S. 1
 
-#7->1X							// Assign motor to CS and define scale
+#7->1A							// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
+									
+Coord[7].PosRollOver[0]=7500		// Axis position rollover range for rotary only
+									// in axis units!!!! default=0.0 disabled
+									// .PosRollOver[0] for axis A
+									// .PosRollOver[1] for axis B ...
+									// 360 -> shortest path in abs move
+									// -360 -> use commanded direction in abs move
+									
 
 									//////////////////////////////////////////////////////////////
 // MOTOR modulator linear stage stage
@@ -1848,11 +1856,11 @@ Motor[10].HomeOffset=0.0					// Position referencing offset
 
 &10									// Address C.S. 1
 
-#10->1X					// Assign motor to CS and define scale
+#10->1A					// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 
-//Coord[10].PosRollOver[0]=6400		// Axis position rollover range for rotary only
+Coord[10].PosRollOver[0]=16000		// Axis position rollover range for rotary only
 									// in axis units!!!! default=0.0 disabled
 									// .PosRollOver[0] for axis A
 									// .PosRollOver[1] for axis B ...
@@ -2072,11 +2080,11 @@ Motor[11].HomeOffset=0					// Position referencing offset
 
 &11									// Address C.S. 1
 
-#11->1X				// Assign motor to CS and define scale
+#11->1a				// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 
-//Coord[11].PosRollOver[0]=6400		// Axis position rollover range for rotary only
+Coord[11].PosRollOver[0]=16000		// Axis position rollover range for rotary only
 									// in axis units!!!! default=0.0 disabled
 									// .PosRollOver[0] for axis A
 									// .PosRollOver[1] for axis B ...
@@ -3144,9 +3152,9 @@ Motor[16].JogTs=-1000					// Jog accel/decel S-curve time or inverse jerk rate
 										// -50 -> 0.02m/s^3
 										// -12500 -> 0.00008 mu/ms^3 -> 80m/s^3 -> 80g/s
 
-Motor[16].BlSize=32.						// Backlash size
+Motor[16].BlSize=0.						// Backlash size
 
-Motor[16].BlSlewRate =10.0				// Backlash take-up rate
+Motor[16].BlSlewRate =0				// Backlash take-up rate
 
 Motor[16].HomeOffset=0.0					// Position referencing offset	
 
@@ -3155,11 +3163,11 @@ Motor[16].HomeOffset=0.0					// Position referencing offset
 
 &16									// Address C.S. 1
 
-#16->1X						// Assign motor to CS and define scale
+#16->1A						// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 
-Coord[16].PosRollOver[0]=-18000		// Axis position rollover range for rotary only
+Coord[16].PosRollOver[0]=18000		// Axis position rollover range for rotary only
 									// in axis units!!!! default=0.0 disabled
 									// .PosRollOver[0] for axis A
 									// .PosRollOver[1] for axis B ...
@@ -3381,11 +3389,11 @@ Motor[17].HomeOffset=0.0					// Position referencing offset
 
 &17									// Address C.S. 1
 
-#17->1X							// Assign motor to CS and define scale
+#17->1A							// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 
-//Coord[17].PosRollOver[0]=18000		// Axis position rollover range for rotary only
+Coord[17].PosRollOver[0]=18000		// Axis position rollover range for rotary only
 									// in axis units!!!! default=0.0 disabled
 									// .PosRollOver[0] for axis A
 									// .PosRollOver[1] for axis B ...

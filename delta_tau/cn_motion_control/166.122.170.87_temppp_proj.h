@@ -92,6 +92,10 @@ enum ptrMarray {_ptrMarray_=-1};
 #define	iteration(i)	pshm->Coord[i%MAX_COORDS].Q[1032]
 #define	curPosition(i)	pshm->Coord[i%MAX_COORDS].Q[1033]
 #define	updateReady(i)	pshm->Coord[i%MAX_COORDS].Q[1034]
+#define	moveCount(i)	pshm->Coord[i%MAX_COORDS].Q[1035]
+#define	iteration(i)	pshm->Coord[i%MAX_COORDS].Q[1036]
+#define	curPosition(i)	pshm->Coord[i%MAX_COORDS].Q[1037]
+#define	updateReady(i)	pshm->Coord[i%MAX_COORDS].Q[1038]
 #define	sTime	pshm->P[8200]
 #define	eTime	pshm->P[8201]
 #define	totMovTime	pshm->P[8202]
@@ -201,7 +205,11 @@ enum csglobalQ {_csglobalQ_=-1
 ,moveCount=1031
 ,iteration=1032
 ,curPosition=1033
-,updateReady=1034};
+,updateReady=1034
+,moveCount=1035
+,iteration=1036
+,curPosition=1037
+,updateReady=1038};
 enum csglobalQarray {_csglobalQarray_=-1};
 enum ptrM {_ptrM_=-1
 ,Motor2UserFlag=8192
@@ -350,6 +358,10 @@ double GetEnumPtrArrayVar(enum ptrMarray var, unsigned index)
 #define iteration 1032
 #define curPosition 1033
 #define updateReady 1034
+#define moveCount 1035
+#define iteration 1036
+#define curPosition 1037
+#define updateReady 1038
 #define sTime 8200
 #define eTime 8201
 #define totMovTime 8202

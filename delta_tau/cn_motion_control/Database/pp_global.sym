@@ -69,8 +69,12 @@
 69	CSGlobal	iteration	1032	1
 70	CSGlobal	curPosition	1033	1
 71	CSGlobal	updateReady	1034	1
-72	Global	sTime	8200	1
-73	Global	eTime	8201	1
-74	Global	totMovTime	8202	1
-75	Global	triggerHighOnMove	8203	1
-76	Global	triggerHighOnInPos	8204	1
+72	CSGlobal	moveCount	1035	1
+73	CSGlobal	iteration	1036	1
+74	CSGlobal	curPosition	1037	1
+75	CSGlobal	updateReady	1038	1
+76	Global	sTime	8200	1
+77	Global	eTime	8201	1
+78	Global	totMovTime	8202	1
+79	Global	triggerHighOnMove	8203	1
+80	Global	triggerHighOnInPos	8204	1

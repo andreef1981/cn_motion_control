@@ -213,11 +213,11 @@ Motor[17].HomeOffset=0.0					// Position referencing offset
 
 &17									// Address C.S. 1
 
-#17->1X							// Assign motor to CS and define scale
+#17->1A							// Assign motor to CS and define scale
 									// X, Y, Z,.... linear
 									// A, B, C, AA, BB, CC .... rotary
 
-//Coord[17].PosRollOver[0]=18000		// Axis position rollover range for rotary only
+Coord[17].PosRollOver[0]=18000		// Axis position rollover range for rotary only
 									// in axis units!!!! default=0.0 disabled
 									// .PosRollOver[0] for axis A
 									// .PosRollOver[1] for axis B ...
