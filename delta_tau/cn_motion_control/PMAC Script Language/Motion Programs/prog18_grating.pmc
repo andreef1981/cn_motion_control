@@ -18,7 +18,7 @@ abs;			// Absolute move mode
 ta1000;			// 1-second accel/decel time
 ts0;			// No S-curve accel/decel time
 f1000000;		// Speed of 1e6 axis units [mu] per time unit [s]
-X(LocalDesiredPosition); // Move X-axis to position
+A(LocalDesiredPosition); // Move X-axis to position
 
 //report that move is done
 send0 "m[%d]:isDone\n",Ldata.coord;

@@ -1,7 +1,5 @@
 [PMAC_HARDWARE]
 [PMAC_CONFIG]
-Loading PMAC Defaults ($$$***) Configuration
-[PMAC_PROJECT]
 [PMAC_PROJECT]
 /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog36.pmc:5:1: warning: "moveCount" redefined
 /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog35.pmc:5:1: warning: this is the location of the previous definition
@@ -11,17 +9,13 @@ Loading PMAC Defaults ($$$***) Configuration
 /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog35.pmc:7:1: warning: this is the location of the previous definition
 /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog36.pmc:8:1: warning: "updateReady" redefined
 /var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog35.pmc:8:1: warning: this is the location of the previous definition
-[PMAC_CONFIG]
-[PMAC_INC_PROJECT]
-[PMAC_INC_PROJECT]
-[PMAC_INC_PROJECT]
-[PMAC_INC_PROJECT]
-[PMAC_INC_PROJECT]
-[PMAC_INC_PROJECT]
-[PMAC_INC_PROJECT]
-[PMAC_INC_PROJECT]
-[PMAC_INC_PROJECT]
-[PMAC_INC_PROJECT]
-[PMAC_INC_PROJECT]
-[PMAC_INC_PROJECT]
+[PMAC_PROJECT]
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog36.pmc:5:1: warning: "moveCount" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog35.pmc:5:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog36.pmc:6:1: warning: "iteration" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog35.pmc:6:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog36.pmc:7:1: warning: "curPosition" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog35.pmc:7:1: warning: this is the location of the previous definition
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog36.pmc:8:1: warning: "updateReady" redefined
+/var/ftp/usrflash/Project/PMAC Script Language/Motion Programs/prog35.pmc:8:1: warning: this is the location of the previous definition
 [PMAC_CONFIG]

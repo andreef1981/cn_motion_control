@@ -92,7 +92,7 @@ Gate3[1].Chan[0].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[1].Chan[0].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[1].Chan[0].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -142,7 +142,7 @@ EncTable[3].pEnc =Gate3[1].Chan[0].ServoCapt.a			// Encoder table entry primary 
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[0].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[1].Chan[0].TimerA.a for internal
@@ -255,11 +255,11 @@ Motor[3].EncLossLevel=1
 
 Motor[3].Servo.Kp = 2					// PID proportiona term		
 Motor[3].Servo.Ki = 0.0				// PID integral term
-Motor[3].Servo.Kvfb= 25.0					// PID velocity feedback (ìderivativeî) gain term
+Motor[3].Servo.Kvfb= 25.0					// PID velocity feedback (‚Äúderivative‚Äù) gain term
 											// =0 see user manual p. 286
 
 Motor[3].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
-Motor[3].Servo.Kbreak = 0				// Servo ìgain breakî relative gain within this dead band
+Motor[3].Servo.Kbreak = 0				// Servo ‚Äúgain break‚Äù relative gain within this dead band
 Motor[3].InPosBand = 2.0
 
 Motor[3].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
@@ -317,7 +317,7 @@ Gate3[1].Chan[1].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[1].Chan[1].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[1].Chan[1].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -367,7 +367,7 @@ EncTable[4].pEnc =Gate3[1].Chan[1].ServoCapt.a			// Encoder table entry primary 
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[1].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[1].Chan[1].TimerA.a for internal
@@ -480,10 +480,10 @@ Motor[4].EncLossLevel=1
 
 Motor[4].Servo.Kp = 2					// PID proportiona term		
 Motor[4].Servo.Ki = 0.0				// PID integral term
-Motor[4].Servo.Kvfb= 25.					// PID velocity feedback (ìderivativeî) gain term
+Motor[4].Servo.Kvfb= 25.					// PID velocity feedback (‚Äúderivative‚Äù) gain term
 
 Motor[4].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
-Motor[4].Servo.Kbreak = 0				// Servo ìgain breakî relative gain within this dead band
+Motor[4].Servo.Kbreak = 0				// Servo ‚Äúgain break‚Äù relative gain within this dead band
 Motor[4].InPosBand = 2.0
 
 Motor[4].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
@@ -543,7 +543,7 @@ Gate3[1].Chan[2].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[1].Chan[2].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[1].Chan[2].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -591,7 +591,7 @@ EncTable[5].pEnc =Gate3[1].Chan[2].ServoCapt.a			// Encoder table entry primary 
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[1].Chan[2].TimerA.a for internal
@@ -703,11 +703,11 @@ Motor[5].EncLossLevel=1
 
 Motor[5].Servo.Kp = 4.					// PID proportiona term		
 Motor[5].Servo.Ki = 0.0				// PID integral term
-Motor[5].Servo.Kvfb= 0					// PID velocity feedback (ìderivativeî) gain term
+Motor[5].Servo.Kvfb= 0					// PID velocity feedback (‚Äúderivative‚Äù) gain term
 
 Motor[5].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[5].InPosBand=2.0
-Motor[5].Servo.Kbreak = 0				// Servo ìgain breakî relative gain within this dead band
+Motor[5].Servo.Kbreak = 0				// Servo ‚Äúgain break‚Äù relative gain within this dead band
 
 Motor[5].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
 Motor[5].WarnFeLimit = 1000.0			// add BlSize
@@ -770,7 +770,7 @@ Gate3[1].Chan[3].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[1].Chan[3].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[1].Chan[3].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -817,7 +817,7 @@ EncTable[6].pEnc =  Gate3[1].Chan[3].ServoCapt.a		// Encoder table entry primary
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[1].Chan[3].TimerA.a for internal
@@ -926,11 +926,11 @@ Motor[6].EncLossLevel=1
 
 Motor[6].Servo.Kp = 1.25					// PID proportiona term		
 Motor[6].Servo.Ki = 0.00				// PID integral term
-Motor[6].Servo.Kvfb= 25					// PID velocity feedback (ìderivativeî) gain term
+Motor[6].Servo.Kvfb= 25					// PID velocity feedback (‚Äúderivative‚Äù) gain term
 
 Motor[6].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[6].InPosBand=2.0
-Motor[6].Servo.Kbreak = 0				// Servo ìgain breakî relative gain within this dead band
+Motor[6].Servo.Kbreak = 0				// Servo ‚Äúgain break‚Äù relative gain within this dead band
 
 Motor[6].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
 Motor[6].WarnFeLimit = 42000.0			// add BlSize
@@ -992,7 +992,7 @@ Gate3[2].Chan[0].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[2].Chan[0].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[2].Chan[0].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -1039,7 +1039,7 @@ EncTable[7].pEnc =  Gate3[2].Chan[0].TimerA.a			// Encoder table entry primary s
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[2].Chan[0].TimerA.a for internal
@@ -1145,11 +1145,11 @@ Motor[7].pEnc2 = EncTable[7].a						// Inner (velocity) loop position feedback p
 
 Motor[7].Servo.Kp = 1					// PID proportiona term		
 Motor[7].Servo.Ki = 0.000				// PID integral term
-Motor[7].Servo.Kvfb= 0					// PID velocity feedback (ìderivativeî) gain term
+Motor[7].Servo.Kvfb= 0					// PID velocity feedback (‚Äúderivative‚Äù) gain term
 
 Motor[7].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[7].InPosBand=2.0
-Motor[7].Servo.Kbreak = 0				// Servo ìgain breakî relative gain within this dead band
+Motor[7].Servo.Kbreak = 0				// Servo ‚Äúgain break‚Äù relative gain within this dead band
 
 Motor[7].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
 Motor[7].WarnFeLimit = 4000.0			// add BlSize
@@ -1204,7 +1204,7 @@ Gate3[2].Chan[1].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[2].Chan[1].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[2].Chan[1].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -1251,7 +1251,7 @@ EncTable[8].pEnc =  Gate3[2].Chan[1].ServoCapt.a				// Encoder table entry prima
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[2].Chan[1].TimerA.a for internal
@@ -1360,10 +1360,10 @@ Motor[8].EncLossLevel=1
 
 Motor[8].Servo.Kp = 2					// PID proportiona term		
 Motor[8].Servo.Ki = 0.0				// PID integral term
-Motor[8].Servo.Kvfb= 0					// PID velocity feedback (ìderivativeî) gain term
+Motor[8].Servo.Kvfb= 0					// PID velocity feedback (‚Äúderivative‚Äù) gain term
 
 Motor[8].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
-Motor[8].Servo.Kbreak = 0				// Servo ìgain breakî relative gain within this dead band
+Motor[8].Servo.Kbreak = 0				// Servo ‚Äúgain break‚Äù relative gain within this dead band
 Motor[8].InPosBand=2.0
 
 Motor[8].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
@@ -1425,7 +1425,7 @@ Gate3[2].Chan[2].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[2].Chan[2].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[2].Chan[2].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -1472,7 +1472,7 @@ EncTable[9].pEnc =  Gate3[2].Chan[2].ServoCapt.a			// Encoder table entry primar
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[2].Chan[2].TimerA.a for internal
@@ -1581,11 +1581,11 @@ Motor[9].EncLossLevel=1
 
 Motor[9].Servo.Kp = 3.25					// PID proportiona term		
 Motor[9].Servo.Ki = 0.0				// PID integral term
-Motor[9].Servo.Kvfb= 0					// PID velocity feedback (ìderivativeî) gain term
+Motor[9].Servo.Kvfb= 0					// PID velocity feedback (‚Äúderivative‚Äù) gain term
 
 Motor[9].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[9].InPosBand=2.0
-Motor[9].Servo.Kbreak = 0				// Servo ìgain breakî relative gain within this dead band
+Motor[9].Servo.Kbreak = 0				// Servo ‚Äúgain break‚Äù relative gain within this dead band
 
 Motor[9].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
 Motor[9].WarnFeLimit = 42000.0			// add BlSize
@@ -1644,7 +1644,7 @@ Gate3[2].Chan[3].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[2].Chan[3].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[2].Chan[3].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -1691,7 +1691,7 @@ EncTable[10].pEnc =  Gate3[2].Chan[3].TimerA.a			// Encoder table entry primary 
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[2].Chan[3].TimerA.a for internal
@@ -1797,11 +1797,11 @@ Motor[10].pEnc2 = EncTable[10].a						// Inner (velocity) loop position feedback
 
 Motor[10].Servo.Kp = 4								// PID proportiona term		
 Motor[10].Servo.Ki = 0.0							// PID integral term
-Motor[10].Servo.Kvfb= 40							// PID velocity feedback (ìderivativeî) gain term
+Motor[10].Servo.Kvfb= 40							// PID velocity feedback (‚Äúderivative‚Äù) gain term
 
 Motor[10].Servo.BreakPosErr = 2.0
 Motor[10].InPosBand = 2.0					// Servo gain-break error size (deadband)
-Motor[10].Servo.Kbreak = 0							// Servo ìgain breakî relative gain within this dead band
+Motor[10].Servo.Kbreak = 0							// Servo ‚Äúgain break‚Äù relative gain within this dead band
 
 Motor[10].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
 Motor[10].WarnFeLimit = 4000.0			// add BlSize
@@ -1864,7 +1864,7 @@ Gate3[3].Chan[0].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[3].Chan[0].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[3].Chan[0].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -1911,7 +1911,7 @@ EncTable[11].pEnc =  Gate3[3].Chan[0].TimerA.a			// Encoder table entry primary 
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[3].Chan[0].TimerA.a for internal
@@ -2017,11 +2017,11 @@ Motor[11].pEnc2 = EncTable[11].a						// Inner (velocity) loop position feedback
 
 Motor[11].Servo.Kp = 4					// PID proportiona term		
 Motor[11].Servo.Ki = 0.000				// PID integral term
-Motor[11].Servo.Kvfb= 40					// PID velocity feedback (ìderivativeî) gain term
+Motor[11].Servo.Kvfb= 40					// PID velocity feedback (‚Äúderivative‚Äù) gain term
 
 Motor[11].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[11].InPosBand = 2.0				// 
-Motor[11].Servo.Kbreak = 0				// Servo ìgain breakî relative gain within this dead band
+Motor[11].Servo.Kbreak = 0				// Servo ‚Äúgain break‚Äù relative gain within this dead band
 
 Motor[11].Servo.MaxPosErr= 28000.0	// Servo-error input magnitude limit
 Motor[11].WarnFeLimit = 4000.0			// add BlSize
@@ -2083,7 +2083,7 @@ Gate3[3].Chan[1].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[3].Chan[1].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[3].Chan[1].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -2130,7 +2130,7 @@ EncTable[12].pEnc =  Gate3[3].Chan[1].TimerA.a			// Encoder table entry primary 
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[3].Chan[1].TimerA.a for internal
@@ -2236,10 +2236,10 @@ Motor[12].pEnc2 = EncTable[12].a						// Inner (velocity) loop position feedback
 
 Motor[12].Servo.Kp = 5.25					// PID proportiona term		
 Motor[12].Servo.Ki = 0.0				// PID integral term
-Motor[12].Servo.Kvfb= 100					// PID velocity feedback (ìderivativeî) gain term
+Motor[12].Servo.Kvfb= 100					// PID velocity feedback (‚Äúderivative‚Äù) gain term
 
 Motor[12].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
-Motor[12].Servo.Kbreak = 0				// Servo ìgain breakî relative gain within this dead band
+Motor[12].Servo.Kbreak = 0				// Servo ‚Äúgain break‚Äù relative gain within this dead band
 Motor[12].InPosBand = 1.0
 
 Motor[12].Servo.MaxPosErr= 10000.0		// Servo-error input magnitude limit
@@ -2294,7 +2294,7 @@ Gate3[3].Chan[2].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[3].Chan[2].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[3].Chan[2].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -2341,7 +2341,7 @@ EncTable[13].pEnc =  Gate3[3].Chan[2].TimerA.a			// Encoder table entry primary 
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[3].Chan[2].TimerA.a for internal
@@ -2447,10 +2447,10 @@ Motor[13].pEnc2 = EncTable[13].a						// Inner (velocity) loop position feedback
 
 Motor[13].Servo.Kp = 5.25					// PID proportiona term		
 Motor[13].Servo.Ki = 0.0				// PID integral term
-Motor[13].Servo.Kvfb= 100					// PID velocity feedback (ìderivativeî) gain term
+Motor[13].Servo.Kvfb= 100					// PID velocity feedback (‚Äúderivative‚Äù) gain term
 
 Motor[13].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
-Motor[13].Servo.Kbreak = 0				// Servo ìgain breakî relative gain within this dead band
+Motor[13].Servo.Kbreak = 0				// Servo ‚Äúgain break‚Äù relative gain within this dead band
 Motor[13].InPosBand = 1.0
 
 Motor[13].Servo.MaxPosErr= 10000.0		// Servo-error input magnitude limit
@@ -2505,7 +2505,7 @@ Gate3[3].Chan[3].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[3].Chan[3].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[3].Chan[3].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -2552,7 +2552,7 @@ EncTable[14].pEnc =  Gate3[3].Chan[3].TimerA.a			// Encoder table entry primary 
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[3].Chan[3].TimerA.a for internal
@@ -2658,11 +2658,11 @@ Motor[14].pEnc2 = EncTable[14].a						// Inner (velocity) loop position feedback
 
 Motor[14].Servo.Kp = 5.25					// PID proportiona term		
 Motor[14].Servo.Ki = 0				// PID integral term
-Motor[14].Servo.Kvfb= 100					// PID velocity feedback (ìderivativeî) gain term
+Motor[14].Servo.Kvfb= 100					// PID velocity feedback (‚Äúderivative‚Äù) gain term
 
 Motor[14].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[14].InPosBand=2.0
-Motor[14].Servo.Kbreak = 0				// Servo ìgain breakî relative gain within this dead band
+Motor[14].Servo.Kbreak = 0				// Servo ‚Äúgain break‚Äù relative gain within this dead band
 
 Motor[14].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
 Motor[9].WarnFeLimit = 200.0			// add BlSize
@@ -2725,7 +2725,7 @@ Gate3[4].Chan[0].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[4].Chan[0].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[4].Chan[0].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -2773,7 +2773,7 @@ EncTable[15].pEnc =  Gate3[4].Chan[0].ServoCapt.a   	// Encoder table entry prim
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[4].Chan[0].TimerA.a for internal
@@ -2883,11 +2883,11 @@ Motor[15].EncLossLevel=1
 
 Motor[15].Servo.Kp = 1.25					// PID proportiona term		
 Motor[15].Servo.Ki = 0.				// PID integral term
-Motor[15].Servo.Kvfb= 25					// PID velocity feedback (ìderivativeî) gain term
+Motor[15].Servo.Kvfb= 25					// PID velocity feedback (‚Äúderivative‚Äù) gain term
 
 Motor[15].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
 Motor[15].InPosBand=2.0
-Motor[15].Servo.Kbreak = 0.				// Servo ìgain breakî relative gain within this dead band
+Motor[15].Servo.Kbreak = 0.				// Servo ‚Äúgain break‚Äù relative gain within this dead band
 
 Motor[15].Servo.MaxPosErr= 28000.0		// Servo-error input magnitude limit
 Motor[15].WarnFeLimit = 400.0			// add BlSize
@@ -2945,7 +2945,7 @@ Gate3[4].Chan[1].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[4].Chan[1].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[4].Chan[1].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -2992,7 +2992,7 @@ EncTable[16].pEnc =  Gate3[4].Chan[1].TimerA.a			// Encoder table entry primary 
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[4].Chan[1].TimerA.a for internal
@@ -3098,10 +3098,10 @@ Motor[16].pEnc2 = EncTable[16].a						// Inner (velocity) loop position feedback
 
 Motor[16].Servo.Kp = 4					// PID proportiona term		
 Motor[16].Servo.Ki = 0.001				// PID integral term
-Motor[16].Servo.Kvfb= 40					// PID velocity feedback (ìderivativeî) gain term
+Motor[16].Servo.Kvfb= 40					// PID velocity feedback (‚Äúderivative‚Äù) gain term
 
 Motor[16].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
-Motor[16].Servo.Kbreak = 0				// Servo ìgain breakî relative gain within this dead band
+Motor[16].Servo.Kbreak = 0				// Servo ‚Äúgain break‚Äù relative gain within this dead band
 
 Motor[16].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
 
@@ -3160,7 +3160,7 @@ Gate3[4].Chan[2].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[4].Chan[2].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[4].Chan[2].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -3207,7 +3207,7 @@ EncTable[17].pEnc =  Gate3[4].Chan[2].TimerA.a			// Encoder table entry primary 
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[4].Chan[2].TimerA.a for internal
@@ -3313,10 +3313,10 @@ Motor[17].pEnc2 = EncTable[17].a						// Inner (velocity) loop position feedback
 
 Motor[17].Servo.Kp = 4					// PID proportiona term		
 Motor[17].Servo.Ki = 0.001				// PID integral term
-Motor[17].Servo.Kvfb= 40					// PID velocity feedback (ìderivativeî) gain term
+Motor[17].Servo.Kvfb= 40					// PID velocity feedback (‚Äúderivative‚Äù) gain term
 
 Motor[17].Servo.BreakPosErr = 2.0		// Servo gain-break error size (deadband)
-Motor[17].Servo.Kbreak = 0				// Servo ìgain breakî relative gain within this dead band
+Motor[17].Servo.Kbreak = 0				// Servo ‚Äúgain break‚Äù relative gain within this dead band
 
 Motor[17].Servo.MaxPosErr= 1000000.0		// Servo-error input magnitude limit
 
@@ -3375,7 +3375,7 @@ Gate3[4].Chan[3].OutputMode=8				// Servo IC channel output mode select; default
 											// .outputMode=8 PFM on channel D
 											// (software reference manual p. 314)
 											
-Gate3[4].Chan[3].PackOutData=0				// IC channel PWM/DAC ìpackî enable; default=1
+Gate3[4].Chan[3].PackOutData=0				// IC channel PWM/DAC ‚Äúpack‚Äù enable; default=1
 											// .PackOutData=0 no packaging all in seperate 
 											// registers (software reference manual p. 317)
 											
@@ -3422,7 +3422,7 @@ EncTable[18].pEnc =  Gate3[4].Chan[3].TimerA.a			// Encoder table entry primary 
 														// The typical addresses used depend on the 
 														// conversion type. For type 1
 														// .pEnc=Gate3[2].Chan[2].ServoCapt.a For a
-														// PMAC3-style ASIC channelís encoder counter
+														// PMAC3-style ASIC channel‚Äôs encoder counter
 														// value with hardware interpolation from either
 														// timer data (1/T) used with encoder
 														// .pEnc =  Gate3[4].Chan[3].TimerA.a for internal
@@ -3533,11 +3533,11 @@ Motor[18].AbsPosSf = 1 //(Motor units per sensor LSB) // no scaling regquired is
 
 Motor[18].Servo.Kp = 0.006					// PID proportiona term		
 Motor[18].Servo.Ki = 0.				// PID integral term
-Motor[18].Servo.Kvfb= 1.4					// PID velocity feedback (ìderivativeî) gain term
+Motor[18].Servo.Kvfb= 1.4					// PID velocity feedback (‚Äúderivative‚Äù) gain term
 Motor[18].Servo.Kvff = 0
 
 Motor[18].Servo.BreakPosErr = 419.4304/2		// Servo gain-break error size (deadband)
-Motor[18].Servo.Kbreak = 0				// Servo ìgain breakî relative gain within this dead band
+Motor[18].Servo.Kbreak = 0				// Servo ‚Äúgain break‚Äù relative gain within this dead band
 Motor[18].InPosBand = 419.4304
 Motor[18].Servo.MaxPosErr= 10000000.0		// Servo-error input magnitude limit
 
@@ -3697,7 +3697,3 @@ ACC65E[6].CtrlReg=$07
 &0
 
 Sys.WpKey=$0 // Write-protect Gate3 registers			// disabling writing to hardware registers
-enable plc 25
-disable plc 25
-enable plc 26
-disable plc 26
