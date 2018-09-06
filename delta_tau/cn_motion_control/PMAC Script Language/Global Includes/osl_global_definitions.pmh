@@ -31,6 +31,18 @@ csArray(5) = 18;   // gt
 #define numberOfMoves (Q0-4)/3
 
 //-----------------------------------------------
+// Ensure the synchronised buffer operations are
+// set large enough for the real time coordinate
+// systems
+//-----------------------------------------------
+Coord[3].SyncOps=8192
+Coord[4].SyncOps=8192
+Coord[15].SyncOps=8192
+Coord[5].SyncOps=8192
+Coord[16].SyncOps=8192
+Coord[18].SyncOps=8192
+
+//-----------------------------------------------
 // External Time Base Config
 //-----------------------------------------------
 Sys.WpKey=$aaaaaaaa

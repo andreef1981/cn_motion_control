@@ -243,3 +243,6 @@ Status: Successful load of preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pm
 Status: Download to PPMAC Command Processor, Time (sec) = 0.002212
 Status: Final pp_proj.h & Run Background C Apps, Time (sec) = 0.170708
 Project Preprocessing & Load Total Time (sec) = 0.531604
+[PMAC_CONFIG]
+Successful: SaveConfiguration using /var/ftp/usrflash/Project/Configuration/pp_save.cfg
+Successful: SaveCustomConfiguration using /var/ftp/usrflash/Project/Configuration/pp_custom_save.tpl
